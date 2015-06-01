@@ -43,6 +43,9 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'vim-scripts/AnsiEsc.vim'
 
+"Plugin 'bling/vim-airline'
+Plugin 'itchyny/lightline.vim'
+
 " Ruby/Rails
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
@@ -192,3 +195,8 @@ nnoremap <f2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let g:NERDTreeDirArrows=0
 let g:NERDTreeMouseMode=0
+
+" airline
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
