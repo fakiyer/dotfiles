@@ -1,3 +1,7 @@
+""""""""""""""""""""""""""""""
+" Vundle
+""""""""""""""""""""""""""""""
+set nocompatible      " We're running Vim, not Vi!
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -37,6 +41,7 @@ Plugin 'surround.vim'
 " Bundle 'hrp/EnhancedCommentify'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-endwise'
+Plugin 'vim-scripts/AnsiEsc.vim'
 
 " Ruby/Rails
 Plugin 'vim-ruby/vim-ruby'
@@ -46,7 +51,7 @@ Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-projectionist'
 Plugin 'jlanzarotta/bufexplorer'
-Plugin 'scrooloose/nerdcommenter'
+"Plugin 'scrooloose/nerdcommenter'
 " Bundle 'snipMate'
 Plugin 'ruby-matchit'
 
@@ -57,7 +62,6 @@ Plugin 'git-commit'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-set nocompatible      " We're running Vim, not Vi!
 
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -70,7 +74,11 @@ set nocompatible      " We're running Vim, not Vi!
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+""""""""""""""""""""""""""""""
 
+""""""""""""""""""""""""""""""
+" Option
+""""""""""""""""""""""""""""""
 syntax enable
 
 " display
@@ -152,12 +160,12 @@ noremap <CR> o<ESC>
 " auto command
 " --------------------
 augroup BufferAu
-  autocmd!
-  " change current directory
-  autocmd BufNewFile,BufRead *.erb  set noexpandtab
-  autocmd BufNewFile,BufRead *.rhtml   set nowrap tabstop=2 shiftwidth=2
-  autocmd BufNewFile,BufRead *.rb  set nowrap tabstop=2 shiftwidth=2
-  autocmd BufNewFile,BufRead,BufEnter * if isdirectory(expand("%:p:h")) && bufname("%") !~ "NERD_tree" | cd %:p:h | endif
+autocmd!
+" change current directory
+autocmd BufNewFile,BufRead *.erb  set noexpandtab
+autocmd BufNewFile,BufRead *.rhtml   set nowrap tabstop=2 shiftwidth=2
+autocmd BufNewFile,BufRead *.rb  set nowrap tabstop=2 shiftwidth=2
+autocmd BufNewFile,BufRead,BufEnter * if isdirectory(expand("%:p:h")) && bufname("%") !~ "NERD_tree" | cd %:p:h | endif
 augroup END
 
 " Plugin setting
