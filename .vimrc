@@ -96,7 +96,6 @@ set ruler
 set list " show eol,tab,etc...
 set listchars=tab:>-,trail:-,extends:>,precedes:< " eol:$
 set laststatus=2
-" set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 
 " edit
@@ -165,9 +164,6 @@ noremap <CR> o<ESC>
 augroup BufferAu
 autocmd!
 " change current directory
-autocmd BufNewFile,BufRead *.erb  set noexpandtab
-autocmd BufNewFile,BufRead *.rhtml   set nowrap tabstop=2 shiftwidth=2
-autocmd BufNewFile,BufRead *.rb  set nowrap tabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead,BufEnter * if isdirectory(expand("%:p:h")) && bufname("%") !~ "NERD_tree" | cd %:p:h | endif
 augroup END
 
