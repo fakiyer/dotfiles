@@ -3,7 +3,10 @@
     userId: "c8108de1-b3b8-b018-6bc1-436050e572ef"
   welcome:
     showOnStartup: false
-  core: {}
+  core:
+    audioBeep: false
   editor:
     invisibles: {}
     fontFamily: "Ricty Diminished"
+  "one-dark-ui": {}
+  react: {}
