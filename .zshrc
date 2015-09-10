@@ -86,3 +86,5 @@ source $ZSH/oh-my-zsh.sh
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+DISABLE_AUTO_TITLE=true
