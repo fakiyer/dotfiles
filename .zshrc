@@ -87,4 +87,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# for tmux
 DISABLE_AUTO_TITLE=true
+unsetopt share_history
