@@ -6,16 +6,18 @@ atom-notifications:empty {
 
 atom-text-editor::shadow .editor--private {
   order: 2;
+  flex: 1 0 0;
 }
 
-atom-text-editor::shadow, atom-text-editor {
+atom-text-editor::shadow, atom-text-editor, html {
   atom-text-editor-minimap {
     display: block;
     width: 10%;
     height: 100%;
     overflow: hidden;
     position: relative;
-    order: 2;
+    order: 3;
+    flex: 0 0 10%;
 
     -webkit-user-select: none;
 

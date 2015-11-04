@@ -96,9 +96,14 @@ class Main
   constructor: ->
     @emitter = new Emitter
 
+  # Activates the minimap package.
+  activate: ->
+    return if @active
+    MinimapElement ?= require './minimap-element'
+    MinimapElement.registerViewProvider()
+
     # Commands Subscriptions
-    @subscriptionsOfCommands = new CompositeDisposable
-    @subscriptionsOfCommands.add atom.commands.add 'atom-workspace',
+    @subscriptionsOfCommands = atom.commands.add 'atom-workspace',
       'minimap:toggle': => @toggle()
       'minimap:generate-coffee-plugin': => @generatePlugin('coffee')
       'minimap:generate-javascript-plugin': => @generatePlugin('javascript')
@@ -107,21 +112,22 @@ class Main
     # Other Subscriptions
     @subscriptions = new CompositeDisposable
 
-    MinimapElement ?= require './minimap-element'
-    MinimapElement.registerViewProvider()
-
-  # Activates the minimap package.
-  activate: ->
     @active = true
     @toggle() if atom.config.get 'minimap.autoToggle'
 
   # Deactivates the minimap package.
   deactivate: ->
+    return unless @active
+
     @deactivateAllPlugins()
-    @subscriptions.dispose()
     @editorsMinimaps?.forEach (value, key) =>
       value.destroy()
       @editorsMinimaps.delete(key)
+
+    @subscriptions.dispose()
+    @subscriptions = null
+    @subscriptionsOfCommands.dispose()
+    @subscriptionsOfCommands = null
     @editorsMinimaps = undefined
     @toggled = false
     @active = false
@@ -215,6 +221,11 @@ class Main
   onDidDeactivatePlugin: (callback) ->
     @emitter.on 'did-deactivate-plugin', callback
 
+  # Returns the {Minimap} class.
+  #
+  # Returns a {Function}.
+  minimapClass: -> Minimap ?= require './minimap'
+
   # Returns the {Minimap} object associated to the
   # passed-in `TextEditorElement`.
   #
@@ -246,6 +257,20 @@ class Main
         editorSubscription.dispose()
 
     minimap
+
+  # Returns a new stand-alone {Minimap} for the passed-in `TextEditor`.
+  #
+  # editorView - An `Editor` instance
+  #
+  # Returns a {Minimap}.
+  standAloneMinimapForEditor: (textEditor) ->
+    return unless textEditor?
+
+    Minimap ?= require './minimap'
+    new Minimap({
+      textEditor: textEditor
+      standAlone: true
+    })
 
   # Returns the {Minimap} of the active `TextEditor`.
   #

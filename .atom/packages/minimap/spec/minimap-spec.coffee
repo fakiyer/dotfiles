@@ -1,19 +1,25 @@
+require './helpers/workspace'
+
 fs = require 'fs-plus'
-{TextEditor} = require 'atom'
 Minimap = require '../lib/minimap'
 
 describe 'Minimap', ->
-  [editor, minimap, largeSample, smallSample] = []
+  [editor, editorElement, minimap, largeSample, smallSample, minimapVerticalScaleFactor, minimapHorizontalScaleFactor] = []
 
   beforeEach ->
     atom.config.set 'minimap.charHeight', 4
     atom.config.set 'minimap.charWidth', 2
     atom.config.set 'minimap.interline', 1
 
-    editor = new TextEditor({})
-    editor.setLineHeightInPixels(10)
-    editor.setHeight(50)
-    editor.setWidth(200)
+    editor = atom.workspace.buildTextEditor({})
+
+    editorElement = atom.views.getView(editor)
+    jasmine.attachToDOM(editorElement)
+    editorElement.setHeight(50)
+    editorElement.setWidth(200)
+
+    minimapVerticalScaleFactor = 5 / editor.getLineHeightInPixels()
+    minimapHorizontalScaleFactor = 2 / editor.getDefaultCharWidth()
 
     dir = atom.project.getDirectories()[0]
 
@@ -38,12 +44,12 @@ describe 'Minimap', ->
     expect(minimap.getHeight()).toEqual(editor.getScreenLineCount() * 5)
 
   it 'measures the scaling factor between the editor and the minimap', ->
-    expect(minimap.getVerticalScaleFactor()).toEqual(0.5)
-    expect(minimap.getHorizontalScaleFactor()).toEqual(2 / editor.getDefaultCharWidth())
+    expect(minimap.getVerticalScaleFactor()).toEqual(minimapVerticalScaleFactor)
+    expect(minimap.getHorizontalScaleFactor()).toEqual(minimapHorizontalScaleFactor)
 
   it 'measures the editor visible area size at minimap scale', ->
     editor.setText(largeSample)
-    expect(minimap.getTextEditorScaledHeight()).toEqual(25)
+    expect(minimap.getTextEditorScaledHeight()).toEqual(50 * minimapVerticalScaleFactor)
 
   it 'measures the available minimap scroll', ->
     editor.setText(largeSample)
@@ -72,7 +78,7 @@ describe 'Minimap', ->
     scrollSpy = jasmine.createSpy('didScroll')
     minimap.onDidChangeScrollTop(scrollSpy)
 
-    editor.setScrollTop(100)
+    editorElement.setScrollTop(100)
 
     expect(scrollSpy).toHaveBeenCalled()
 
@@ -84,9 +90,9 @@ describe 'Minimap', ->
 
     # Seems like text without a view aren't able to scroll horizontally
     # even when its width was set.
-    spyOn(editor.displayBuffer, 'getScrollWidth').andReturn(10000)
+    spyOn(editorElement, 'getScrollWidth').andReturn(10000)
 
-    editor.setScrollLeft(100)
+    editorElement.setScrollLeft(100)
 
     expect(scrollSpy).toHaveBeenCalled()
 
@@ -96,28 +102,24 @@ describe 'Minimap', ->
       atom.config.set 'editor.scrollPastEnd', true
 
     it 'adjust the scrolling ratio', ->
-      editor.setScrollTop(editor.displayBuffer.getMaxScrollTop())
+      editorElement.setScrollTop(editorElement.getScrollHeight())
 
-      maxScrollTop = editor.displayBuffer.getMaxScrollTop() - (editor.getHeight() - 3 * editor.displayBuffer.getLineHeightInPixels())
+      maxScrollTop = editorElement.getScrollHeight() - editorElement.getHeight() - (editorElement.getHeight() - 3 * editor.displayBuffer.getLineHeightInPixels())
 
-      expect(minimap.getTextEditorScrollRatio()).toEqual(editor.getScrollTop() / maxScrollTop)
+      expect(minimap.getTextEditorScrollRatio()).toEqual(editorElement.getScrollTop() / maxScrollTop)
 
     it 'lock the minimap scroll top to 1', ->
-      editor.setScrollTop(editor.displayBuffer.getMaxScrollTop())
+      editorElement.setScrollTop(editorElement.getScrollHeight())
       expect(minimap.getScrollTop()).toEqual(minimap.getMaxScrollTop())
 
-    describe 'when getScrollTop() and maxScrollTop both equal 0', ->
+    describe 'getTextEditorScrollRatio(), when getScrollTop() and maxScrollTop both equal 0', ->
       beforeEach ->
         editor.setText(smallSample)
-        editor.setHeight(40)
+        editorElement.setHeight(40)
         atom.config.set 'editor.scrollPastEnd', true
 
-      it 'getTextEditorScrollRatio() should return 0', ->
-        editor.setScrollTop(0)
-
-        maxScrollTop = editor.displayBuffer.getMaxScrollTop() - (editor.getHeight() - 3 * editor.displayBuffer.getLineHeightInPixels())
-
-        expect(maxScrollTop).toEqual(0)
+      it 'returns 0', ->
+        editorElement.setScrollTop(0)
         expect(minimap.getTextEditorScrollRatio()).toEqual(0)
 
   describe 'when soft wrap is enabled', ->
@@ -150,33 +152,33 @@ describe 'Minimap', ->
       # Same here, without a view, the getScrollWidth method always returns 1
       # and the test fails because the capped scroll left value always end up
       # to be 0, inducing errors in computations.
-      spyOn(editor.displayBuffer, 'getScrollWidth').andReturn(10000)
+      spyOn(editorElement, 'getScrollWidth').andReturn(10000)
 
       editor.setText(largeSample)
-      editor.setScrollTop(1000)
-      editor.setScrollLeft(200)
+      editorElement.setScrollTop(1000)
+      editorElement.setScrollLeft(200)
 
       largeLineCount = editor.getScreenLineCount()
       editorHeight = largeLineCount * editor.getLineHeightInPixels()
-      editorScrollRatio = editor.getScrollTop() / editor.displayBuffer.getMaxScrollTop()
+      editorScrollRatio = editorElement.getScrollTop() / (editorElement.getScrollHeight() - editorElement.getHeight())
 
     it 'scales the editor scroll based on the minimap scale factor', ->
-      expect(minimap.getTextEditorScaledScrollTop()).toEqual(500)
-      expect(minimap.getTextEditorScaledScrollLeft()).toEqual(200 * minimap.getHorizontalScaleFactor())
+      expect(minimap.getTextEditorScaledScrollTop()).toEqual(1000 * minimapVerticalScaleFactor)
+      expect(minimap.getTextEditorScaledScrollLeft()).toEqual(200 * minimapHorizontalScaleFactor)
 
     it 'computes the offset to apply based on the editor scroll top', ->
       expect(minimap.getScrollTop()).toEqual(editorScrollRatio * minimap.getMaxScrollTop())
 
     it 'computes the first visible row in the minimap', ->
-      expect(minimap.getFirstVisibleScreenRow()).toEqual(Math.floor(99))
+      expect(minimap.getFirstVisibleScreenRow()).toEqual(58)
 
     it 'computes the last visible row in the minimap', ->
-      expect(minimap.getLastVisibleScreenRow()).toEqual(110)
+      expect(minimap.getLastVisibleScreenRow()).toEqual(69)
 
     describe 'down to the bottom', ->
       beforeEach ->
-        editor.setScrollTop(editor.displayBuffer.getMaxScrollTop())
-        editorScrollRatio = editor.getScrollTop() / editor.displayBuffer.getMaxScrollTop()
+        editorElement.setScrollTop(editorElement.getScrollHeight())
+        editorScrollRatio = editorElement.getScrollTop() / editorElement.getScrollHeight()
 
       it 'computes an offset that scrolls the minimap to the bottom edge', ->
         expect(minimap.getScrollTop()).toEqual(minimap.getMaxScrollTop())
@@ -296,7 +298,7 @@ describe 'Minimap', ->
 
         expect(decoration).toBeUndefined()
 
-  describe '::decorationsForScreenRowRangeByTypeThenRows', ->
+  describe '::decorationsByTypeThenRows', ->
     [decorations] = []
 
     beforeEach ->
@@ -313,7 +315,7 @@ describe 'Minimap', ->
       createDecoration 'line', [[12,0], [12,0]]
       createDecoration 'highlight-under', [[0,0], [10,1]]
 
-      decorations = minimap.decorationsForScreenRowRangeByTypeThenRows(0, 12)
+      decorations = minimap.decorationsByTypeThenRows(0, 12)
 
     it 'returns an object whose keys are the decorations types', ->
       expect(Object.keys(decorations).sort()).toEqual(['highlight-over', 'highlight-under', 'line'])
@@ -334,3 +336,168 @@ describe 'Minimap', ->
       expect(decorations['line']['3'].length).toEqual(1)
 
       expect(decorations['highlight-under']['5'].length).toEqual(1)
+
+#     ######  ########    ###    ##    ## ########
+#    ##    ##    ##      ## ##   ###   ## ##     ##
+#    ##          ##     ##   ##  ####  ## ##     ##
+#     ######     ##    ##     ## ## ## ## ##     ##
+#          ##    ##    ######### ##  #### ##     ##
+#    ##    ##    ##    ##     ## ##   ### ##     ##
+#     ######     ##    ##     ## ##    ## ########
+#
+#       ###    ##        #######  ##    ## ########
+#      ## ##   ##       ##     ## ###   ## ##
+#     ##   ##  ##       ##     ## ####  ## ##
+#    ##     ## ##       ##     ## ## ## ## ######
+#    ######### ##       ##     ## ##  #### ##
+#    ##     ## ##       ##     ## ##   ### ##
+#    ##     ## ########  #######  ##    ## ########
+
+describe 'Stand alone minimap', ->
+  [editor, editorElement, minimap, largeSample, smallSample] = []
+
+  beforeEach ->
+    atom.config.set 'minimap.charHeight', 4
+    atom.config.set 'minimap.charWidth', 2
+    atom.config.set 'minimap.interline', 1
+
+    editor = atom.workspace.buildTextEditor({})
+    editorElement = atom.views.getView(editor)
+    jasmine.attachToDOM(editorElement)
+    editorElement.setHeight(50)
+    editorElement.setWidth(200)
+    editor.setLineHeightInPixels(10)
+
+    dir = atom.project.getDirectories()[0]
+
+    minimap = new Minimap({
+      textEditor: editor
+      standAlone: true
+    })
+
+    largeSample = fs.readFileSync(dir.resolve('large-file.coffee')).toString()
+    smallSample = fs.readFileSync(dir.resolve('sample.coffee')).toString()
+
+  it 'has an associated editor', ->
+    expect(minimap.getTextEditor()).toEqual(editor)
+
+  it 'measures the minimap size based on the current editor content', ->
+    editor.setText(smallSample)
+    expect(minimap.getHeight()).toEqual(editor.getScreenLineCount() * 5)
+
+    editor.setText(largeSample)
+    expect(minimap.getHeight()).toEqual(editor.getScreenLineCount() * 5)
+
+  it 'measures the scaling factor between the editor and the minimap', ->
+    expect(minimap.getVerticalScaleFactor()).toEqual(0.5)
+    expect(minimap.getHorizontalScaleFactor()).toEqual(2 / editor.getDefaultCharWidth())
+
+  it 'measures the editor visible area size at minimap scale', ->
+    editor.setText(largeSample)
+    expect(minimap.getTextEditorScaledHeight()).toEqual(25)
+
+  it 'has a visible height based on the passed-in options', ->
+    expect(minimap.getVisibleHeight()).toEqual(5)
+
+    editor.setText(smallSample)
+    expect(minimap.getVisibleHeight()).toEqual(20)
+
+    editor.setText(largeSample)
+    expect(minimap.getVisibleHeight()).toEqual(editor.getScreenLineCount() * 5)
+
+    minimap.height = 100
+    expect(minimap.getVisibleHeight()).toEqual(100)
+
+  it 'has a visible width based on the passed-in options', ->
+    expect(minimap.getVisibleWidth()).toEqual(0)
+
+    editor.setText(smallSample)
+    expect(minimap.getVisibleWidth()).toEqual(36)
+
+    editor.setText(largeSample)
+    expect(minimap.getVisibleWidth()).toEqual(editor.getMaxScreenLineLength() * 2)
+
+    minimap.width = 50
+    expect(minimap.getVisibleWidth()).toEqual(50)
+
+  it 'measures the available minimap scroll', ->
+    editor.setText(largeSample)
+    largeLineCount = editor.getScreenLineCount()
+
+    expect(minimap.getMaxScrollTop()).toEqual(0)
+    expect(minimap.canScroll()).toBeFalsy()
+
+    minimap.height = 100
+
+    expect(minimap.getMaxScrollTop()).toEqual(largeLineCount * 5 - 100)
+    expect(minimap.canScroll()).toBeTruthy()
+
+  it 'computes the first visible row in the minimap', ->
+    expect(minimap.getFirstVisibleScreenRow()).toEqual(0)
+
+  it 'computes the last visible row in the minimap', ->
+    editor.setText(largeSample)
+
+    expect(minimap.getLastVisibleScreenRow()).toEqual(editor.getScreenLineCount())
+
+    minimap.height = 100
+    expect(minimap.getLastVisibleScreenRow()).toEqual(20)
+
+  it 'does not relay scroll top events from the editor', ->
+    editor.setText(largeSample)
+
+    scrollSpy = jasmine.createSpy('didScroll')
+    minimap.onDidChangeScrollTop(scrollSpy)
+
+    editorElement.setScrollTop(100)
+
+    expect(scrollSpy).not.toHaveBeenCalled()
+
+  it 'does not relay scroll left events from the editor', ->
+    editor.setText(largeSample)
+
+    scrollSpy = jasmine.createSpy('didScroll')
+    minimap.onDidChangeScrollLeft(scrollSpy)
+
+    # Seems like text without a view aren't able to scroll horizontally
+    # even when its width was set.
+    spyOn(editorElement, 'getScrollWidth').andReturn(10000)
+
+    editorElement.setScrollLeft(100)
+
+    expect(scrollSpy).not.toHaveBeenCalled()
+
+  it 'has a scroll top that is not bound to the text editor', ->
+    scrollSpy = jasmine.createSpy('didScroll')
+    minimap.onDidChangeScrollTop(scrollSpy)
+
+    editor.setText(largeSample)
+    editorElement.setScrollTop(1000)
+
+    expect(minimap.getScrollTop()).toEqual(0)
+    expect(scrollSpy).not.toHaveBeenCalled()
+
+    minimap.setScrollTop(10)
+
+    expect(minimap.getScrollTop()).toEqual(10)
+    expect(scrollSpy).toHaveBeenCalled()
+
+  it 'has rendering properties that can overrides the config values', ->
+    minimap.setCharWidth(8.5)
+    minimap.setCharHeight(10.2)
+    minimap.setInterline(10.6)
+
+    expect(minimap.getCharWidth()).toEqual(8)
+    expect(minimap.getCharHeight()).toEqual(10)
+    expect(minimap.getInterline()).toEqual(10)
+    expect(minimap.getLineHeight()).toEqual(20)
+
+  it 'emits a config change event when a value is changed', ->
+    changeSpy = jasmine.createSpy('did-change')
+    minimap.onDidChangeConfig(changeSpy)
+
+    minimap.setCharWidth(8.5)
+    minimap.setCharHeight(10.2)
+    minimap.setInterline(10.6)
+
+    expect(changeSpy.callCount).toEqual(3)

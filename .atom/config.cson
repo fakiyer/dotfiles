@@ -8,5 +8,6 @@
   editor:
     invisibles: {}
     fontFamily: "Ricty Diminished"
+    fontSize: 13
   "one-dark-ui": {}
   react: {}
