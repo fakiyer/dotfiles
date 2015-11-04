@@ -90,3 +90,5 @@ eval "$(rbenv init -)"
 # for tmux
 DISABLE_AUTO_TITLE=true
 unsetopt share_history
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

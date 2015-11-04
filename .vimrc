@@ -253,3 +253,6 @@ endfunction
 function! MyMode()
   return winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
+
+" fzf
+set rtp+=~/.fzf
