@@ -11,3 +11,6 @@
     fontSize: 13
   "one-dark-ui": {}
   react: {}
+  linter:
+    errorPanelHeight: 100
+  "atom-beautify": {}

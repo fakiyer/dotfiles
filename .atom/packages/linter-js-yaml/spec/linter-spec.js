@@ -1,4 +1,6 @@
 'use babel';
+/* eslint-env jasmine */
+/* global waitsForPromise */
 
 describe('Js-YAML provider for Linter', () => {
   const lint = require('../lib/linter-js-yaml.js').provideLinter().lint;
@@ -11,7 +13,7 @@ describe('Js-YAML provider for Linter', () => {
     });
   });
 
-  it('bad.yaml', () => {
+  it('finds something wrong with bad.yaml', () => {
     waitsForPromise(() => {
       return atom.workspace.open(__dirname + '/files/bad.yaml').then(editor => {
         const messages = lint(editor);
@@ -19,12 +21,12 @@ describe('Js-YAML provider for Linter', () => {
         expect(messages[0].type).toEqual('Error');
         expect(messages[0].text).toEqual('end of the stream or a document separator is expected');
         expect(messages[0].filePath).toMatch(/.+bad\.yaml$/);
-        expect(messages[0].range).toEqual([[2, 4], [2, 5]]);
+        expect(messages[0].range).toEqual([[2, 4], [2, 4]]);
       });
     });
   });
 
-  it('issue-2.yaml', () => {
+  it('finds nothing wrong with issue-2.yaml.', () => {
     waitsForPromise(() => {
       return atom.workspace.open(__dirname + '/files/issue-2.yaml').then(editor => {
         const messages = lint(editor);
@@ -33,7 +35,7 @@ describe('Js-YAML provider for Linter', () => {
     });
   });
 
-  it('ssue-9.yaml', () => {
+  it('finds nothing wrong with issue-9.yaml.', () => {
     waitsForPromise(() => {
       return atom.workspace.open(__dirname + '/files/issue-9.yaml').then(editor => {
         const messages = lint(editor);
