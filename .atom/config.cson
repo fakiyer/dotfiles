@@ -13,4 +13,5 @@
   react: {}
   linter:
     errorPanelHeight: 100
-  "atom-beautify": {}
+  "atom-beautify":
+    _analyticsUserId: "2f9444de-5b05-4540-bb34-5904ba065a5f"
