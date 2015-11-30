@@ -137,7 +137,7 @@ imap <C-Space> <C-x><C-o>
 " search
 " ----------------------
 set incsearch
-" set ignorecase
+set ignorecase
 set smartcase
 set hlsearch
 set nowrapscan
