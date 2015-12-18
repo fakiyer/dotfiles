@@ -60,7 +60,6 @@ Plugin 'ruby-matchit'
 
 " Git
 Plugin 'git-commit'
-" Bundle 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -79,6 +78,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 """"""""""""""""""""""""""""""
 
+
 """"""""""""""""""""""""""""""
 " Option
 """"""""""""""""""""""""""""""
@@ -88,8 +88,6 @@ syntax enable
 " ----------------------
 " set background=dark
 " colorscheme solarized
-" colorscheme desert
-" set number " show line number
 set noshowmode " show mode
 set title " show filename
 set ruler
@@ -112,7 +110,6 @@ set autoread
 set hidden
 set showcmd
 set backspace=indent,eol,start
-set pastetoggle=<F10>
 set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
@@ -158,6 +155,9 @@ set t_vb=
 " --------------------
 let mapleader = ","
 noremap <CR> o<ESC>
+nnoremap <f2> :NERDTreeToggle<CR>
+nnoremap <F9> :set nonumber!<CR>
+set pastetoggle=<F10>
 
 " auto command
 " --------------------
@@ -181,13 +181,11 @@ let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
 let loaded_matchparen = 1
-"set number
 "hi LineNr ctermfg=DarkGray ctermbg=Black
 "hi LineNr ctermfg=DarkGray
 
 " NERD_tree.vim
 ""---------------------
-nnoremap <f2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let g:NERDTreeDirArrows=0
 let g:NERDTreeMouseMode=0
