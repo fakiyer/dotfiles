@@ -42,6 +42,7 @@ Plugin 'surround.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'vim-scripts/AnsiEsc.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 "Plugin 'bling/vim-airline'
 Plugin 'itchyny/lightline.vim'
@@ -156,6 +157,7 @@ set t_vb=
 let mapleader = ","
 noremap <CR> o<ESC>
 nnoremap <f2> :NERDTreeToggle<CR>
+nmap <silent> <F8> <Plug>IndentGuidesToggle
 nnoremap <F9> :set nonumber!<CR>
 set pastetoggle=<F10>
 
@@ -185,10 +187,14 @@ let loaded_matchparen = 1
 "hi LineNr ctermfg=DarkGray
 
 " NERD_tree.vim
-""---------------------
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let g:NERDTreeDirArrows=0
 let g:NERDTreeMouseMode=0
+
+" vim-indent-guides
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black   ctermbg=235
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgray ctermbg=236
 
 " airline
 let g:lightline = {
