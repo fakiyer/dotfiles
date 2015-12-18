@@ -87,6 +87,9 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+### docker
+eval $(docker-machine env default)
+
 ### tmux
 DISABLE_AUTO_TITLE=true
 unsetopt share_history
