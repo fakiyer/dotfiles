@@ -1,6 +1,6 @@
 {
   "name": "linter-jscs",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "main": "index.js",
   "description": "Linter plugin for JavaScript, using JSCS",
   "repository": {
@@ -12,7 +12,7 @@
     "atom": ">=1.0.0"
   },
   "dependencies": {
-    "atom-linter": "^3.0.0",
+    "atom-linter": "^4.2.0",
     "atom-package-deps": "^2.0.2",
     "jscs": "^2.0.0"
   },
@@ -26,19 +26,34 @@
       }
     }
   },
-  "readme": "JSCS Linter\n===========\n\n> JSCS — JavaScript Code Style is a code style checker. You can configure jscs for your project in detail using over 60 validation rules. See [mdevils/node-jscs](https://github.com/mdevils/node-jscs) for more informations about JSCS.\n\nThis package will lint your `.js` and `.jsx` opened filed in Atom through [jscs linter](https://github.com/mdevils/node-jscs). **It will lint on edit and/or on save**, so you'll see instantly if your code is sticking your code conventions/style.\n\n* Support `.jscs.json`, `.jscsrc` and `package.json` configurations files\n* Switch between `jscs` preset with ease.\n* Enable `esnext` for babel ES6/ES7/JSX syntax support.\n* Can autofix your file to the codestyle.\n\n(Install [React package](https://atom.io/packages/react) to have `.jsx` files syntax recognized, and possibly linted by the linter)\n\nA gif is better than everything:\n\n![linter-jscs](https://github.com/iam4x/linter-jscs/raw/master/example.gif)\n\n(you can see `linter-jscs` and `linter-jshint` working together without any problems).\n\n## Installation\n\n* `$ apm install linter-jscs`\n\n## Other available linters\n- [linter-phpcs](https://atom.io/packages/linter-phpcs) - Linter plugin for PHP, using phpcs.\n- [linter-phpmd](https://atom.io/packages/linter-phpmd) - Linter plugin for PHP, using phpmd.\n- [linter-jshint](https://atom.io/packages/linter-jshint) - Linter plugin for JavaScript, using jshint.\n- [linter-scss-lint](https://atom.io/packages/linter-scss-lint) - Sass Linter plugin for SCSS, using scss-lint.\n- [linter-coffeelint](https://atom.io/packages/linter-coffeelint) Linter plugin for CoffeeScript, using coffeelint.\n- [linter-csslint](https://atom.io/packages/linter-csslint) Linter plugin for CSS, using csslint.\n- [linter-rubocop](https://atom.io/packages/linter-rubocop) - Linter plugin for Ruby, using rubocop.\n- [linter-tslint](https://atom.io/packages/linter-tslint) Linter plugin for TypeScript, using tslint.\n",
+  "readme": "# JSCS Linter\n\n> JSCS — JavaScript Code Style is a code style checker. You can configure jscs\n>for your project in detail using over 60 validation rules. See\n>[mdevils/node-jscs](https://github.com/mdevils/node-jscs) for more\n>information about JSCS.\n\nThis package will lint your `.js` and `.jsx` opened filed in Atom through\n[jscs linter](https://github.com/mdevils/node-jscs).\n**It will lint on edit and/or on save**, so you'll see instantly if your code\nis following your code conventions/style.\n\n*   Support `.jscs.json`, `.jscsrc` and `package.json` configurations files\n*   Switch between `jscs` presets with ease.\n*   Enable `esnext` for babel ES6/ES7/JSX syntax support.\n*   Can autofix your file to the codestyle.\n\n(Install [React package](https://atom.io/packages/react) to have `.jsx` files\nsyntax recognized, and possibly linted by the linter)\n\nA gif is better than everything:\n\n![linter-jscs](https://github.com/iam4x/linter-jscs/raw/master/example.gif)\n\n(you can see `linter-jscs` and `linter-jshint` working together without any\nproblems).\n\n## Installation\n\n```ShellSession\napm install linter-jscs\n```\n",
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/AtomLinter/linter-jscs/issues"
   },
   "homepage": "https://github.com/AtomLinter/linter-jscs#readme",
-  "_id": "linter-jscs@3.2.0",
-  "_shasum": "f199bd162cef9a4a842f7a743ceebef9222a7e41",
-  "_resolved": "file:../d-115106-30209-1mfrlsu/package.tgz",
-  "_from": "../d-115106-30209-1mfrlsu/package.tgz",
+  "_id": "linter-jscs@3.2.1",
+  "_shasum": "0d983bb1ba9e5a5ec4ccbb6ad95f59c3de1b5359",
+  "_resolved": "file:../d-11604-10962-r7x2jr/package.tgz",
+  "_from": "../d-11604-10962-r7x2jr/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
+      {
+        "name": "atom-linter",
+        "version": "4.3.0",
+        "path": "node_modules/atom-linter/lib/helpers.js"
+      },
+      {
+        "name": "consistent-path",
+        "version": "1.0.1",
+        "path": "node_modules/atom-linter/node_modules/consistent-path/lib/index.js"
+      },
+      {
+        "name": "shell-path",
+        "version": "1.0.4",
+        "path": "node_modules/atom-linter/node_modules/consistent-path/node_modules/shell-path/index.js"
+      },
       {
         "name": "tmp",
         "version": "0.0.28",
@@ -51,7 +66,7 @@
       },
       {
         "name": "xregexp",
-        "version": "2.0.0",
+        "version": "3.0.0",
         "path": "node_modules/atom-linter/node_modules/xregexp/xregexp-all.js"
       },
       {
@@ -61,12 +76,12 @@
       },
       {
         "name": "jscs",
-        "version": "2.5.0",
+        "version": "2.7.0",
         "path": "node_modules/jscs/lib/checker.js"
       },
       {
         "name": "babel-core",
-        "version": "5.8.33",
+        "version": "5.8.34",
         "path": "node_modules/jscs/node_modules/babel-core/index.js"
       },
       {
@@ -151,7 +166,7 @@
       },
       {
         "name": "babylon",
-        "version": "5.8.29",
+        "version": "5.8.34",
         "path": "node_modules/jscs/node_modules/babel-core/node_modules/babylon/lib/index.js"
       },
       {
@@ -161,12 +176,12 @@
       },
       {
         "name": "convert-source-map",
-        "version": "1.1.1",
+        "version": "1.1.3",
         "path": "node_modules/jscs/node_modules/babel-core/node_modules/convert-source-map/index.js"
       },
       {
         "name": "core-js",
-        "version": "1.2.5",
+        "version": "1.2.6",
         "path": "node_modules/jscs/node_modules/babel-core/node_modules/core-js/index.js"
       },
       {
@@ -266,12 +281,12 @@
       },
       {
         "name": "brace-expansion",
-        "version": "1.1.1",
+        "version": "1.1.2",
         "path": "node_modules/jscs/node_modules/babel-core/node_modules/minimatch/node_modules/brace-expansion/index.js"
       },
       {
         "name": "balanced-match",
-        "version": "0.2.1",
+        "version": "0.3.0",
         "path": "node_modules/jscs/node_modules/babel-core/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js"
       },
       {
@@ -446,7 +461,7 @@
       },
       {
         "name": "is-buffer",
-        "version": "1.1.0",
+        "version": "1.1.1",
         "path": "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/align-text/node_modules/kind-of/node_modules/is-buffer/index.js"
       },
       {
@@ -461,7 +476,7 @@
       },
       {
         "name": "lazy-cache",
-        "version": "0.2.4",
+        "version": "0.2.7",
         "path": "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/cliui/node_modules/center-align/node_modules/lazy-cache/index.js"
       },
       {
@@ -481,7 +496,7 @@
       },
       {
         "name": "is-buffer",
-        "version": "1.1.0",
+        "version": "1.1.1",
         "path": "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/cliui/node_modules/right-align/node_modules/align-text/node_modules/kind-of/node_modules/is-buffer/index.js"
       },
       {
@@ -501,8 +516,13 @@
       },
       {
         "name": "decamelize",
-        "version": "1.1.1",
+        "version": "1.1.2",
         "path": "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/decamelize/index.js"
+      },
+      {
+        "name": "escape-string-regexp",
+        "version": "1.0.4",
+        "path": "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/decamelize/node_modules/escape-string-regexp/index.js"
       },
       {
         "name": "os-locale",
@@ -521,7 +541,7 @@
       },
       {
         "name": "window-size",
-        "version": "0.1.2",
+        "version": "0.1.4",
         "path": "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/window-size/index.js"
       },
       {
@@ -556,7 +576,7 @@
       },
       {
         "name": "recast",
-        "version": "0.10.37",
+        "version": "0.10.39",
         "path": "node_modules/jscs/node_modules/babel-core/node_modules/regexpu/node_modules/recast/main.js"
       },
       {
@@ -721,7 +741,7 @@
       },
       {
         "name": "escape-string-regexp",
-        "version": "1.0.3",
+        "version": "1.0.4",
         "path": "node_modules/jscs/node_modules/chalk/node_modules/escape-string-regexp/index.js"
       },
       {
@@ -771,12 +791,12 @@
       },
       {
         "name": "escope",
-        "version": "3.2.0",
+        "version": "3.3.0",
         "path": "node_modules/jscs/node_modules/escope/lib/index.js"
       },
       {
         "name": "es6-map",
-        "version": "0.1.2",
+        "version": "0.1.3",
         "path": "node_modules/jscs/node_modules/escope/node_modules/es6-map/index.js"
       },
       {
@@ -786,7 +806,7 @@
       },
       {
         "name": "es5-ext",
-        "version": "0.10.8",
+        "version": "0.10.11",
         "path": "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/es5-ext/index.js"
       },
       {
@@ -796,12 +816,12 @@
       },
       {
         "name": "es6-set",
-        "version": "0.1.2",
+        "version": "0.1.3",
         "path": "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/es6-set/index.js"
       },
       {
         "name": "es6-symbol",
-        "version": "3.0.1",
+        "version": "3.0.2",
         "path": "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/es6-symbol/index.js"
       },
       {
@@ -811,7 +831,7 @@
       },
       {
         "name": "es6-weak-map",
-        "version": "0.1.4",
+        "version": "2.0.1",
         "path": "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/index.js"
       },
       {
@@ -821,27 +841,17 @@
       },
       {
         "name": "es5-ext",
-        "version": "0.10.8",
+        "version": "0.10.11",
         "path": "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/index.js"
       },
       {
         "name": "es6-iterator",
         "version": "2.0.0",
-        "path": "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-iterator/index.js"
-      },
-      {
-        "name": "es6-symbol",
-        "version": "3.0.1",
-        "path": "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/index.js"
-      },
-      {
-        "name": "es6-iterator",
-        "version": "0.1.3",
         "path": "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es6-iterator/index.js"
       },
       {
         "name": "es6-symbol",
-        "version": "2.0.1",
+        "version": "3.0.2",
         "path": "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es6-symbol/index.js"
       },
       {
@@ -852,11 +862,11 @@
       {
         "name": "estraverse",
         "version": "3.1.0",
-        "path": "node_modules/jscs/node_modules/escope/node_modules/estraverse/estraverse.js"
+        "path": "node_modules/jscs/node_modules/escope/node_modules/esrecurse/node_modules/estraverse/estraverse.js"
       },
       {
         "name": "esprima",
-        "version": "2.7.0",
+        "version": "2.7.1",
         "path": "node_modules/jscs/node_modules/esprima/esprima.js"
       },
       {
@@ -891,7 +901,7 @@
       },
       {
         "name": "once",
-        "version": "1.3.2",
+        "version": "1.3.3",
         "path": "node_modules/jscs/node_modules/glob/node_modules/once/once.js"
       },
       {
@@ -951,7 +961,7 @@
       },
       {
         "name": "core-util-is",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "path": "node_modules/jscs/node_modules/htmlparser2/node_modules/readable-stream/node_modules/core-util-is/lib/util.js"
       },
       {
@@ -971,7 +981,7 @@
       },
       {
         "name": "js-yaml",
-        "version": "3.4.3",
+        "version": "3.4.6",
         "path": "node_modules/jscs/node_modules/js-yaml/index.js"
       },
       {
@@ -985,14 +995,54 @@
         "path": "node_modules/jscs/node_modules/js-yaml/node_modules/argparse/node_modules/sprintf-js/src/sprintf.js"
       },
       {
+        "name": "inherit",
+        "version": "2.2.2",
+        "path": "node_modules/jscs/node_modules/js-yaml/node_modules/inherit/index.js"
+      },
+      {
         "name": "jscs-jsdoc",
-        "version": "1.2.0",
+        "version": "1.3.1",
         "path": "node_modules/jscs/node_modules/jscs-jsdoc/lib/index.js"
       },
       {
         "name": "comment-parser",
-        "version": "0.3.0",
+        "version": "0.3.1",
         "path": "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/index.js"
+      },
+      {
+        "name": "readable-stream",
+        "version": "2.0.5",
+        "path": "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/readable.js"
+      },
+      {
+        "name": "core-util-is",
+        "version": "1.0.2",
+        "path": "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/core-util-is/lib/util.js"
+      },
+      {
+        "name": "inherits",
+        "version": "2.0.1",
+        "path": "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/inherits/inherits.js"
+      },
+      {
+        "name": "isarray",
+        "version": "0.0.1",
+        "path": "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/isarray/index.js"
+      },
+      {
+        "name": "process-nextick-args",
+        "version": "1.0.6",
+        "path": "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/process-nextick-args/index.js"
+      },
+      {
+        "name": "string_decoder",
+        "version": "0.10.31",
+        "path": "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/string_decoder/index.js"
+      },
+      {
+        "name": "util-deprecate",
+        "version": "1.0.2",
+        "path": "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/util-deprecate/node.js"
       },
       {
         "name": "jsdoctypeparser",
@@ -1056,12 +1106,12 @@
       },
       {
         "name": "brace-expansion",
-        "version": "1.1.1",
+        "version": "1.1.2",
         "path": "node_modules/jscs/node_modules/minimatch/node_modules/brace-expansion/index.js"
       },
       {
         "name": "balanced-match",
-        "version": "0.2.1",
+        "version": "0.3.0",
         "path": "node_modules/jscs/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js"
       },
       {
@@ -1141,8 +1191,43 @@
       },
       {
         "name": "rimraf",
-        "version": "2.4.3",
+        "version": "2.5.0",
         "path": "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/rimraf.js"
+      },
+      {
+        "name": "glob",
+        "version": "6.0.3",
+        "path": "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/glob.js"
+      },
+      {
+        "name": "inflight",
+        "version": "1.0.4",
+        "path": "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight/inflight.js"
+      },
+      {
+        "name": "wrappy",
+        "version": "1.0.1",
+        "path": "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/wrappy.js"
+      },
+      {
+        "name": "inherits",
+        "version": "2.0.1",
+        "path": "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inherits/inherits.js"
+      },
+      {
+        "name": "once",
+        "version": "1.3.3",
+        "path": "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/once/once.js"
+      },
+      {
+        "name": "wrappy",
+        "version": "1.0.1",
+        "path": "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/wrappy.js"
+      },
+      {
+        "name": "path-is-absolute",
+        "version": "1.0.0",
+        "path": "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/path-is-absolute/index.js"
       },
       {
         "name": "winston",
@@ -1196,7 +1281,7 @@
       },
       {
         "name": "is-utf8",
-        "version": "0.2.0",
+        "version": "0.2.1",
         "path": "node_modules/jscs/node_modules/strip-bom/node_modules/is-utf8/is-utf8.js"
       },
       {
@@ -1216,7 +1301,7 @@
       },
       {
         "name": "vow",
-        "version": "0.4.11",
+        "version": "0.4.12",
         "path": "node_modules/jscs/node_modules/vow/lib/vow.js"
       },
       {
@@ -1251,12 +1336,12 @@
       },
       {
         "name": "brace-expansion",
-        "version": "1.1.1",
+        "version": "1.1.2",
         "path": "node_modules/jscs/node_modules/vow-fs/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/index.js"
       },
       {
         "name": "balanced-match",
-        "version": "0.2.1",
+        "version": "0.3.0",
         "path": "node_modules/jscs/node_modules/vow-fs/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js"
       },
       {
@@ -1266,7 +1351,7 @@
       },
       {
         "name": "once",
-        "version": "1.3.2",
+        "version": "1.3.3",
         "path": "node_modules/jscs/node_modules/vow-fs/node_modules/glob/node_modules/once/once.js"
       },
       {
@@ -1276,7 +1361,7 @@
       },
       {
         "name": "node-uuid",
-        "version": "1.4.3",
+        "version": "1.4.7",
         "path": "node_modules/jscs/node_modules/vow-fs/node_modules/node-uuid/uuid.js"
       },
       {
@@ -1293,6 +1378,10 @@
     "extensions": {
       ".js": [
         "index.js",
+        "node_modules/atom-linter/lib/helpers.js",
+        "node_modules/atom-linter/node_modules/consistent-path/lib/index.js",
+        "node_modules/atom-linter/node_modules/consistent-path/node_modules/shell-path/index.js",
+        "node_modules/atom-linter/node_modules/consistent-path/src/index.js",
         "node_modules/atom-linter/node_modules/tmp/Gruntfile.js",
         "node_modules/atom-linter/node_modules/tmp/lib/tmp.js",
         "node_modules/atom-linter/node_modules/tmp/node_modules/os-tmpdir/index.js",
@@ -1379,6 +1468,7 @@
         "node_modules/jscs/lib/rules/disallow-spaces-in-function-declaration.js",
         "node_modules/jscs/lib/rules/disallow-spaces-in-function-expression.js",
         "node_modules/jscs/lib/rules/disallow-spaces-in-function.js",
+        "node_modules/jscs/lib/rules/disallow-spaces-in-generator.js",
         "node_modules/jscs/lib/rules/disallow-spaces-in-named-function-expression.js",
         "node_modules/jscs/lib/rules/disallow-spaces-inside-array-brackets.js",
         "node_modules/jscs/lib/rules/disallow-spaces-inside-brackets.js",
@@ -1389,6 +1479,7 @@
         "node_modules/jscs/lib/rules/disallow-trailing-comma.js",
         "node_modules/jscs/lib/rules/disallow-trailing-whitespace.js",
         "node_modules/jscs/lib/rules/disallow-unused-params.js",
+        "node_modules/jscs/lib/rules/disallow-var.js",
         "node_modules/jscs/lib/rules/disallow-yoda-conditions.js",
         "node_modules/jscs/lib/rules/jsdoc.js",
         "node_modules/jscs/lib/rules/maximum-line-length.js",
@@ -1396,6 +1487,7 @@
         "node_modules/jscs/lib/rules/require-aligned-multiline-params.js",
         "node_modules/jscs/lib/rules/require-aligned-object-values.js",
         "node_modules/jscs/lib/rules/require-anonymous-functions.js",
+        "node_modules/jscs/lib/rules/require-array-destructuring.js",
         "node_modules/jscs/lib/rules/require-arrow-functions.js",
         "node_modules/jscs/lib/rules/require-blocks-on-newline.js",
         "node_modules/jscs/lib/rules/require-camelcase-or-uppercase-identifiers.js",
@@ -1405,6 +1497,8 @@
         "node_modules/jscs/lib/rules/require-curly-braces.js",
         "node_modules/jscs/lib/rules/require-dollar-before-jquery-assignment.js",
         "node_modules/jscs/lib/rules/require-dot-notation.js",
+        "node_modules/jscs/lib/rules/require-early-return.js",
+        "node_modules/jscs/lib/rules/require-enhanced-object-literals.js",
         "node_modules/jscs/lib/rules/require-function-declarations.js",
         "node_modules/jscs/lib/rules/require-keywords-on-new-line.js",
         "node_modules/jscs/lib/rules/require-line-break-after-variable-assignment.js",
@@ -1415,6 +1509,7 @@
         "node_modules/jscs/lib/rules/require-named-unassigned-functions.js",
         "node_modules/jscs/lib/rules/require-newline-before-block-statements.js",
         "node_modules/jscs/lib/rules/require-numeric-literals.js",
+        "node_modules/jscs/lib/rules/require-object-destructuring.js",
         "node_modules/jscs/lib/rules/require-object-keys-on-new-line.js",
         "node_modules/jscs/lib/rules/require-operator-before-line-break.js",
         "node_modules/jscs/lib/rules/require-padding-newline-after-variable-declaration.js",
@@ -1443,7 +1538,6 @@
         "node_modules/jscs/lib/rules/require-space-before-object-values.js",
         "node_modules/jscs/lib/rules/require-space-before-postfix-unary-operators.js",
         "node_modules/jscs/lib/rules/require-space-between-arguments.js",
-        "node_modules/jscs/lib/rules/require-spaces-around-generators.js",
         "node_modules/jscs/lib/rules/require-spaces-in-anonymous-function-expression.js",
         "node_modules/jscs/lib/rules/require-spaces-in-call-expression.js",
         "node_modules/jscs/lib/rules/require-spaces-in-conditional-expression.js",
@@ -1451,6 +1545,7 @@
         "node_modules/jscs/lib/rules/require-spaces-in-function-declaration.js",
         "node_modules/jscs/lib/rules/require-spaces-in-function-expression.js",
         "node_modules/jscs/lib/rules/require-spaces-in-function.js",
+        "node_modules/jscs/lib/rules/require-spaces-in-generator.js",
         "node_modules/jscs/lib/rules/require-spaces-in-named-function-expression.js",
         "node_modules/jscs/lib/rules/require-spaces-inside-array-brackets.js",
         "node_modules/jscs/lib/rules/require-spaces-inside-brackets.js",
@@ -2143,11 +2238,11 @@
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.collection.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.core.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.ctx.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.def.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.defined.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.descriptors.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.dom-create.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.enum-keys.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.export.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.fails-is-regexp.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.fails.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.fix-re-wks.js",
@@ -2178,7 +2273,6 @@
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.math-log1p.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.math-sign.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.microtask.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.mix.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.object-assign.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.object-define.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.object-sap.js",
@@ -2187,7 +2281,8 @@
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.partial.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.path.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.property-desc.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.redef.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.redefine-all.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.redefine.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.replacer.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.same-value.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.set-proto.js",
@@ -2209,6 +2304,7 @@
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.to-object.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.to-primitive.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.typed-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.typed.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.uid.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/$.wks.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/core.delay.js",
@@ -2234,6 +2330,7 @@
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.array.iterator.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.array.of.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.array.species.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.date.to-string.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.function.has-instance.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.function.name.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.map.js",
@@ -2310,17 +2407,17 @@
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.string.starts-with.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.string.trim.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.symbol.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed-arrays.array-buffer.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed-arrays.data-view.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed-arrays.float32-array.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed-arrays.float64-array.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed-arrays.int16-array.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed-arrays.int32-array.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed-arrays.int8-array.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed-arrays.uint16-array.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed-arrays.uint32-array.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed-arrays.uint8-array.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed-arrays.uint8-clamped-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed.array-buffer.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed.data-view.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed.float32-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed.float64-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed.int16-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed.int32-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed.int8-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed.uint16-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed.uint32-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed.uint8-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.typed.uint8-clamped-array.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.weak-map.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es6.weak-set.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/library/modules/es7.array.includes.js",
@@ -2361,11 +2458,11 @@
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.collection.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.core.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.ctx.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.def.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.defined.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.descriptors.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.dom-create.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.enum-keys.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.export.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.fails-is-regexp.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.fails.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.fix-re-wks.js",
@@ -2396,7 +2493,6 @@
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.math-log1p.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.math-sign.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.microtask.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.mix.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.object-assign.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.object-define.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.object-sap.js",
@@ -2405,7 +2501,8 @@
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.partial.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.path.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.property-desc.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.redef.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.redefine-all.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.redefine.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.replacer.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.same-value.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.set-proto.js",
@@ -2427,6 +2524,7 @@
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.to-object.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.to-primitive.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.typed-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.typed.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.uid.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/$.wks.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/core.delay.js",
@@ -2452,6 +2550,7 @@
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.array.iterator.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.array.of.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.array.species.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.date.to-string.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.function.has-instance.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.function.name.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.map.js",
@@ -2528,17 +2627,17 @@
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.string.starts-with.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.string.trim.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.symbol.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed-arrays.array-buffer.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed-arrays.data-view.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed-arrays.float32-array.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed-arrays.float64-array.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed-arrays.int16-array.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed-arrays.int32-array.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed-arrays.int8-array.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed-arrays.uint16-array.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed-arrays.uint32-array.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed-arrays.uint8-array.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed-arrays.uint8-clamped-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed.array-buffer.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed.data-view.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed.float32-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed.float64-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed.int16-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed.int32-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed.int8-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed.uint16-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed.uint32-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed.uint8-array.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.typed.uint8-clamped-array.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.weak-map.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es6.weak-set.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/es7.array.includes.js",
@@ -2556,11 +2655,12 @@
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/js.array.statics.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/library/$.add-to-unscopables.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/library/$.collection.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/library/$.def.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/library/$.export.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/library/$.library.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/library/$.path.js",
-        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/library/$.redef.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/library/$.redefine.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/library/$.set-species.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/library/es6.date.to-string.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/library/es6.function.name.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/library/es6.number.constructor.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/core-js/modules/library/es6.object.to-string.js",
@@ -2759,6 +2859,7 @@
         "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/cliui/node_modules/wordwrap/example/meat.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/cliui/node_modules/wordwrap/index.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/decamelize/index.js",
+        "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/decamelize/node_modules/escape-string-regexp/index.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/os-locale/index.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/os-locale/node_modules/lcid/index.js",
         "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/os-locale/node_modules/lcid/node_modules/invert-kv/index.js",
@@ -2941,6 +3042,7 @@
         "node_modules/jscs/node_modules/escope/gulpfile.js",
         "node_modules/jscs/node_modules/escope/lib/definition.js",
         "node_modules/jscs/node_modules/escope/lib/index.js",
+        "node_modules/jscs/node_modules/escope/lib/pattern-visitor.js",
         "node_modules/jscs/node_modules/escope/lib/reference.js",
         "node_modules/jscs/node_modules/escope/lib/referencer.js",
         "node_modules/jscs/node_modules/escope/lib/scope-manager.js",
@@ -3210,6 +3312,8 @@
         "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/es5-ext/object/copy.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/es5-ext/object/count.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/es5-ext/object/create.js",
+        "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/es5-ext/object/ensure-natural-number-value.js",
+        "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/es5-ext/object/ensure-natural-number.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/es5-ext/object/eq.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/es5-ext/object/every.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/es5-ext/object/filter.js",
@@ -3225,6 +3329,7 @@
         "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/es5-ext/object/is-copy-deep.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/es5-ext/object/is-copy.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/es5-ext/object/is-empty.js",
+        "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/es5-ext/object/is-number-value.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/es5-ext/object/is-object.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/es5-ext/object/is-plain-object.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/es5-ext/object/is.js",
@@ -3593,21 +3698,6 @@
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/math/trunc/index.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/math/trunc/is-implemented.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/math/trunc/shim.js",
-        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-iterator/#/chain.js",
-        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-iterator/array.js",
-        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-iterator/for-of.js",
-        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-iterator/get.js",
-        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-iterator/index.js",
-        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-iterator/is-iterable.js",
-        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-iterator/string.js",
-        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-iterator/valid-iterable.js",
-        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/implement.js",
-        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/index.js",
-        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/is-implemented.js",
-        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/is-native-implemented.js",
-        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/is-symbol.js",
-        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/polyfill.js",
-        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/validate-symbol.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/number/#/index.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/number/#/pad.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/number/epsilon/implement.js",
@@ -3653,6 +3743,8 @@
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/object/copy.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/object/count.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/object/create.js",
+        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/object/ensure-natural-number-value.js",
+        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/object/ensure-natural-number.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/object/eq.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/object/every.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/object/filter.js",
@@ -3668,6 +3760,7 @@
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/object/is-copy-deep.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/object/is-copy.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/object/is-empty.js",
+        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/object/is-number-value.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/object/is-object.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/object/is-plain-object.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/object/is.js",
@@ -3796,10 +3889,11 @@
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/polyfill.js",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/valid-weak-map.js",
         "node_modules/jscs/node_modules/escope/node_modules/esrecurse/esrecurse.js",
-        "node_modules/jscs/node_modules/escope/node_modules/estraverse/estraverse.js",
-        "node_modules/jscs/node_modules/escope/node_modules/estraverse/gulpfile.js",
+        "node_modules/jscs/node_modules/escope/node_modules/esrecurse/node_modules/estraverse/estraverse.js",
+        "node_modules/jscs/node_modules/escope/node_modules/esrecurse/node_modules/estraverse/gulpfile.js",
         "node_modules/jscs/node_modules/escope/src/definition.js",
         "node_modules/jscs/node_modules/escope/src/index.js",
+        "node_modules/jscs/node_modules/escope/src/pattern-visitor.js",
         "node_modules/jscs/node_modules/escope/src/reference.js",
         "node_modules/jscs/node_modules/escope/src/referencer.js",
         "node_modules/jscs/node_modules/escope/src/scope-manager.js",
@@ -3861,7 +3955,7 @@
         "node_modules/jscs/node_modules/htmlparser2/node_modules/readable-stream/lib/_stream_transform.js",
         "node_modules/jscs/node_modules/htmlparser2/node_modules/readable-stream/lib/_stream_writable.js",
         "node_modules/jscs/node_modules/htmlparser2/node_modules/readable-stream/node_modules/core-util-is/lib/util.js",
-        "node_modules/jscs/node_modules/htmlparser2/node_modules/readable-stream/node_modules/core-util-is/util.js",
+        "node_modules/jscs/node_modules/htmlparser2/node_modules/readable-stream/node_modules/core-util-is/test.js",
         "node_modules/jscs/node_modules/htmlparser2/node_modules/readable-stream/node_modules/inherits/inherits.js",
         "node_modules/jscs/node_modules/htmlparser2/node_modules/readable-stream/node_modules/inherits/inherits_browser.js",
         "node_modules/jscs/node_modules/htmlparser2/node_modules/readable-stream/node_modules/inherits/test.js",
@@ -3942,6 +4036,8 @@
         "node_modules/jscs/node_modules/js-yaml/node_modules/argparse/node_modules/sprintf-js/gruntfile.js",
         "node_modules/jscs/node_modules/js-yaml/node_modules/argparse/node_modules/sprintf-js/src/angular-sprintf.js",
         "node_modules/jscs/node_modules/js-yaml/node_modules/argparse/node_modules/sprintf-js/src/sprintf.js",
+        "node_modules/jscs/node_modules/js-yaml/node_modules/inherit/index.js",
+        "node_modules/jscs/node_modules/js-yaml/node_modules/inherit/lib/inherit.js",
         "node_modules/jscs/node_modules/jscs-jsdoc/lib/esprima-helpers.js",
         "node_modules/jscs/node_modules/jscs-jsdoc/lib/index.js",
         "node_modules/jscs/node_modules/jscs-jsdoc/lib/jsdoc.js",
@@ -3967,6 +4063,29 @@
         "node_modules/jscs/node_modules/jscs-jsdoc/lib/rules/validate-jsdoc.js",
         "node_modules/jscs/node_modules/jscs-jsdoc/lib/tags/index.js",
         "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/index.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/duplex.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/lib/_stream_duplex.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/lib/_stream_passthrough.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/lib/_stream_readable.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/lib/_stream_transform.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/lib/_stream_writable.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/core-util-is/lib/util.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/core-util-is/test.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/inherits/inherits.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/inherits/inherits_browser.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/inherits/test.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/isarray/build/build.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/isarray/index.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/process-nextick-args/index.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/process-nextick-args/test.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/string_decoder/index.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/util-deprecate/browser.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/util-deprecate/node.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/passthrough.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/readable.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/transform.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/writable.js",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/parser.js",
         "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/jsdoctypeparser/benchmark/benchmark_TypeBuilder.js",
         "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/jsdoctypeparser/benchmark/benchmark_TypeLexer.js",
         "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/jsdoctypeparser/gulpfile.js",
@@ -4525,6 +4644,18 @@
         "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/mkdirp/node_modules/minimist/index.js",
         "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/ncp/lib/ncp.js",
         "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/bin.js",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/common.js",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/glob.js",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight/inflight.js",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/wrappy.js",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight/test.js",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inherits/inherits.js",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inherits/inherits_browser.js",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inherits/test.js",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/wrappy.js",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/once/once.js",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/path-is-absolute/index.js",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/sync.js",
         "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/rimraf.js",
         "node_modules/jscs/node_modules/prompt/node_modules/winston/examples/couchdb.js",
         "node_modules/jscs/node_modules/prompt/node_modules/winston/examples/custom-levels.js",
@@ -4571,7 +4702,6 @@
         "node_modules/jscs/node_modules/resolve/lib/sync.js",
         "node_modules/jscs/node_modules/strip-bom/index.js",
         "node_modules/jscs/node_modules/strip-bom/node_modules/is-utf8/is-utf8.js",
-        "node_modules/jscs/node_modules/strip-bom/node_modules/is-utf8/test.js",
         "node_modules/jscs/node_modules/strip-json-comments/cli.js",
         "node_modules/jscs/node_modules/strip-json-comments/strip-json-comments.js",
         "node_modules/jscs/node_modules/to-double-quotes/index.js",
@@ -4625,15 +4755,9 @@
         "node_modules/jscs/patterns/identifiers-ES5.js",
         "node_modules/jscs/patterns/identifiers-ES6.js"
       ],
-      ".coffee": [
-        "node_modules/atom-linter/lib/helpers.coffee",
-        "node_modules/jscs/node_modules/babel-core/node_modules/js-tokens/regex.coffee",
-        "node_modules/jscs/node_modules/babel-core/node_modules/source-map-support/amd-test/script.coffee",
-        "node_modules/jscs/node_modules/babel-core/node_modules/source-map-support/browser-test/script.coffee",
-        "node_modules/jscs/node_modules/babel-core/node_modules/source-map-support/header-test/script.coffee",
-        "node_modules/jscs/node_modules/escope/node_modules/esrecurse/gulpfile.coffee"
-      ],
       ".json": [
+        "node_modules/atom-linter/node_modules/consistent-path/node_modules/shell-path/package.json",
+        "node_modules/atom-linter/node_modules/consistent-path/package.json",
         "node_modules/atom-linter/node_modules/tmp/node_modules/os-tmpdir/package.json",
         "node_modules/atom-linter/node_modules/tmp/package.json",
         "node_modules/atom-linter/node_modules/xregexp/package.json",
@@ -4749,6 +4873,7 @@
         "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/cliui/node_modules/right-align/package.json",
         "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/cliui/node_modules/wordwrap/package.json",
         "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/cliui/package.json",
+        "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/decamelize/node_modules/escape-string-regexp/package.json",
         "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/decamelize/package.json",
         "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/os-locale/node_modules/lcid/lcid.json",
         "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/os-locale/node_modules/lcid/node_modules/invert-kv/package.json",
@@ -4819,14 +4944,12 @@
         "node_modules/jscs/node_modules/escope/node_modules/es6-map/node_modules/event-emitter/package.json",
         "node_modules/jscs/node_modules/escope/node_modules/es6-map/package.json",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/d/package.json",
-        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-iterator/package.json",
-        "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/package.json",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/package.json",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es6-iterator/package.json",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es6-symbol/package.json",
         "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/package.json",
+        "node_modules/jscs/node_modules/escope/node_modules/esrecurse/node_modules/estraverse/package.json",
         "node_modules/jscs/node_modules/escope/node_modules/esrecurse/package.json",
-        "node_modules/jscs/node_modules/escope/node_modules/estraverse/package.json",
         "node_modules/jscs/node_modules/escope/package.json",
         "node_modules/jscs/node_modules/esprima/package.json",
         "node_modules/jscs/node_modules/estraverse/package.json",
@@ -4863,10 +4986,19 @@
         "node_modules/jscs/node_modules/js-yaml/node_modules/argparse/node_modules/sprintf-js/bower.json",
         "node_modules/jscs/node_modules/js-yaml/node_modules/argparse/node_modules/sprintf-js/package.json",
         "node_modules/jscs/node_modules/js-yaml/node_modules/argparse/package.json",
+        "node_modules/jscs/node_modules/js-yaml/node_modules/inherit/package.json",
         "node_modules/jscs/node_modules/js-yaml/package.json",
         "node_modules/jscs/node_modules/jscs-jsdoc/lib/tags/closurecompiler.json",
         "node_modules/jscs/node_modules/jscs-jsdoc/lib/tags/jsdoc3.json",
         "node_modules/jscs/node_modules/jscs-jsdoc/lib/tags/jsduck5.json",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/core-util-is/package.json",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/inherits/package.json",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/isarray/component.json",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/isarray/package.json",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/process-nextick-args/package.json",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/string_decoder/package.json",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/node_modules/util-deprecate/package.json",
+        "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/package.json",
         "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/package.json",
         "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/jsdoctypeparser/package.json",
         "node_modules/jscs/node_modules/jscs-jsdoc/package.json",
@@ -4915,6 +5047,13 @@
         "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/mkdirp/node_modules/minimist/package.json",
         "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/mkdirp/package.json",
         "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/ncp/package.json",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/package.json",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight/package.json",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inherits/package.json",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/package.json",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/once/package.json",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/path-is-absolute/package.json",
+        "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/package.json",
         "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/package.json",
         "node_modules/jscs/node_modules/prompt/node_modules/utile/package.json",
         "node_modules/jscs/node_modules/prompt/node_modules/winston/node_modules/async/component.json",
@@ -4965,6 +5104,13 @@
         "node_modules/jscs/presets/wordpress.json",
         "node_modules/jscs/presets/yandex.json",
         "package.json"
+      ],
+      ".coffee": [
+        "node_modules/jscs/node_modules/babel-core/node_modules/js-tokens/regex.coffee",
+        "node_modules/jscs/node_modules/babel-core/node_modules/source-map-support/amd-test/script.coffee",
+        "node_modules/jscs/node_modules/babel-core/node_modules/source-map-support/browser-test/script.coffee",
+        "node_modules/jscs/node_modules/babel-core/node_modules/source-map-support/header-test/script.coffee",
+        "node_modules/jscs/node_modules/escope/node_modules/esrecurse/gulpfile.coffee"
       ]
     },
     "folders": [
@@ -4973,7 +5119,7 @@
           ""
         ],
         "dependencies": {
-          "atom-linter": "^3.0.0",
+          "atom-linter": "^4.2.0",
           "atom-package-deps": "^2.0.2",
           "jscs": "^2.0.0"
         }
@@ -4981,12 +5127,21 @@
       {
         "paths": [
           "node_modules/atom-linter/lib",
-          "node_modules/atom-linter",
-          "node_modules/atom-linter/spec/fixtures",
-          "node_modules/atom-linter/spec"
+          "node_modules/atom-linter"
         ],
         "dependencies": {
-          "xregexp": "^2.0.0"
+          "xregexp": "^3.0.0",
+          "consistent-path": "^1.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/atom-linter/node_modules/consistent-path/lib",
+          "node_modules/atom-linter/node_modules/consistent-path",
+          "node_modules/atom-linter/node_modules/consistent-path/src"
+        ],
+        "dependencies": {
+          "shell-path": "^1.0.4"
         }
       },
       {
@@ -5023,7 +5178,7 @@
           "glob": "^5.0.1",
           "htmlparser2": "3.8.3",
           "js-yaml": "~3.4.0",
-          "jscs-jsdoc": "1.2.0",
+          "jscs-jsdoc": "^1.3.1",
           "jscs-preset-wikimedia": "~1.0.0",
           "jsonlint": "~1.6.2",
           "lodash": "~3.10.0",
@@ -5096,7 +5251,7 @@
           "babel-plugin-runtime": "^1.0.7",
           "babel-plugin-undeclared-variables-check": "^1.0.2",
           "babel-plugin-undefined-to-void": "^1.1.6",
-          "babylon": "^5.8.29",
+          "babylon": "^5.8.34",
           "bluebird": "^2.9.33",
           "chalk": "^1.0.0",
           "convert-source-map": "^1.1.0",
@@ -5213,7 +5368,7 @@
           "node_modules/jscs/node_modules/babel-core/node_modules/minimatch/node_modules/brace-expansion"
         ],
         "dependencies": {
-          "balanced-match": "^0.2.0",
+          "balanced-match": "^0.3.0",
           "concat-map": "0.0.1"
         }
       },
@@ -5401,6 +5556,14 @@
         ],
         "dependencies": {
           "is-buffer": "^1.0.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/jscs/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/yargs/node_modules/decamelize"
+        ],
+        "dependencies": {
+          "escape-string-regexp": "^1.0.4"
         }
       },
       {
@@ -5605,10 +5768,10 @@
           "node_modules/jscs/node_modules/escope/third_party"
         ],
         "dependencies": {
-          "es6-map": "^0.1.1",
-          "es6-weak-map": "^0.1.2",
+          "es6-map": "^0.1.2",
+          "es6-weak-map": "^2.0.1",
           "esrecurse": "^3.1.1",
-          "estraverse": "^3.1.0"
+          "estraverse": "^4.1.1"
         }
       },
       {
@@ -5624,8 +5787,8 @@
           "d": "~0.1.1",
           "es5-ext": "~0.10.8",
           "es6-iterator": "2",
-          "es6-set": "~0.1.2",
-          "es6-symbol": "3",
+          "es6-set": "~0.1.3",
+          "es6-symbol": "~3.0.1",
           "event-emitter": "~0.3.4"
         }
       },
@@ -5795,7 +5958,7 @@
         ],
         "dependencies": {
           "es6-iterator": "2",
-          "es6-symbol": "3"
+          "es6-symbol": "~3.0.2"
         }
       },
       {
@@ -5837,7 +6000,7 @@
         ],
         "dependencies": {
           "d": "~0.1.1",
-          "es5-ext": "~0.10.8"
+          "es5-ext": "~0.10.10"
         }
       },
       {
@@ -5857,10 +6020,10 @@
           "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/test"
         ],
         "dependencies": {
-          "d": "~0.1.1",
-          "es5-ext": "~0.10.6",
-          "es6-iterator": "~0.1.3",
-          "es6-symbol": "~2.0.1"
+          "d": "^0.1.1",
+          "es5-ext": "^0.10.8",
+          "es6-iterator": "2",
+          "es6-symbol": "3"
         }
       },
       {
@@ -6029,30 +6192,7 @@
         ],
         "dependencies": {
           "es6-iterator": "2",
-          "es6-symbol": "3"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-iterator/#",
-          "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-iterator",
-          "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-iterator/test/#",
-          "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-iterator/test"
-        ],
-        "dependencies": {
-          "d": "^0.1.1",
-          "es5-ext": "^0.10.7",
-          "es6-symbol": "3"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol",
-          "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/test"
-        ],
-        "dependencies": {
-          "d": "~0.1.1",
-          "es5-ext": "~0.10.8"
+          "es6-symbol": "~3.0.2"
         }
       },
       {
@@ -6063,9 +6203,9 @@
           "node_modules/jscs/node_modules/escope/node_modules/es6-weak-map/node_modules/es6-iterator/test"
         ],
         "dependencies": {
-          "d": "~0.1.1",
-          "es5-ext": "~0.10.5",
-          "es6-symbol": "~2.0.1"
+          "d": "^0.1.1",
+          "es5-ext": "^0.10.7",
+          "es6-symbol": "3"
         }
       },
       {
@@ -6075,7 +6215,7 @@
         ],
         "dependencies": {
           "d": "~0.1.1",
-          "es5-ext": "~0.10.5"
+          "es5-ext": "~0.10.10"
         }
       },
       {
@@ -6109,8 +6249,7 @@
       },
       {
         "paths": [
-          "node_modules/jscs/node_modules/glob/node_modules/once",
-          "node_modules/jscs/node_modules/glob/node_modules/once/test"
+          "node_modules/jscs/node_modules/glob/node_modules/once"
         ],
         "dependencies": {
           "wrappy": "1"
@@ -6190,7 +6329,8 @@
         ],
         "dependencies": {
           "argparse": "^1.0.2",
-          "esprima": "^2.6.0"
+          "esprima": "^2.6.0",
+          "inherit": "^2.2.2"
         }
       },
       {
@@ -6218,8 +6358,32 @@
           "node_modules/jscs/node_modules/jscs-jsdoc"
         ],
         "dependencies": {
-          "comment-parser": "0.3.0",
+          "comment-parser": "^0.3.1",
           "jsdoctypeparser": "~1.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser",
+          "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/tests",
+          "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/tests/fixtures"
+        ],
+        "dependencies": {
+          "readable-stream": "^2.0.4"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream",
+          "node_modules/jscs/node_modules/jscs-jsdoc/node_modules/comment-parser/node_modules/readable-stream/lib"
+        ],
+        "dependencies": {
+          "core-util-is": "~1.0.0",
+          "inherits": "~2.0.1",
+          "isarray": "0.0.1",
+          "process-nextick-args": "~1.0.6",
+          "string_decoder": "~0.10.x",
+          "util-deprecate": "~1.0.1"
         }
       },
       {
@@ -6283,7 +6447,7 @@
           "node_modules/jscs/node_modules/minimatch/node_modules/brace-expansion"
         ],
         "dependencies": {
-          "balanced-match": "^0.2.0",
+          "balanced-match": "^0.3.0",
           "concat-map": "0.0.1"
         }
       },
@@ -6346,7 +6510,36 @@
           "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf"
         ],
         "dependencies": {
-          "glob": "^5.0.14"
+          "glob": "^6.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob"
+        ],
+        "dependencies": {
+          "inflight": "^1.0.4",
+          "inherits": "2",
+          "minimatch": "2 || 3",
+          "once": "^1.3.0",
+          "path-is-absolute": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/inflight"
+        ],
+        "dependencies": {
+          "once": "^1.3.0",
+          "wrappy": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/node_modules/once"
+        ],
+        "dependencies": {
+          "wrappy": "1"
         }
       },
       {
@@ -6425,14 +6618,13 @@
           "node_modules/jscs/node_modules/vow-fs/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion"
         ],
         "dependencies": {
-          "balanced-match": "^0.2.0",
+          "balanced-match": "^0.3.0",
           "concat-map": "0.0.1"
         }
       },
       {
         "paths": [
-          "node_modules/jscs/node_modules/vow-fs/node_modules/glob/node_modules/once",
-          "node_modules/jscs/node_modules/vow-fs/node_modules/glob/node_modules/once/test"
+          "node_modules/jscs/node_modules/vow-fs/node_modules/glob/node_modules/once"
         ],
         "dependencies": {
           "wrappy": "1"
