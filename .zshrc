@@ -94,7 +94,7 @@ eval $(docker-machine env default)
 DISABLE_AUTO_TITLE=true
 unsetopt share_history
 
-### fdf
+### fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # fshow - git commit browser
