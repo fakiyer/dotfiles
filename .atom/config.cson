@@ -1,18 +1,18 @@
 "*":
-  "exception-reporting":
-    userId: "c8108de1-b3b8-b018-6bc1-436050e572ef"
-  welcome:
-    showOnStartup: false
+  "atom-beautify":
+    _analyticsUserId: "2f9444de-5b05-4540-bb34-5904ba065a5f"
   core:
     audioBeep: false
   editor:
-    invisibles: {}
     fontFamily: "Ricty Diminished"
     fontSize: 13
-  "one-dark-ui": {}
-  react: {}
+    invisibles: {}
+  "exception-reporting":
+    userId: "c8108de1-b3b8-b018-6bc1-436050e572ef"
   linter:
     errorPanelHeight: 100
-  "atom-beautify":
-    _analyticsUserId: "2f9444de-5b05-4540-bb34-5904ba065a5f"
+  "one-dark-ui": {}
+  react: {}
   "remote-edit": {}
+  welcome:
+    showOnStartup: false
