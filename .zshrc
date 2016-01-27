@@ -110,7 +110,7 @@ fshow() {
 # frepo
 frepo() {
   local dir
-  dir=$(ghq list -p > /dev/null | fzf +m) &&
-    cd "$dir"
+  dir=$(ghq list > /dev/null | fzf +m) &&
+    cd $(ghq root)/$dir
 }
 
