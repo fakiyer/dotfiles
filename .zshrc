@@ -106,3 +106,11 @@ fshow() {
                 echo '{}' | grep -o '[a-f0-9]\{7\}' | head -1 |
                 xargs -I % sh -c 'git show --color=always % | less -R'"
 }
+
+# frepo
+frepo() {
+  local dir
+  dir=$(ghq list -p > /dev/null | fzf +m) &&
+    cd "$dir"
+}
+
