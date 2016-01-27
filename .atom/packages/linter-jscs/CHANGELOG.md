@@ -1,5 +1,22 @@
 # Change Log
 
+## v3.4.1
+
+- Use `rangeFromLineNumber` to highlight errors
+
+## v3.4.0
+
+Fix Incorrect Column Number on Errors
+https://github.com/AtomLinter/linter-jscs/issues/122
+
+## v3.3.1
+
+Add Tests
+
+## v3.3.0
+
+*   Skip Excluded Files ([#154](https://github.com/AtomLinter/linter-jscs/pull/154))
+
 ## v3.2.2
 
 *   Fix a race condition ([#151](https://github.com/AtomLinter/linter-jscs/pull/151))
