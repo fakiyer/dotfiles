@@ -110,7 +110,7 @@ fshow() {
 # frepo
 frepo() {
   local dir
-  dir=$(ghq list > /dev/null | fzf +m) &&
+  dir=$(ghq list > /dev/null | fzf-tmux --reverse +m) &&
     cd $(ghq root)/$dir
 }
 
