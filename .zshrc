@@ -84,11 +84,15 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 ### rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
 
 ### docker
-eval $(docker-machine env default)
+if which docker-machine > /dev/null; then
+  eval $(docker-machine env default)
+fi
 
 ### tmux
 DISABLE_AUTO_TITLE=true
@@ -113,4 +117,3 @@ frepo() {
   dir=$(ghq list > /dev/null | fzf-tmux --reverse +m) &&
     cd $(ghq root)/$dir
 }
-
