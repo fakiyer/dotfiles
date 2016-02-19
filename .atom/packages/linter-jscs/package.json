@@ -1,6 +1,6 @@
 {
   "name": "linter-jscs",
-  "version": "3.4.5",
+  "version": "3.4.6",
   "main": "src/linter-jscs",
   "description": "Linter plugin for JavaScript, using JSCS",
   "repository": {
@@ -41,17 +41,17 @@
     "url": "https://github.com/AtomLinter/linter-jscs/issues"
   },
   "homepage": "https://github.com/AtomLinter/linter-jscs#readme",
-  "_id": "linter-jscs@3.4.5",
-  "_shasum": "fa50c01d7a83f09de28f9e3fa1f5bbc38daad08a",
-  "_resolved": "file:../d-11619-10070-1469hka/package.tgz",
-  "_from": "../d-11619-10070-1469hka/package.tgz",
+  "_id": "linter-jscs@3.4.6",
+  "_shasum": "7b6440a6de4697ccd67e00fa8381f3642209483f",
+  "_resolved": "file:../d-116116-4921-z8m3za/package.tgz",
+  "_from": "../d-116116-4921-z8m3za/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
       {
         "name": "atom-linter",
-        "version": "4.4.0",
-        "path": "node_modules/atom-linter/lib/helpers.js"
+        "version": "4.5.0",
+        "path": "node_modules/atom-linter/lib/index.js"
       },
       {
         "name": "consistent-path",
@@ -77,6 +77,11 @@
         "name": "named-js-regexp",
         "version": "1.3.1",
         "path": "node_modules/atom-linter/node_modules/named-js-regexp/lib/named-js-regexp.js"
+      },
+      {
+        "name": "sb-promisify",
+        "version": "1.1.1",
+        "path": "node_modules/atom-linter/node_modules/sb-promisify/lib/index.js"
       },
       {
         "name": "tmp",
@@ -155,7 +160,7 @@
       },
       {
         "name": "jscs",
-        "version": "2.9.0",
+        "version": "2.10.1",
         "path": "node_modules/jscs/lib/checker.js"
       },
       {
@@ -365,7 +370,7 @@
       },
       {
         "name": "brace-expansion",
-        "version": "1.1.2",
+        "version": "1.1.3",
         "path": "node_modules/jscs/node_modules/babel-jscs/node_modules/babel-core/node_modules/minimatch/node_modules/brace-expansion/index.js"
       },
       {
@@ -1185,7 +1190,7 @@
       },
       {
         "name": "brace-expansion",
-        "version": "1.1.2",
+        "version": "1.1.3",
         "path": "node_modules/jscs/node_modules/minimatch/node_modules/brace-expansion/index.js"
       },
       {
@@ -1225,7 +1230,7 @@
       },
       {
         "name": "mute-stream",
-        "version": "0.0.5",
+        "version": "0.0.6",
         "path": "node_modules/jscs/node_modules/prompt/node_modules/read/node_modules/mute-stream/mute.js"
       },
       {
@@ -1270,12 +1275,12 @@
       },
       {
         "name": "rimraf",
-        "version": "2.5.1",
+        "version": "2.5.2",
         "path": "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/rimraf.js"
       },
       {
         "name": "glob",
-        "version": "6.0.4",
+        "version": "7.0.0",
         "path": "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf/node_modules/glob/glob.js"
       },
       {
@@ -1415,7 +1420,7 @@
       },
       {
         "name": "brace-expansion",
-        "version": "1.1.2",
+        "version": "1.1.3",
         "path": "node_modules/jscs/node_modules/vow-fs/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/index.js"
       },
       {
@@ -1457,11 +1462,14 @@
     "extensions": {
       ".js": [
         "node_modules/atom-linter/lib/helpers.js",
+        "node_modules/atom-linter/lib/index.js",
+        "node_modules/atom-linter/lib/types.js",
         "node_modules/atom-linter/node_modules/consistent-path/lib/index.js",
         "node_modules/atom-linter/node_modules/consistent-path/node_modules/shell-path/index.js",
         "node_modules/atom-linter/node_modules/consistent-path/node_modules/shell-path/node_modules/strip-ansi/index.js",
         "node_modules/atom-linter/node_modules/consistent-path/node_modules/shell-path/node_modules/strip-ansi/node_modules/ansi-regex/index.js",
         "node_modules/atom-linter/node_modules/named-js-regexp/lib/named-js-regexp.js",
+        "node_modules/atom-linter/node_modules/sb-promisify/lib/index.js",
         "node_modules/atom-linter/node_modules/tmp/Gruntfile.js",
         "node_modules/atom-linter/node_modules/tmp/lib/tmp.js",
         "node_modules/atom-linter/node_modules/tmp/node_modules/os-tmpdir/index.js",
@@ -1579,6 +1587,7 @@
         "node_modules/jscs/lib/rules/disallow-spaces-inside-object-brackets.js",
         "node_modules/jscs/lib/rules/disallow-spaces-inside-parentheses.js",
         "node_modules/jscs/lib/rules/disallow-spaces-inside-parenthesized-expression.js",
+        "node_modules/jscs/lib/rules/disallow-spaces-inside-template-string-placeholders.js",
         "node_modules/jscs/lib/rules/disallow-tabs.js",
         "node_modules/jscs/lib/rules/disallow-trailing-comma.js",
         "node_modules/jscs/lib/rules/disallow-trailing-whitespace.js",
@@ -1605,6 +1614,7 @@
         "node_modules/jscs/lib/rules/require-early-return.js",
         "node_modules/jscs/lib/rules/require-enhanced-object-literals.js",
         "node_modules/jscs/lib/rules/require-function-declarations.js",
+        "node_modules/jscs/lib/rules/require-imports-alphabetized.js",
         "node_modules/jscs/lib/rules/require-keywords-on-new-line.js",
         "node_modules/jscs/lib/rules/require-line-break-after-variable-assignment.js",
         "node_modules/jscs/lib/rules/require-line-feed-at-file-end.js",
@@ -4859,6 +4869,7 @@
         "node_modules/atom-linter/node_modules/consistent-path/node_modules/shell-path/package.json",
         "node_modules/atom-linter/node_modules/consistent-path/package.json",
         "node_modules/atom-linter/node_modules/named-js-regexp/package.json",
+        "node_modules/atom-linter/node_modules/sb-promisify/package.json",
         "node_modules/atom-linter/node_modules/tmp/node_modules/os-tmpdir/package.json",
         "node_modules/atom-linter/node_modules/tmp/package.json",
         "node_modules/atom-linter/package.json",
@@ -5249,6 +5260,7 @@
         "dependencies": {
           "consistent-path": "^1.0.3",
           "named-js-regexp": "^1.3.1",
+          "sb-promisify": "^1.0.0",
           "tmp": "~0.0.28"
         }
       },
@@ -6703,7 +6715,7 @@
           "node_modules/jscs/node_modules/prompt/node_modules/utile/node_modules/rimraf"
         ],
         "dependencies": {
-          "glob": "^6.0.1"
+          "glob": "^7.0.0"
         }
       },
       {

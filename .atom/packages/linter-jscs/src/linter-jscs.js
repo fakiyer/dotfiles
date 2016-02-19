@@ -2,9 +2,10 @@
 
 import path from 'path';
 import configFile from 'jscs/lib/cli-config';
+import extractJs from 'jscs/lib/extract-js';
 import globule from 'globule';
 
-const grammarScopes = ['source.js', 'source.js.jsx'];
+const grammarScopes = ['source.js', 'source.js.jsx', 'text.html.basic'];
 
 export default class LinterJSCS {
 
@@ -84,7 +85,6 @@ export default class LinterJSCS {
           var exclude = globule.isMatch(config && config.excludeFiles, this.getFilePath(editor.getPath()));
 
           if ((this.fixOnSave && !exclude) || this.testFixOnSave) {
-            console.log('FIXING');
             this.fixString(editor);
           }
         }
@@ -129,6 +129,7 @@ export default class LinterJSCS {
         if (!jscsConfig.configPath && config) {
           jscsConfig.configPath = config.configPath;
         }
+
         this.jscs.configure(jscsConfig);
 
         // We don't have a config file present in project directory
@@ -136,9 +137,26 @@ export default class LinterJSCS {
         if (!config && this.onlyConfig) return Promise.resolve([]);
 
         const text = editor.getText();
-        const errors = this.jscs
-          .checkString(text, filePath)
-          .getErrorList();
+        const scope = editor.getGrammar().scopeName;
+
+        let errors;
+        if (scope === 'text.html.basic' || scope === 'text.plain.null-grammar') { // text.plain.null-grammar is temp for tests
+          let result = extractJs(filePath, text);
+
+          result.sources.forEach((script) => {
+            this.jscs.checkString(script.source, filePath).getErrorList().forEach((error) => {
+              error.line += script.line;
+              error.column += script.offset;
+              result.addError(error);
+            });
+          }, this);
+
+          errors = result.errors.getErrorList();
+        } else {
+          errors = this.jscs
+            .checkString(text, filePath)
+            .getErrorList();
+        }
 
         // Exclude `excludeFiles` for errors
         var exclude = globule.isMatch(config && config.excludeFiles, this.getFilePath(editor.getPath()));
@@ -148,7 +166,13 @@ export default class LinterJSCS {
           const type = this.displayAs;
           const html = `<span class='badge badge-flexible'>${rule}</span> ${message}`;
 
-          // Work around a bug in jscs causing it to report columns past the end of the line
+          /* Work around a bug in esprima causing jscs to report columns past
+           * the end of the line. This is fixed in esprima@2.7.2, but as jscs
+           * only depends on "~2.7.0" we need to wait on a jscs release depending
+           * on a later version till this can be removed.
+           * Ref: https://github.com/jquery/esprima/issues/1457
+           * TODO: Remove when jscs updates
+           */
           const maxCol = editor.getBuffer().lineLengthForRow(line - 1);
           if ((column - 1) > maxCol) {
             column = maxCol + 1;
