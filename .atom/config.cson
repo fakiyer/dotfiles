@@ -5,12 +5,13 @@
     audioBeep: false
   editor:
     fontFamily: "Ricty Diminished"
-    fontSize: 13
     invisibles: {}
   "exception-reporting":
     userId: "c8108de1-b3b8-b018-6bc1-436050e572ef"
   linter:
     errorPanelHeight: 100
+  "linter-jscs":
+    esnext: true
   "one-dark-ui": {}
   react: {}
   "remote-edit": {}
