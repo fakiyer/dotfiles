@@ -6,6 +6,8 @@
   editor:
     fontFamily: "Ricty Diminished"
     invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
   "exception-reporting":
     userId: "c8108de1-b3b8-b018-6bc1-436050e572ef"
   linter:
