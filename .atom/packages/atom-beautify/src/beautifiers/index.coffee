@@ -38,6 +38,7 @@ module.exports = class Beautifiers extends EventEmitter
     'coffee-formatter'
     'coffee-fmt'
     'clang-format'
+    'dfmt'
     'elm-format'
     'htmlbeautifier'
     'csscomb'
@@ -48,8 +49,10 @@ module.exports = class Beautifiers extends EventEmitter
     'jscs'
     'perltidy'
     'php-cs-fixer'
+    'phpcbf'
     'prettydiff'
     'puppet-fix'
+    'remark'
     'rubocop'
     'ruby-beautify'
     'rustfmt'
@@ -58,6 +61,7 @@ module.exports = class Beautifiers extends EventEmitter
     'tidy-markdown'
     'typescript-formatter'
     'yapf'
+    'erl_tidy'
   ]
 
   ###
@@ -258,6 +262,12 @@ module.exports = class Beautifiers extends EventEmitter
       beautifiers = lang.beautifiers
       optionName = "language_#{lang.namespace}"
 
+      # Check if namespace has already been used
+      if _.has(flatOptions, "#{optionName}_disabled")
+        error = new Error("Language named '#{name}' has an already used namespace #{lang.namespace}.")
+        atom.notifications?.addError(error.message, {
+          stack: error.stack, detail: error.message, dismissable : true})
+        throw error
 
       # Add Language configurations
       flatOptions["#{optionName}_disabled"] = {
@@ -633,9 +643,12 @@ module.exports = class Beautifiers extends EventEmitter
     externalOptions = undefined
     if configPath
       fs ?= require("fs")
-      contents = fs.readFileSync(configPath,
-        encoding : "utf8"
-      )
+      try
+        contents = fs.readFileSync(configPath,
+          encoding : "utf8"
+        )
+      catch error
+        contents = null #file isnt available anymore
       unless contents
         externalOptions = {}
       else
