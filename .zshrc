@@ -94,6 +94,8 @@ if which docker-machine > /dev/null; then
   eval $(docker-machine env default)
 fi
 
+alias doc="docker"
+alias doc-com="docker-compose"
 docrm() { docker rm $(docker ps -a -q); }
 docrmi() { docker rmi $(docker images | awk '/^<none>/ { print $3 }'); }
 
