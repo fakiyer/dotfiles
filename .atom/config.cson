@@ -1,6 +1,8 @@
 "*":
   "atom-beautify":
     _analyticsUserId: "2f9444de-5b05-4540-bb34-5904ba065a5f"
+  "atom-terminal":
+    app: "/Applications/iTerm.app"
   core:
     audioBeep: false
   editor:
@@ -12,8 +14,10 @@
     userId: "c8108de1-b3b8-b018-6bc1-436050e572ef"
   linter:
     errorPanelHeight: 100
+  "linter-eslint": {}
   "linter-jscs":
     esnext: true
+  "linter-jshint": {}
   "one-dark-ui": {}
   react: {}
   "remote-edit": {}
