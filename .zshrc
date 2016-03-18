@@ -96,6 +96,7 @@ fi
 
 alias doc="docker"
 alias doc-com="docker-compose"
+alias doc-com-r="docker-compose run"
 docrm() { docker rm $(docker ps -a -q); }
 docrmi() { docker rmi $(docker images | awk '/^<none>/ { print $3 }'); }
 
