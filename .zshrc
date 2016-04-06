@@ -83,6 +83,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+### git
+alias ggfpush='git push --force-with-lease origin $(git_current_branch)'
+
 ### rbenv
 if which rbenv > /dev/null; then
   export PATH="$HOME/.rbenv/bin:$PATH"
