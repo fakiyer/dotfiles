@@ -4,6 +4,81 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[1.7.12 - 2016-05-21]
+---------------------
+### Added
+- **New icons:** Adobe CC (After Effects, InDesign, Premiere), APL, Blank page, C# Cake, C#-Script, Csound, Cucumber/Gherkin, dBASE, Finder, Keynote, Microsoft Office (Access, Excel, OneNote, PowerPoint, Word), NAnt, OpenOffice, Protractor, Storyist, Strings, Typings, Wavefront OBJ, ZBrush
+- **Support:** Config files (`.htmlhintrc`), Generic code (`.aepx`, `.sgm`, `.sgml`), Git commit/merge messages (`COMMIT_EDITMSG`, `MERGE_HEAD`, `MERGE_MODE`, `MERGE_MSG`), Graph files (`.dif`, `.slk`), Music-related (`.chord`), Preprocessed FORTRAN (`.F`, `.F77`, `.F90`, `.F95`, `.F03`, `.F08`, `.FOR`, `.FPP`), Readme (`.1st`)
+- Alternative solid-coloured icons for TypeScript (`\02A6`), TSX (`\E9E7`) and JSX (`\E9E6`). To use them, copy their codepoints into your stylesheet.
+
+### Changed
+- [[`#366`](https://github.com/DanBrooker/file-icons/issues/366)] Default icon changed to a blank page instead of a text file. This is more format-neutral, and makes "true" text formats easier to spot.
+- Restricted text-file icons to the following formats: `.ans`, `.err`, `.etx`, `.irclog`, `.log`, `.msg`, `.nfo`, `.rtf`, `.srt`, `.sub`, `.text`, `.txt`, `.uof`, `.uop`, `.uos`, `.uot`, `.utf8`, `.utxt`, `.weechatlog`
+- APL icon replaced with the more recognisable [grade up symbol](http://www.fileformat.info/info/unicode/char/234b/index.htm).
+- Cakefile class-name changed from `.cake` to `.cakefile` to accommodate C#'s "cake"
+
+### Fixed
+- Horizontal alignment of symlinks and zip-files
+
+
+[1.7.11 - 2016-05-10]
+---------------------
+### Added
+- **New icons:** Julia, SQLite
+- **Support:** Embedded Crystal (`.coffee.ecr`, `.htm.ecr`, `.html.ecr`, `.js.ecr`), Embedded Ruby (`.htm.erb`), NodeJS (`.node-version`), NPM (`npmrc`), Python (`pypirc`, `.pypirc`, `pythonrc`, `.pythonrc`, `.python-venv`), Ruby (`gemrc`, `pryrc`, `rspec`), ZSH (`zlogin`, `zlogout`, `zprofile`, `zshenv`, `zshrc`, `.zsh-theme`)
+
+### Changed
+- Size/alignment tweaked for PDF and Python icons
+- Python icon used for `.python-version` files
+
+### Fixed
+- Alignment and advance widths of Docker, Gradle, Groovy, Lisp, R, and Vue icons
+- PDF files now respect value of user's "Coloured" setting
+
+
+[1.7.10 - 2016-05-07]
+---------------------
+### Added
+- **Support:** APL (`.apl.history`), Binary (`.swp`), Config files (`.apl.ascii`), Manual pages (`mmn`, `mmt`, `tmac.`), Stylelint (`.stylelintignore`)
+
+### Fixed
+- [[`#352`](https://github.com/DanBrooker/file-icons/issues/352)] Reverted fix for modified files with yellow icons
+- Babel icon now shows for all `.babel` files
+
+
+[1.7.9 - 2016-05-05]
+--------------------
+### Added
+- **New icons:** Brakeman, CakePHP, Code Climate, Hack, Jenkins, Karma, Minecraft, New Relic, NuGet, PowerShell, Pug, SBT, Scrutinizer, Service Fabric, Shopify, Thor, TSX (React/Typescript), Vagrant
+- **Support:** Adobe Photoshop (`.psb`), ANSI Weather (`.ansiweatherrc`), `CNAME`, Config files (`.arcconfig`, `.codoopts`, `.ctags`, `.env.*`, `indent.pro`, `.pairs`, `.python-version`, `.yardopts`), Erlang (`.app.src`), Gears (`.dll`), Generic code (`.gdbinit`, `.resx`, `.fsh`, `.vsh`), Git (`.git*`), GNU (`.GPLv[2-3]`), Gradle (`gradlew`), Heroku (`.buildpacks`, `Procfile`, `.vendor_urls`), Images (`.apng`, `.bmp`, `.bpg`, `.cd5`, `.cpc`, `.dcm`, `.ecw`, `.exr`, `.fit`, `.fits`, `.flif`, `.fts`, `.hdp`, `.hdr`, `.heic`, `.heif`, `.icns`, `.iff`, `.jpf`, `.jps`, `.jxr`, `.lbm`, `.liff`, `.mpo`, `.nrrd`, `.ora`, `.pbm`, `.pcx`, `.pgf`, `.pict`, `.pxr`, `.raw`, `.sct`, `.tga`, `.wbm`, `.wdp`), Makefiles (`BSDmakefile`), Manual Pages (`.tmac`, `.tmac-u`, `.nroff`, `.troff`), `METADATA.pb`, Mention-bot configs (`.mention-bot`), Prolog (`.pro`, `.prolog`, `.yap`), Readme (`AUTHORS`, `CHANGELOG`, `CONTRIBUTING`, `CONTRIBUTORS`, `COPYING`, `HISTORY`, `INSTALL`, `LICENSE`, `NEWS`, `PROJECTS`, `.read.me`, `.readme`, `THANKS`), Shell (`bash_history`, `bash_logout`), Shockwave Flash (`.swf`), Tag files (`tags`, `.tags`), Texinfo (`.texi`), TextMate (`.JSON-tmLanguage`), Visual Studio (`.builds`), Windows shortcuts (`.lnk`)
+- Colour for default PDF icons
+- Command to toggle coloured icons. To use it, create a keybinding for `file-icons:toggle-colours` in your keymap
+
+### Changed
+- Clearer icon now used for Jenkinsfiles
+- Git icon used for `.mailmap` files
+- Prolog files now use a dedicated icon instead of a generic one
+
+### Fixed
+- [[`#341`](https://github.com/DanBrooker/file-icons/issues/341)] Yellow icons no longer share same colour as modification indicator
+- `.eslintrc.js` files are no longer overridden by JS icon
+
+
+[1.7.8 - 2016-04-28]
+--------------------
+### Added
+- **New icons:** Cabal, eC, MuPAD, OOC, Opa, OpenEdge ABL, Ox, Oxygene, Oz, Pan, Papyrus, Parrot, PAWN, Pickle, Pike, PogoScript, Pony, POV-Ray SDL, Propeller Spin, Puppet, PureBasic, PureScript, Racket, RDoc, REALbasic/Xojo, Rebol, Red, reStructuredText, RobotFramework, Sage, Scheme, Scilab, Self, Shen, Slash, SQF, Stan, Stata, SuperCollider, SystemVerilog, Textile, TextMate, Turing, TXL, Uno, UnrealScript, UrWeb, Varnish, VHDL, X10, XMOS, XPages, Xtend, Zephir, Zimpl
+- **Support:** [Over +120 new extensions added](https://github.com/DanBrooker/file-icons/releases/tag/v1.7.8)
+
+### Changed
+- [[`#339`](https://github.com/DanBrooker/file-icons/issues/339)] `.toc` files now use a more generic-looking icon
+- [[`93e705d`](https://github.com/DanBrooker/file-icons/commit/93e705d4d)] Fixed advance widths of icons with portrait-sized dimensions
+- Size and alignment corrections made to Boot, ClojureScript, Elm, Ionic, JSX, Leiningen, nginx and React icons
+
+### Removed
+- Dropped support for Graph Modelling Language; its extension conflicts with GameMaker Language (`.gml`)
+
+
 [1.7.7 - 2016-04-24]
 --------------------
 ### Added
@@ -21,8 +96,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - **Support:** Composer (`composer.phar`), Cycript (`.cy`), DNS Zones (`.arpa`, `.zone`), Dust (`.dust`), Dylan (`.dylan`, `.dyl`, `.intr`, `.lid`), ECL (`.ecl`, `.eclxml`), Formatted (`.eam.fs`), Forth (`.4th`, `.fth`, `.forth`, `.frt`), G-code (`.gco`, `.gcode`), Grace (`.grace`), Graph Modelling Language (`.gml`)
 
 ### Changed
-- Generic config icon now used for `.conf` files instead of nginx logo [[`#331`](https://github.com/DanBrooker/file-icons/issues/331)]
-- Python icon is now blue instead of orange [[`#199`](https://github.com/DanBrooker/file-icons/issues/199)]
+- [[`#331`](https://github.com/DanBrooker/file-icons/issues/331)] Generic config icon now used for `.conf` files instead of nginx logo
+- [[`#199`](https://github.com/DanBrooker/file-icons/issues/199)] Python icon is now blue instead of orange
 - Visual Basic files now distinguished by Visual Studio icon
 
 
@@ -692,7 +767,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.7...HEAD
+[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.12...HEAD
+[1.7.12]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.12
+[1.7.11]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.11
+[1.7.10]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.10
+[1.7.9]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.9
+[1.7.8]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.8
 [1.7.7]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.7
 [1.7.6]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.6
 [1.7.5]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.5
