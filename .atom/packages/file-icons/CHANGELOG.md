@@ -4,6 +4,44 @@ All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+[1.7.15] - 2016-06-17
+---------------------
+### Added
+- **New icons:** Arch Linux, TypeDoc
+- **Support:** Atom (`.atom`), Bower (`bower_components`), Debian (`control`, `rules`), Red Hat (`.spec`), Webpack (`webpackfile.js`)
+
+### Changed
+- [[`#381`](https://github.com/DanBrooker/file-icons/issues/381)] Erosion removed from Vagrant icon
+
+### Fixed
+- [[`#390`](https://github.com/DanBrooker/file-icons/issues/390)] Directory icons now respect user's *"Colour only when changed"* setting
+
+
+[1.7.14] - 2016-06-10
+---------------------
+### Added
+- **New icons:** Alpine Linux, Knockout, Rollup, Stylus (alternate icons)
+- Added NodeJS icon to `node_modules` folder
+
+### Changed
+- Stylus icon changed to use the logotype's first letter, [as per Stylus's favicon](http://stylus-lang.com/favicon.ico). The previous icon is still included at codepoint `\E9F7`.
+
+
+
+[1.7.13] - 2016-05-30
+---------------------
+### Added
+- **New icons:** Audacity, Blender, FBX, Khronos, LightWave 3D, Maya, Nib, Stylus (new logo)
+- **Support:** 3DS Max (`.3ds`, `.max`), 3D models (`.stl`), Danmakufu (`.dnh`), Flash (`.swc`), Generic code (`.appxmanifest`), Images (`.dds`), Keys (`git-credential-osxkeychain`), Links (`.url`), Models (`.u3d`), PHPUnit Config (`.xml.dist`), Stylelint (`.stylelintrc.{json, yaml, js}`, `stylelint.config.js`), Unity3D (`.unityproj`), Visual Studio (`.sln`), Wavefront Materials (`.mtl`)
+- Colour variations for MAXScript files
+
+### Changed
+- `.obj` class renamed `.model` to be less format-specific
+
+### Fixed
+- `CMakeLists.txt` no longer replaced with standard text-file icon
+
+
 [1.7.12 - 2016-05-21]
 ---------------------
 ### Added
@@ -767,10 +805,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Initial release.
 
 
-[Unreleased]: https://github.com/DanBrooker/file-icons/compare/v1.7.12...HEAD
-[1.7.12]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.12
-[1.7.11]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.11
-[1.7.10]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.10
+[Unpublished]: https://github.com/DanBrooker/file-icons/compare/v1.7.15...HEAD
+[1.7.15]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.15
+[1.7.14]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.14
+[1.7.13]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.13
+[1.7.12]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.12
+[1.7.11]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.11
+[1.7.10]: https://github.com/DanBrooker/file-icons/releases/tag/v1.7.10
 [1.7.9]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.9
 [1.7.8]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.8
 [1.7.7]:  https://github.com/DanBrooker/file-icons/releases/tag/v1.7.7
