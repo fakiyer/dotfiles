@@ -1,7 +1,7 @@
 {
   "name": "git-plus",
   "main": "./lib/git-plus",
-  "version": "5.16.1",
+  "version": "5.16.2",
   "description": "Do git things without the terminal",
   "keywords": [
     "git"
@@ -86,10 +86,10 @@
     "url": "https://github.com/akonwi/git-plus/issues"
   },
   "homepage": "https://github.com/akonwi/git-plus#readme",
-  "_id": "git-plus@5.16.1",
-  "_shasum": "07f56de35b1f87b0257f29280568dba986cb5d46",
-  "_resolved": "file:../d-116529-37375-14mdppa/package.tgz",
-  "_from": "../d-116529-37375-14mdppa/package.tgz",
+  "_id": "git-plus@5.16.2",
+  "_shasum": "e479b016f06d3ad326dc6311800f678211655147",
+  "_resolved": "file:../d-11666-86913-1fqxc1r/package.tgz",
+  "_from": "../d-11666-86913-1fqxc1r/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -135,7 +135,7 @@
       },
       {
         "name": "es5-ext",
-        "version": "0.10.11",
+        "version": "0.10.12",
         "path": "node_modules/atom-space-pen-views/node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/index.js"
       },
       {
@@ -145,7 +145,7 @@
       },
       {
         "name": "es6-symbol",
-        "version": "3.0.2",
+        "version": "3.1.0",
         "path": "node_modules/atom-space-pen-views/node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/es6-weak-map/node_modules/es5-ext/node_modules/es6-symbol/index.js"
       },
       {
@@ -1112,7 +1112,7 @@
         ],
         "dependencies": {
           "es6-iterator": "2",
-          "es6-symbol": "~3.0.2"
+          "es6-symbol": "~3.1"
         }
       },
       {
@@ -1135,7 +1135,7 @@
         ],
         "dependencies": {
           "d": "~0.1.1",
-          "es5-ext": "~0.10.10"
+          "es5-ext": "~0.10.11"
         }
       },
       {
