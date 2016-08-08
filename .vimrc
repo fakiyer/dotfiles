@@ -43,6 +43,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'vim-scripts/AnsiEsc.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'terryma/vim-expand-region'
 
 "Plugin 'bling/vim-airline'
 Plugin 'itchyny/lightline.vim'
