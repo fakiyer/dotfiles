@@ -33,8 +33,6 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Bundle 'railscasts'
 Plugin 'surround.vim'
 " Bundle 'mru.vim'
-" Bundle 'The-NERD-tree'
-" Plugin 'The-NERD-Commenter'
 " Bundle 'EasyMotion'
 " Bundle 'FuzzyFinder'
 " Bundle 'AutoClose'
