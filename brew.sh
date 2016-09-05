@@ -22,6 +22,10 @@ fi;
 # Install more recent versions of some macOS tools.
 brew install vim
 
+# Install Fzf
+brew install fzf
+/usr/local/opt/fzf/install
+
 # Install other useful binaries.
 brew install ghq
 brew install git
