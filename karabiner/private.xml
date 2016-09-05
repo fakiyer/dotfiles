@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<root>
+    <list>
+        <item>
+            <name>MouseButton 4 and 5</name>
+            <identifier>remap.mouse_button4_5</identifier>
+            <autogen>
+                --PointingButtonToKey-- PointingButton::BUTTON4,
+                KeyCode::JIS_BRACKET_LEFT, ModifierFlag::COMMAND_L
+            </autogen>
+                <autogen>
+                    --PointingButtonToKey-- PointingButton::BUTTON5,
+                    KeyCode::JIS_BRACKET_RIGHT, ModifierFlag::COMMAND_L
+                </autogen>
+        </item>
+    </list>
+</root>
