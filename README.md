@@ -18,9 +18,12 @@
 ### Install Karabiner
 * https://pqrs.org/osx/karabiner/
 
+### Install iTerm
+* https://www.iterm2.com/index.html
+
+#### Theme(DimmedMonokai)
+* https://github.com/mbadolato/iTerm2-Color-Schemes#dimmedmonokai
+
 ## Font
 ### Install RictyDiminished
 * https://github.com/mzyy94/RictyDiminished-for-Powerline
-
-## iTerm Theme(DimmedMonokai)
-* https://github.com/mbadolato/iTerm2-Color-Schemes#dimmedmonokai
