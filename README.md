@@ -11,18 +11,19 @@
 ### Install Vundle
 * https://github.com/VundleVim/Vundle.vim
 
+## iTerm
+### Install iTerm
+* https://www.iterm2.com/index.html
+
+### Install Theme(DimmedMonokai)
+* https://github.com/mbadolato/iTerm2-Color-Schemes#dimmedmonokai
+
 ## Other tools
 ### Install Homebrew
 * http://brew.sh/
 
 ### Install Karabiner
 * https://pqrs.org/osx/karabiner/
-
-### Install iTerm
-* https://www.iterm2.com/index.html
-
-#### Theme(DimmedMonokai)
-* https://github.com/mbadolato/iTerm2-Color-Schemes#dimmedmonokai
 
 ## Font
 ### Install RictyDiminished
