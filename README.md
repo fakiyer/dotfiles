@@ -10,3 +10,7 @@
 ## Vim
 ### Install Vundle
 * https://github.com/VundleVim/Vundle.vim
+
+## Other tools
+### Install Homebrew
+* http://brew.sh/
