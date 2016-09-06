@@ -43,6 +43,11 @@ Plugin 'vim-scripts/AnsiEsc.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'terryma/vim-expand-region'
 
+" Unite
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/neoyank.vim'
+Plugin 'Shougo/neomru.vim'
+
 "Plugin 'bling/vim-airline'
 Plugin 'itchyny/lightline.vim'
 
