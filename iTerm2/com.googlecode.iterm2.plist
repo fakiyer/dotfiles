@@ -2353,17 +2353,17 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>357 38 742 286 0 0 1280 800 </string>
+	<string>207 119 742 279 0 0 1280 800 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>203 319 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>330 307 620 392 0 0 1280 800 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>0 277 796 473 0 0 1280 777 </string>
+	<string>313 118 918 495 0 0 1280 800 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>80 193 592 584 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>349 354 585 402 0 0 1280 777 </string>
+	<string>349 337 585 402 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>166 207 585 402 0 0 1280 777 </string>
 	<key>NeverWarnAboutShortLivedSessions_FA6A022A-3E16-4993-9DA2-87F13C9D5D43</key>
@@ -3671,7 +3671,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>RictyDiminished-Regular 14</string>
+			<string>RictyDiminishedForPowerline-Regular 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -3836,6 +3836,8 @@
 			<false/>
 			<key>Use Italic Font</key>
 			<true/>
+			<key>Use Non-ASCII Font</key>
+			<false/>
 			<key>Use Tab Color</key>
 			<false/>
 			<key>Vertical Spacing</key>
@@ -4732,7 +4734,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-09-05T00:27:11Z</date>
+	<date>2016-09-06T00:24:06Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
