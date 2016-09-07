@@ -3,7 +3,7 @@
 	email = xxxxxxxxxx
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = vim
+	editor = vim -c \"set fenc=utf-8\"
 	autocrlf = input
 [push]
 	default = simple
