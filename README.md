@@ -25,6 +25,9 @@
 ### Install Karabiner
 * https://pqrs.org/osx/karabiner/
 
+### Install Tmux Plugin Manager
+* https://github.com/tmux-plugins/tpm
+
 ## Font
 ### Install RictyDiminished
 * https://github.com/mzyy94/RictyDiminished-for-Powerline
