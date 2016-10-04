@@ -122,6 +122,15 @@ module.exports = {
           config: atom.config.get('linter-eslint'),
           filePath: filePath
         }).then(function (response) {
+          if (textEditor.getText() !== text) {
+            /*
+               The editor text has been modified since the lint was triggered,
+               as we can't be sure that the results will map properly back to
+               the new contents, simply return `null` to tell the
+               `provideLinter` consumer not to update the saved results.
+             */
+            return null;
+          }
           return response.map(function (_ref) {
             var message = _ref.message;
             var line = _ref.line;
@@ -139,7 +148,12 @@ module.exports = {
                 newText: fix.text
               };
             }
-            var range = Helpers.rangeFromLineNumber(textEditor, line - 1, column ? column - 1 : column);
+            var range = void 0;
+            try {
+              range = Helpers.rangeFromLineNumber(textEditor, line - 1, column ? column - 1 : column);
+            } catch (err) {
+              throw new Error('Cannot mark location in editor for (' + ruleId + ') - (' + message + ')' + (' at line (' + line + ') column (' + column + ')'));
+            }
             var ret = {
               filePath: filePath,
               type: severity === 1 ? 'Warning' : 'Error',

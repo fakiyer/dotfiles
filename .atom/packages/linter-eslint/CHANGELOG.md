@@ -1,5 +1,13 @@
 # Changelog
 
+## v7.3.2
+
+*   Fix a race condition with modified editor text ([#703](https://github.com/AtomLinter/linter-eslint/pull/703))
+
+## v7.3.1
+
+*   Throw original error for invalid ranges ([#694](https://github.com/AtomLinter/linter-eslint/pull/694))
+
 ## v7.3.0
 
 *   Fix sending `null` to `path.dirname()` for future Electron compatibility ([#673](https://github.com/AtomLinter/linter-eslint/pull/673))

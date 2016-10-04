@@ -1,7 +1,32 @@
 # Change Log
 
-## [1.3.2](https://github.com/AtomLinter/linter-csslint/tree/1.3.2) (2016-03-03)
-[Full Changelog](https://github.com/AtomLinter/linter-csslint/compare/v1.3.1...1.3.2)
+## [v1.3.3](https://github.com/AtomLinter/linter-csslint/tree/v1.3.3) (2016-09-27)
+[Full Changelog](https://github.com/AtomLinter/linter-csslint/compare/v1.3.2...v1.3.3)
+
+**Implemented enhancements:**
+
+- Error Process Execution Timed Out [\#95](https://github.com/AtomLinter/linter-csslint/issues/95)
+- Rewrite in ES2015 [\#148](https://github.com/AtomLinter/linter-csslint/pull/148) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update ESLint to v3.6.1 [\#147](https://github.com/AtomLinter/linter-csslint/pull/147) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update CI configuration [\#146](https://github.com/AtomLinter/linter-csslint/pull/146) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update atom-linter to version 8.0.0 🚀 [\#136](https://github.com/AtomLinter/linter-csslint/pull/136) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update atom-linter to version 7.0.0 🚀 [\#124](https://github.com/AtomLinter/linter-csslint/pull/124) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update atom-linter to version 6.0.0 🚀 [\#116](https://github.com/AtomLinter/linter-csslint/pull/116) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update eslint-config-airbnb-base to version 3.0.1 🚀 [\#114](https://github.com/AtomLinter/linter-csslint/pull/114) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update atom-linter to version 5.0.1 🚀 [\#113](https://github.com/AtomLinter/linter-csslint/pull/113) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update eslint-config-airbnb-base to version 2.0.0 🚀 [\#110](https://github.com/AtomLinter/linter-csslint/pull/110) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Move to eslint-config-airbnb-base [\#109](https://github.com/AtomLinter/linter-csslint/pull/109) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update eslint-config-airbnb to version 7.0.0 🚀 [\#103](https://github.com/AtomLinter/linter-csslint/pull/103) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Add an option to disable execution timeout [\#102](https://github.com/AtomLinter/linter-csslint/pull/102) ([Arcanemagus](https://github.com/Arcanemagus))
+- Update dependencies [\#101](https://github.com/AtomLinter/linter-csslint/pull/101) ([Arcanemagus](https://github.com/Arcanemagus))
+
+**Fixed bugs:**
+
+- Unexpected end of input when attempting to lint [\#92](https://github.com/AtomLinter/linter-csslint/issues/92)
+- Handle blank output [\#100](https://github.com/AtomLinter/linter-csslint/pull/100) ([Arcanemagus](https://github.com/Arcanemagus))
+
+## [v1.3.2](https://github.com/AtomLinter/linter-csslint/tree/v1.3.2) (2016-03-03)
+[Full Changelog](https://github.com/AtomLinter/linter-csslint/compare/v1.3.1...v1.3.2)
 
 **Fixed bugs:**
 
@@ -63,7 +88,7 @@
 ## [v1.1.0](https://github.com/AtomLinter/linter-csslint/tree/v1.1.0) (2015-10-07)
 [Full Changelog](https://github.com/AtomLinter/linter-csslint/compare/v1.0.7...v1.1.0)
 
-**Closed issues:**
+**Fixed bugs:**
 
 - .csslintrc support [\#49](https://github.com/AtomLinter/linter-csslint/issues/49)
 
@@ -83,11 +108,11 @@
 
 **Implemented enhancements:**
 
+- Install `linter` automatically. [\#43](https://github.com/AtomLinter/linter-csslint/issues/43)
 - Automatically install linter [\#47](https://github.com/AtomLinter/linter-csslint/pull/47) ([Arcanemagus](https://github.com/Arcanemagus))
 
-**Closed issues:**
+**Fixed bugs:**
 
-- Install `linter` automatically. [\#43](https://github.com/AtomLinter/linter-csslint/issues/43)
 - Uncaught TypeError: Invalid Point: \(NaN, NaN\) [\#37](https://github.com/AtomLinter/linter-csslint/issues/37)
 
 ## [v1.0.5](https://github.com/AtomLinter/linter-csslint/tree/v1.0.5) (2015-08-07)
@@ -122,7 +147,7 @@
 - Doesn't consider .csslintrc files in parent directories [\#8](https://github.com/AtomLinter/linter-csslint/issues/8)
 - Update to the new Linter API [\#33](https://github.com/AtomLinter/linter-csslint/pull/33) ([Arcanemagus](https://github.com/Arcanemagus))
 
-**Closed issues:**
+**Fixed bugs:**
 
 - Appears to be broken, now that isNodeExecutable is false [\#28](https://github.com/AtomLinter/linter-csslint/issues/28)
 
@@ -136,11 +161,8 @@
 ## [v0.0.13](https://github.com/AtomLinter/linter-csslint/tree/v0.0.13) (2015-05-21)
 [Full Changelog](https://github.com/AtomLinter/linter-csslint/compare/v0.0.12...v0.0.13)
 
-**Closed issues:**
+**Fixed bugs:**
 
-- Config.unobserve is deprecated. [\#24](https://github.com/AtomLinter/linter-csslint/issues/24)
-- Package.getActivationCommands is deprecated. [\#23](https://github.com/AtomLinter/linter-csslint/issues/23)
-- Package.activateConfig is deprecated. [\#22](https://github.com/AtomLinter/linter-csslint/issues/22)
 - Package.getActivationCommands is deprecated. [\#20](https://github.com/AtomLinter/linter-csslint/issues/20)
 - Package.activateConfig is deprecated. [\#19](https://github.com/AtomLinter/linter-csslint/issues/19)
 - Config.unobserve is deprecated. [\#18](https://github.com/AtomLinter/linter-csslint/issues/18)
@@ -151,10 +173,6 @@
 **Implemented enhancements:**
 
 - Big performance hit on large files \(5000 lines CSS\) [\#6](https://github.com/AtomLinter/linter-csslint/issues/6)
-
-**Closed issues:**
-
-- TypeError on "Too many font-size declarations..." [\#13](https://github.com/AtomLinter/linter-csslint/issues/13)
 
 **Merged pull requests:**
 

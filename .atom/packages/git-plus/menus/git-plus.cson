@@ -6,6 +6,11 @@
       'command': 'git-plus:add'
     }
   ]
+  '.tree-view.full-menu .file, .tree-view.full-menu .directory':[
+    label: 'Git difftool',
+    'command': 'git-plus:difftool'
+  ]
+
 
 'menu': [
   {
@@ -38,19 +43,19 @@
           'command': 'git-plus:diff-all'
         }
         {
-          'label': 'Add & Commit'
+          'label': 'Add + Commit'
           'command': 'git-plus:add-and-commit'
         }
         {
-          'label': 'Add & Commit & Push'
+          'label': 'Add + Commit + Push'
           'command': 'git-plus:add-and-commit-and-push'
         }
         {
-          'label': 'Add All & Commit'
+          'label': 'Add All + Commit'
           'command': 'git-plus:add-all-and-commit'
         }
         {
-          'label': 'Add All & Commit & Push'
+          'label': 'Add All + Commit + Push'
           'command': 'git-plus:add-all-commit-and-push'
         }
         {
