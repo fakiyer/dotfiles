@@ -8,7 +8,7 @@
   core:
     audioBeep: false
   editor:
-    fontFamily: "Ricty Diminished"
+    fontFamily: "Ricty Diminished for Powerline"
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
