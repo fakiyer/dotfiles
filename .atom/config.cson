@@ -7,6 +7,7 @@
     app: "/Applications/iTerm.app"
   core:
     audioBeep: false
+    telemetryConsent: "no"
   editor:
     fontFamily: "Ricty Diminished for Powerline"
     invisibles: {}
