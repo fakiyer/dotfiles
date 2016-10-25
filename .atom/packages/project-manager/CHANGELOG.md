@@ -1,5 +1,30 @@
 # Changelog
 
+## 3.3.2
+- Added back the check to see if the path exists in a project. You can however still open it which you couldn't before.
+- Added a link to the documentation about `devMode`.
+
+And some other fixes behind the scenes :)
+
+## 3.3.1
+- Deploy seems to be broken so this is pretty much 3.3.0.
+
+## 3.3.0
+- Added option to save paths relative to home dir.
+- Fixed bug that would change a relative path to absolute when saving a project.
+- The Prettify Title option now works again.
+
+And some other things and corrections.
+
+## 3.2.5
+Now automatically closes the edit/save view on save and restores focus to whatever had focus last.
+
+## 3.2.4
+- Added `Project Manager: Update Projects` command that for example can be used to include a new git repository without having to reload Atom.
+- Added a notification when saving or editing a project.
+- Added a notification for when a syntax error is found in `projects.cson`.
+- Only properties that have been changed on a project is now saved to keep `projects.cson` a bit more clean.
+
 ## 3.2.3
 Fixes [#260](https://github.com/danielbrodin/atom-project-manager/issues/260)
 

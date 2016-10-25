@@ -19,7 +19,7 @@ export function activate() {
   disposables = new CompositeDisposable();
 
   disposables.add(atom.workspace.addOpener((uri) => {
-    if (uri === EDIT_URI) {
+    if (uri === EDIT_URI || uri === SAVE_URI) {
       return editComponent();
     }
 
@@ -48,6 +48,9 @@ export function activate() {
     },
     'project-manager:edit-project': () => {
       atom.workspace.open(EDIT_URI);
+    },
+    'project-manager:update-projects': () => {
+      manager.fetchProjects();
     },
   }));
 }

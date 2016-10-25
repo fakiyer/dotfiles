@@ -1,8 +1,11 @@
 'use babel';
 
+/* eslint "class-methods-use-this": ["error", {"exceptMethods": ["viewForItem"]}] */
+
 import { SelectListView, $$ } from 'atom-space-pen-views';
 import { autorun } from 'mobx';
-import manager from '../Manager';
+import { each } from 'underscore-plus';
+import manager, { Manager } from '../Manager';
 
 export default class ProjectsListView extends SelectListView {
   constructor() {
@@ -19,7 +22,7 @@ export default class ProjectsListView extends SelectListView {
     this.addClass('project-manager');
 
     let infoText = 'shift+enter will open project in the current window';
-    if (this.reversedConfirm) {
+    if (ProjectsListView.reversedConfirm) {
       infoText = 'shift+enter will open project in a new window';
     }
     const infoElement = document.createElement('div');
@@ -28,41 +31,38 @@ export default class ProjectsListView extends SelectListView {
     this.error.after(infoElement);
 
     atom.commands.add(this.element, {
-      'project-manager:alt-confirm': event => {
+      'project-manager:alt-confirm': (event) => {
         this.altConfirmed();
         event.stopPropagation();
       },
     });
   }
 
-  activate() {
-  }
-
-  get possibleFilterKeys() {
+  static get possibleFilterKeys() {
     return ['title', 'group', 'template'];
   }
 
-  get defaultFilterKey() {
+  static get defaultFilterKey() {
     return 'title';
   }
 
-  get sortBy() {
+  static get sortBy() {
     return atom.config.get('project-manager.sortBy');
   }
 
-  get showPath() {
+  static get showPath() {
     return atom.config.get('project-manager.showPath');
   }
 
-  get reversedConfirm() {
+  static get reversedConfirm() {
     return atom.config.get('project-manager.alwaysOpenInSameWindow');
   }
 
   getFilterKey() {
     const input = this.filterEditorView.getText();
     const inputArr = input.split(':');
-    const isFilterKey = this.possibleFilterKeys.includes(inputArr[0]);
-    let filter = this.defaultFilterKey;
+    const isFilterKey = ProjectsListView.possibleFilterKeys.includes(inputArr[0]);
+    let filter = ProjectsListView.defaultFilterKey;
 
     if (inputArr.length > 1 && isFilterKey) {
       filter = inputArr[0];
@@ -92,7 +92,7 @@ export default class ProjectsListView extends SelectListView {
 
   toggle() {
     if (this.panel && this.panel.isVisible()) {
-      this.close();
+      this.cancel();
     } else {
       this.show(manager.projects);
     }
@@ -103,7 +103,9 @@ export default class ProjectsListView extends SelectListView {
       this.panel = atom.workspace.addModalPanel({ item: this });
     }
 
-    const sortedProjects = this.sortItems(projects);
+    this.storeFocusedElement();
+
+    const sortedProjects = ProjectsListView.sortItems(projects);
 
     this.setItems(sortedProjects);
     this.focusFilterEditor();
@@ -111,37 +113,37 @@ export default class ProjectsListView extends SelectListView {
 
   confirmed(project) {
     if (project) {
-      manager.open(project, this.reversedConfirm);
-      this.close();
+      Manager.open(project, ProjectsListView.reversedConfirm);
+      this.hide();
     }
   }
 
   altConfirmed() {
     const project = this.getSelectedItem();
     if (project) {
-      manager.open(project, !this.reversedConfirm);
-      this.close();
+      Manager.open(project, !ProjectsListView.reversedConfirm);
+      this.hide();
     }
   }
 
-  close() {
+  hide() {
     if (this.panel) {
-      this.panel.destroy();
-      this.panel = null;
+      this.panel.hide();
     }
+  }
 
-    atom.workspace.getActivePane().activate();
+  cancel() {
+    super.cancel();
   }
 
   cancelled() {
-    this.close();
+    this.hide();
   }
 
   viewForItem(project) {
     const { title, group, icon, devMode, paths } = project.props;
-    const showPath = this.showPath;
-    // const projectMissing = project.stats ? false : true;
-    const projectMissing = false;
+    const showPath = ProjectsListView.showPath;
+    const projectMissing = !project.stats;
 
     return $$(function itemView() {
       this.li({ class: 'two-lines' },
@@ -162,18 +164,17 @@ export default class ProjectsListView extends SelectListView {
           if (projectMissing) {
             this.div({ class: 'icon icon-alert' }, 'Path is not available');
           } else if (showPath) {
-            let path;
-            for (path of paths) {
+            each(paths, (path) => {
               this.div({ class: 'no-icon' }, path);
-            }
+            }, this);
           }
         });
       });
     });
   }
 
-  sortItems(items) {
-    const key = this.sortBy;
+  static sortItems(items) {
+    const key = ProjectsListView.sortBy;
     let sorted = items;
 
     if (key === 'default') {
