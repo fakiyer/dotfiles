@@ -95,7 +95,7 @@ syntax enable
 " display
 " ----------------------
 " set background=dark
-" colorscheme solarized
+colorscheme peachpuff
 set noshowmode " show mode
 set title " show filename
 set ruler
