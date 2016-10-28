@@ -30,6 +30,7 @@ brew install fzf
 brew install ghq
 brew install git
 brew install git-lfs
+brew install hub
 brew install reattach-to-user-namespace
 brew install tmux
 brew install tree
