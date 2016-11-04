@@ -268,4 +268,4 @@ endfunction
 
 
 " fzf
-set rtp+=~/.fzf
+set rtp+=/usr/local/opt/fzf
