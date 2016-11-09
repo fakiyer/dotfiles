@@ -6,7 +6,7 @@ notifier = require '../notifier'
 
 module.exports =
 class ListView extends SelectListView
-  initialize: (@repo, @data) ->
+  initialize: (@repo, @data, @args=[]) ->
     super
     @show()
     @parseData()
@@ -48,9 +48,10 @@ class ListView extends SelectListView
     @cancel()
 
   merge: (branch) ->
-    git.cmd(['merge', branch], cwd: @repo.getWorkingDirectory())
+    mergeArg = ['merge'].concat(@args).concat [branch]
+    git.cmd(mergeArg, cwd: @repo.getWorkingDirectory(), {color: true})
     .then (data) ->
-      OutputViewManager.create().addLine(data).finish()
+      OutputViewManager.create().setContent(data).finish()
       atom.workspace.getTextEditors().forEach (editor) ->
         fs.exists editor.getPath(), (exist) -> editor.destroy() if not exist
       git.refresh()

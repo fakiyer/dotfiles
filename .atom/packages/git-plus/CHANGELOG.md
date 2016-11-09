@@ -1,5 +1,37 @@
 ## Changelog
 
+### 5.23.2
+- Fix #459 [pr #459](https://github.com/akonwi/git-plus/issues/459)
+  - Output from commands executed by Git Run will be colored if git provides coloring
+
+### 5.22.1
+- Fix #448 [pr #514](https://github.com/akonwi/git-plus/issues/448)
+- Fix #517 [pr #514](https://github.com/akonwi/git-plus/issues/517)
+
+### 5.22.0
+- Adds a new command to do `git push -u`.
+  - The old push command automatically retried after a failure with the `-u` flag and that can completely ignore some pre-push hooks. Fixes [#422](https://github.com/akonwi/git-plus/issues/422)
+- Files can now be staged from the Tree-view with a Git add command in the context menu from right clicking files and folders.
+  - More commands can be added there with pull requests. See [#422](https://github.com/akonwi/git-plus/issues/422)
+  - This work also fixes an unreported bug where trying to open a difftool for a file from the tree-view that was different than the currently active file would not work.
+
+### 5.21.0
+- Includes a format option for the Git Show command in package settings. [pr #527](https://github.com/akonwi/git-plus/issues/527)
+
+### 5.20.0
+- Fix #510 [pr #514](https://github.com/akonwi/git-plus/issues/514)
+- Add new command (Add Modified) [pr #519](https://github.com/akonwi/git-plus/issues/519)
+
+### 5.19.0
+- Add new command (Merge without fast-forward) [pr #492](https://github.com/akonwi/git-plus/issues/492)
+
+### 5.18.3
+- Merge [pr #489](https://github.com/akonwi/git-plus/issues/489)
+
+### 5.18.2
+- Git show defaults to HEAD if input is left empty. [pr #481](https://github.com/akonwi/git-plus/issues/481)
+- Pin icon in status bar can now be disabled. [pr #488](https://github.com/akonwi/git-plus/issues/488)
+
 ### 5.18.0
 - Enable activating the difftool on files and folders in the tree-view [pr #508](https://github.com/akonwi/git-plus/issues/508)
 - Allow the package to initialize immediately when atom loads

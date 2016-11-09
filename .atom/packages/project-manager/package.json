@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-116925-92042-1hc135i/package.tgz",
+        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-116107-47323-edodnw/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-116925-92042-1hc135i/package.tgz",
-        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-116925-92042-1hc135i/package.tgz",
+        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-116107-47323-edodnw/package.tgz",
+        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-116107-47323-edodnw/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-116925-92042-7y7bz5"
+      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-116107-47323-9fe513"
     ]
   ],
-  "_from": "../d-116925-92042-1hc135i/package.tgz",
-  "_id": "project-manager@3.3.2",
+  "_from": "../d-116107-47323-edodnw/package.tgz",
+  "_id": "project-manager@3.3.3",
   "_inCache": true,
   "_installable": true,
   "_location": "/project-manager",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-116925-92042-1hc135i/package.tgz",
+    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-116107-47323-edodnw/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-116925-92042-1hc135i/package.tgz",
-    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-116925-92042-1hc135i/package.tgz",
+    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-116107-47323-edodnw/package.tgz",
+    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-116107-47323-edodnw/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-116925-92042-1hc135i/package.tgz",
-  "_shasum": "468bef5c6401a921769fb04cb279eaceae1a5254",
+  "_resolved": "file:../d-116107-47323-edodnw/package.tgz",
+  "_shasum": "d87fef401850b597159913516a44072ad0d1fa98",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-116925-92042-1hc135i/package.tgz",
-  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-116925-92042-7y7bz5",
+  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-116107-47323-edodnw/package.tgz",
+  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-116107-47323-9fe513",
   "bugs": {
     "url": "https://github.com/danielbrodin/atom-project-manager/issues"
   },
@@ -88,8 +88,8 @@
   "dependencies": {
     "atom-project-util": "^4.0.0",
     "atom-space-pen-views": "^2.0.3",
-    "change-case": "^2.3.1",
-    "etch": "^0.6.3",
+    "change-case": "^3.0.0",
+    "etch": "^0.8.0",
     "findit": "^2.0.0",
     "mobx": "^2.6.0",
     "season": "^5.4.1",
@@ -136,5 +136,5 @@
   "scripts": {
     "test": "apm test && ./node_modules/.bin/eslint lib/**"
   },
-  "version": "3.3.2"
+  "version": "3.3.3"
 }

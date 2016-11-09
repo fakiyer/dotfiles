@@ -1,7 +1,6 @@
 git = require './git'
 
 getCommands = ->
-  GitAdd                 = require './models/git-add'
   GitBranch              = require './models/git-branch'
   GitDeleteLocalBranch   = require './models/git-delete-local-branch.coffee'
   GitDeleteRemoteBranch  = require './models/git-delete-remote-branch.coffee'
@@ -41,8 +40,9 @@ getCommands = ->
       currentFile = repo.relativize(atom.workspace.getActiveTextEditor()?.getPath())
       git.refresh()
       commands = []
-      commands.push ['git-plus:add', 'Add', -> GitAdd(repo)]
-      commands.push ['git-plus:add-all', 'Add All', -> GitAdd(repo, addAll: true)]
+      commands.push ['git-plus:add', 'Add', -> git.add(repo, file: currentFile)]
+      commands.push ['git-plus:add-modified', 'Add Modified', -> git.add(repo, update: true)]
+      commands.push ['git-plus:add-all', 'Add All', -> git.add(repo)]
       commands.push ['git-plus:log', 'Log', -> GitLog(repo)]
       commands.push ['git-plus:log-current-file', 'Log Current File', -> GitLog(repo, onlyCurrentFile: true)]
       commands.push ['git-plus:remove-current-file', 'Remove Current File', -> GitRemove(repo)]
@@ -69,6 +69,7 @@ getCommands = ->
       commands.push ['git-plus:pull', 'Pull', -> GitPull(repo)]
       commands.push ['git-plus:pull-using-rebase', 'Pull Using Rebase', -> GitPull(repo, rebase: true)]
       commands.push ['git-plus:push', 'Push', -> GitPush(repo)]
+      commands.push ['git-plus:push-set-upstream', 'Push -u', -> GitPush(repo, setUpstream: true)]
       commands.push ['git-plus:remove', 'Remove', -> GitRemove(repo, showSelector: true)]
       commands.push ['git-plus:reset', 'Reset HEAD', -> git.reset(repo)]
       commands.push ['git-plus:show', 'Show', -> GitShow(repo)]
@@ -85,6 +86,7 @@ getCommands = ->
       commands.push ['git-plus:run', 'Run', -> new GitRun(repo)]
       commands.push ['git-plus:merge', 'Merge', -> GitMerge(repo)]
       commands.push ['git-plus:merge-remote', 'Merge Remote', -> GitMerge(repo, remote: true)]
+      commands.push ['git-plus:merge-no-fast-forward', 'Merge without fast-forward', -> GitMerge(repo, no_fast_forward: true)]
       commands.push ['git-plus:rebase', 'Rebase', -> GitRebase(repo)]
       commands.push ['git-plus:git-open-changed-files', 'Open Changed Files', -> GitOpenChangedFiles(repo)]
 
