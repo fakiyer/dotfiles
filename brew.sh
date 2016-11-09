@@ -34,6 +34,7 @@ brew install hub
 brew install reattach-to-user-namespace
 brew install tmux
 brew install tree
+brew install pt
 
 # Remove outdated versions from the cellar.
 brew cleanup
