@@ -195,7 +195,7 @@ let loaded_matchparen = 1
 "hi LineNr ctermfg=DarkGray
 
 " NERD_tree.vim
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeDirArrows=0
 let g:NERDTreeMouseMode=0
 
