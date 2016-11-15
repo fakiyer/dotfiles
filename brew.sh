@@ -6,7 +6,7 @@
 brew update
 
 # Upgrade any already-installed formulae.
-brew upgrade --all
+brew upgrade
 
 # Install Zsh
 # Note: don’t forget to add `/usr/local/bin/zsh` to `/etc/shells` before
