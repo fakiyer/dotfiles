@@ -1,5 +1,32 @@
 ## Changelog
 
+### 5.25.1
+- Use experimental toggle: 'Always Pull From Upstream', when pulling before pushing is enabled
+
+### 5.25.0
+- Adds new experimental toggle: 'Always Pull From Upstream', which will pull from your current branch upstream automatically without prompting you for a branch to pull from.
+- Fix [#538](https://github.com/akonwi/git-plus/issues/538)
+  - [#537](https://github.com/akonwi/git-plus/issues/537) has been left open as the original.
+
+### 5.24.2
+- Fix [#436](https://github.com/akonwi/git-plus/issues/436)
+- Fix [#529](https://github.com/akonwi/git-plus/issues/529)
+
+### 5.24.1
+- Fix [#515](https://github.com/akonwi/git-plus/issues/515)
+- Fix [#533](https://github.com/akonwi/git-plus/issues/533)
+
+### 5.24.0
+- This enables basic support for submodules. You should be able to add, commit, and diff files that belong to submodules.
+- Small performance improvements for initial loading of the package's command palette.
+
+### 5.23.3
+- Add new command, `Commit All and Push`
+- Fix [#509](https://github.com/akonwi/git-plus/issues/509) where multiple selected commits weren't being cherry picked.
+- Update README
+  - Table of commands contains info about using Tags.
+  - Add note for Windows users to check out [#224](https://github.com/akonwi/git-plus/issues/224) for troubleshooting pull/push problems
+
 ### 5.23.2
 - Fix #459 [pr #459](https://github.com/akonwi/git-plus/issues/459)
   - Output from commands executed by Git Run will be colored if git provides coloring
