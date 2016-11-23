@@ -192,7 +192,7 @@ let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
 let loaded_matchparen = 1
 "hi LineNr ctermfg=DarkGray ctermbg=Black
-"hi LineNr ctermfg=DarkGray
+hi LineNr ctermfg=DarkGray
 
 " NERD_tree.vim
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
