@@ -10,6 +10,7 @@
     telemetryConsent: "no"
   editor:
     fontFamily: "Ricty Diminished for Powerline"
+    fontSize: 13
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
