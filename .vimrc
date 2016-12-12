@@ -144,7 +144,7 @@ set t_vb=
 
 " key map
 " --------------------
-let mapleader = ","
+let mapleader = "\<Space>"
 noremap <CR> o<ESC>
 nnoremap <f2> :NERDTreeToggle<CR>
 nmap <silent> <F8> <Plug>IndentGuidesToggle
@@ -247,7 +247,6 @@ endfunction
 function! LightLineMode()
   return winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
-
 
 " fzf
 set rtp+=/usr/local/opt/fzf
