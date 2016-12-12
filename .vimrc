@@ -1,90 +1,72 @@
-""""""""""""""""""""""""""""""
-" Vundle
-""""""""""""""""""""""""""""""
-set nocompatible      " We're running Vim, not Vi!
-filetype off                  " required
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" Required:
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+" Required:
+call dein#begin('~/.vim/dein')
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-"Plugin 'user/L9', {'name': 'newL9'}
+" Let dein manage dein
+" Required:
+call dein#add('Shougo/dein.vim')
 
-" My Bundles here:
-" Bundle 'railscasts'
-Plugin 'surround.vim'
-" Bundle 'mru.vim'
-" Bundle 'EasyMotion'
-" Bundle 'FuzzyFinder'
-" Bundle 'AutoClose'
-" Bundle 'hrp/EnhancedCommentify'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tpope/vim-endwise'
-Plugin 'vim-scripts/AnsiEsc.vim'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'terryma/vim-expand-region'
+" Add or remove your plugins here:
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
+call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/neoyank.vim')
+call dein#add('Shougo/neomru.vim')
+" call dein#add('Shougo/neocomplete.vim')
 
-" Unite
-Plugin 'Shougo/unite.vim'
-Plugin 'Shougo/neoyank.vim'
-Plugin 'Shougo/neomru.vim'
+" You can specify revision/branch/tag.
+" call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+
+call dein#add('tpope/vim-fugitive')
+
+call dein#add('surround.vim')
+call dein#add('tomtom/tcomment_vim')
+call dein#add('tpope/vim-endwise')
+call dein#add('vim-scripts/AnsiEsc.vim')
+call dein#add('nathanaelkane/vim-indent-guides')
+call dein#add('terryma/vim-expand-region')
 
 "Plugin 'bling/vim-airline'
-Plugin 'itchyny/lightline.vim'
+call dein#add('itchyny/lightline.vim')
 
 " Ruby/Rails
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rails'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-projectionist'
-Plugin 'jlanzarotta/bufexplorer'
-"Plugin 'scrooloose/nerdcommenter'
+call dein#add('vim-ruby/vim-ruby')
+call dein#add('tpope/vim-rails')
+call dein#add('scrooloose/nerdtree')
+call dein#add('tpope/vim-rake')
+call dein#add('tpope/vim-bundler')
+call dein#add('tpope/vim-projectionist')
+call dein#add('jlanzarotta/bufexplorer')
 " Bundle 'snipMate'
-Plugin 'ruby-matchit'
+call dein#add('ruby-matchit')
 
 " Git
-Plugin 'git-commit'
+call dein#add('git-commit')
 
 " Docker
-Plugin 'ekalinin/Dockerfile.vim'
+call dein#add('ekalinin/Dockerfile.vim')
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+" Required:
+call dein#end()
 
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-""""""""""""""""""""""""""""""
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
+
+"End dein Scripts-------------------------
 
 
 """"""""""""""""""""""""""""""
