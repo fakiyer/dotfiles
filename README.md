@@ -8,8 +8,8 @@
 * https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
 
 ## Vim
-### Install Vundle
-* https://github.com/VundleVim/Vundle.vim
+### Install Dein.vim
+* https://github.com/Shougo/dein.vim (to ~/.vim/dein)
 
 ## iTerm
 ### Install iTerm
