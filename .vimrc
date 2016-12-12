@@ -17,7 +17,7 @@ call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 call dein#add('Shougo/denite.nvim')
 call dein#add('Shougo/neoyank.vim')
 call dein#add('Shougo/neomru.vim')
-" call dein#add('Shougo/neocomplete.vim')
+call dein#add('Shougo/deoplete.nvim')
 
 call dein#add('tpope/vim-fugitive')
 call dein#add('surround.vim')
@@ -53,7 +53,6 @@ endif
 """"""""""""""""""""""""""""""
 colorscheme peachpuff
 set t_Co=256
-
 
 """"""""""""""""""""""""""""""
 " Option
@@ -222,3 +221,10 @@ endfunction
 
 " fzf
 set rtp+=/usr/local/opt/fzf
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+" Popup color.
+hi Pmenu ctermbg=8
+hi PmenuSel ctermbg=1
+hi PmenuSbar ctermbg=0
