@@ -1,19 +1,16 @@
-"dein Scripts-----------------------------
+""""""""""""""""""""""""""""""
+" Dein
+""""""""""""""""""""""""""""""
 if &compatible
-  set nocompatible               " Be iMproved
+  set nocompatible
 endif
 
-" Required:
 set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-" Required:
 call dein#begin('~/.vim/dein')
 
-" Let dein manage dein
-" Required:
 call dein#add('Shougo/dein.vim')
 
-" Add or remove your plugins here:
 call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/neosnippet-snippets')
 call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
@@ -22,22 +19,14 @@ call dein#add('Shougo/neoyank.vim')
 call dein#add('Shougo/neomru.vim')
 " call dein#add('Shougo/neocomplete.vim')
 
-" You can specify revision/branch/tag.
-" call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
-
 call dein#add('tpope/vim-fugitive')
-
 call dein#add('surround.vim')
 call dein#add('tomtom/tcomment_vim')
 call dein#add('tpope/vim-endwise')
 call dein#add('vim-scripts/AnsiEsc.vim')
 call dein#add('nathanaelkane/vim-indent-guides')
 call dein#add('terryma/vim-expand-region')
-
-"Plugin 'bling/vim-airline'
 call dein#add('itchyny/lightline.vim')
-
-" Ruby/Rails
 call dein#add('vim-ruby/vim-ruby')
 call dein#add('tpope/vim-rails')
 call dein#add('scrooloose/nerdtree')
@@ -45,47 +34,37 @@ call dein#add('tpope/vim-rake')
 call dein#add('tpope/vim-bundler')
 call dein#add('tpope/vim-projectionist')
 call dein#add('jlanzarotta/bufexplorer')
-" Bundle 'snipMate'
 call dein#add('ruby-matchit')
-
-" Git
 call dein#add('git-commit')
-
-" Docker
 call dein#add('ekalinin/Dockerfile.vim')
 
-" Required:
 call dein#end()
 
-" Required:
 filetype plugin indent on
 syntax enable
 
-" If you want to install not installed plugins on startup.
 if dein#check_install()
   call dein#install()
 endif
 
-"End dein Scripts-------------------------
+
+""""""""""""""""""""""""""""""
+" Display
+""""""""""""""""""""""""""""""
+colorscheme peachpuff
+set t_Co=256
 
 
 """"""""""""""""""""""""""""""
 " Option
 """"""""""""""""""""""""""""""
-syntax enable
-
-" display
-" ----------------------
-" set background=dark
-colorscheme peachpuff
-set noshowmode " show mode
-set title " show filename
+set noshowmode
+set title
 set ruler
 set list " show eol,tab,etc...
 set listchars=tab:>-,trail:-,extends:>,precedes:< " eol:$
 set laststatus=2
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
-set t_Co=256
 
 " edit
 " ----------------------
@@ -107,21 +86,6 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 highlight link ZenkakuSpace Error
 match ZenkakuSpace /<81>@/
 
-" move
-" ----------------------
-nnoremap j gj
-nnoremap k gk
-set whichwrap=b,s,h,l,<,>,[,]
-
-" When insert mode, enable hjkl and enable go to home/end.
-imap <c-o> <END>
-imap <c-a> <HOME>
-imap <c-h> <LEFT>
-imap <c-j> <DOWN>
-imap <c-k> <UP>
-imap <c-l> <Right>
-imap <C-Space> <C-x><C-o>
-
 " search
 " ----------------------
 set incsearch
@@ -135,21 +99,29 @@ set nowrapscan
 set visualbell
 set t_vb=
 
-" backup
-" --------------------
-" set backup
-" set backupdir=~/.vim/vim_backup
-" set swapfile
-" set directory=~/.vim/vim_swap
-
 " key map
 " --------------------
 let mapleader = "\<Space>"
+
 noremap <CR> o<ESC>
 nnoremap <f2> :NERDTreeToggle<CR>
 nmap <silent> <F8> <Plug>IndentGuidesToggle
 nnoremap <F9> :set nonumber!<CR>
 set pastetoggle=<F10>
+
+nnoremap j gj
+nnoremap k gk
+set whichwrap=b,s,h,l,<,>,[,]
+
+" When insert mode, enable hjkl and enable go to home/end.
+imap <c-o> <END>
+imap <c-a> <HOME>
+imap <c-h> <LEFT>
+imap <c-j> <DOWN>
+imap <c-k> <UP>
+imap <c-l> <Right>
+imap <C-Space> <C-x><C-o>
+
 
 " auto command
 " --------------------
@@ -186,7 +158,7 @@ let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black   ctermbg=235
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgray ctermbg=236
 
-" airline
+" lightline
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'mode_map': { 'c': 'NORMAL' },
