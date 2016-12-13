@@ -224,7 +224,6 @@ set rtp+=/usr/local/opt/fzf
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-" Popup color.
-hi Pmenu ctermbg=8
-hi PmenuSel ctermbg=1
-hi PmenuSbar ctermbg=0
+hi Pmenu ctermbg=0 ctermfg=8
+hi PmenuSel ctermbg=7
+hi PmenuSbar ctermbg=7
