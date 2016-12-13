@@ -23,6 +23,7 @@ fi;
 brew install vim
 brew install neovim/neovim/neovim
 brew install python3
+pip3 install neovim
 
 # Install Fzf
 brew install fzf
