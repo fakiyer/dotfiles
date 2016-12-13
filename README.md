@@ -15,8 +15,8 @@
 ### Install iTerm
 * https://www.iterm2.com/index.html
 
-### Install Theme(DimmedMonokai)
-* https://github.com/mbadolato/iTerm2-Color-Schemes#dimmedmonokai
+### Install Theme(OceanicNext)
+* https://github.com/mhartington/oceanic-next-iterm
 
 ## Other tools
 ### Install Homebrew
