@@ -37,6 +37,7 @@ call dein#add('jlanzarotta/bufexplorer')
 call dein#add('ruby-matchit')
 call dein#add('git-commit')
 call dein#add('ekalinin/Dockerfile.vim')
+call dein#add('mhartington/oceanic-next')
 
 call dein#end()
 
@@ -51,8 +52,8 @@ endif
 """"""""""""""""""""""""""""""
 " Display
 """"""""""""""""""""""""""""""
-colorscheme peachpuff
-set t_Co=256
+colorscheme OceanicNext
+set termguicolors
 
 """"""""""""""""""""""""""""""
 " Option
@@ -224,6 +225,3 @@ set rtp+=/usr/local/opt/fzf
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-hi Pmenu ctermbg=0 ctermfg=8
-hi PmenuSel ctermbg=7
-hi PmenuSbar ctermbg=7
