@@ -15,9 +15,6 @@
 ### Install iTerm
 * https://www.iterm2.com/index.html
 
-### Install Theme(OceanicNext)
-* https://github.com/mhartington/oceanic-next-iterm
-
 ## Other tools
 ### Install Homebrew
 * http://brew.sh/
