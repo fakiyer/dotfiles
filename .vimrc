@@ -38,6 +38,7 @@ call dein#add('ruby-matchit')
 call dein#add('git-commit')
 call dein#add('ekalinin/Dockerfile.vim')
 call dein#add('mhartington/oceanic-next')
+call dein#add('osyo-manga/vim-monster')
 
 call dein#end()
 
@@ -225,3 +226,9 @@ set rtp+=/usr/local/opt/fzf
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+
+" vim-monster
+let g:monster#completion#rcodetools#backend = "async_rct_complete"
+let g:deoplete#sources#omni#input_patterns = {
+\   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
+\}
