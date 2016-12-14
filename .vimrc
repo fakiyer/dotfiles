@@ -37,8 +37,8 @@ call dein#add('jlanzarotta/bufexplorer')
 call dein#add('ruby-matchit')
 call dein#add('git-commit')
 call dein#add('ekalinin/Dockerfile.vim')
-call dein#add('mhartington/oceanic-next')
 call dein#add('osyo-manga/vim-monster')
+call dein#add('lifepillar/vim-solarized8')
 
 call dein#end()
 
@@ -53,8 +53,9 @@ endif
 """"""""""""""""""""""""""""""
 " Display
 """"""""""""""""""""""""""""""
-colorscheme OceanicNext
+colorscheme solarized8_dark
 set termguicolors
+set background=dark
 
 """"""""""""""""""""""""""""""
 " Option
@@ -161,7 +162,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgray ctermbg=236
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'solarized',
       \ 'mode_map': { 'c': 'NORMAL' },
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
@@ -232,3 +233,7 @@ let g:monster#completion#rcodetools#backend = "async_rct_complete"
 let g:deoplete#sources#omni#input_patterns = {
 \   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
 \}
+
+" solarized8
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
