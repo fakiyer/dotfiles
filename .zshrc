@@ -83,6 +83,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+### Custom
+function allupdate() {
+  brew upgrade && brew update && brew cleanup &&
+  pip-review --auto &&
+  nvim -e -R -c "call dein#update()" -c "q"
+}
+
 ### git
 alias ggfpush='git push --force-with-lease origin $(git_current_branch)'
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
