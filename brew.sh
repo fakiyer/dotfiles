@@ -38,6 +38,7 @@ brew install reattach-to-user-namespace
 brew install tmux
 brew install tree
 brew install pt
+pip3 install pip-review
 
 # Remove outdated versions from the cellar.
 brew cleanup
