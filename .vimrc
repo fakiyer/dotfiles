@@ -83,7 +83,7 @@ set hidden
 set showcmd
 set backspace=indent,eol,start
 set hlsearch
-nmap <Esc><Esc> :nohlsearch<CR><Esc>
+set number
 
 highlight link ZenkakuSpace Error
 match ZenkakuSpace /<81>@/
@@ -115,7 +115,6 @@ nnoremap j gj
 nnoremap k gk
 set whichwrap=b,s,h,l,<,>,[,]
 
-" When insert mode, enable hjkl and enable go to home/end.
 imap <c-o> <END>
 imap <c-a> <HOME>
 imap <c-h> <LEFT>
@@ -123,7 +122,8 @@ imap <c-j> <DOWN>
 imap <c-k> <UP>
 imap <c-l> <Right>
 imap <C-Space> <C-x><C-o>
-
+inoremap jj <ESC>
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " auto command
 " --------------------
