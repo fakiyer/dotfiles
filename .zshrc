@@ -49,7 +49,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew brew-cask docker docker-compose git github osx rails rake rbenv ruby tmux vagrant zsh-syntax-highlighting)
+plugins=(docker docker-compose git github osx rails rbenv tmux zsh-syntax-highlighting)
 
 # User configuration
 
@@ -135,7 +135,8 @@ frepo() {
 
 ### node.js
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
 
 ### android
 export ANDROID_HOME=/usr/local/opt/android-sdk
