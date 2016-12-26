@@ -1,7 +1,36 @@
 ## Changelog
 
+### 6.0.2
+- Fixes [#579](https://github.com/akonwi/git-plus/issues/579)
+
+### 6.0.1
+- Fixes [#576](https://github.com/akonwi/git-plus/issues/576)
+
+### 6.0.0
+- __BREAKING__ The configuration option of 'Pull Before Push' is now a simple toggle and there is a second option 'Pull Rebase', which is also a toggle for whether to do all pulls with the `--rebase` flag.
+- Fixes [#235](https://github.com/akonwi/git-plus/issues/235)
+- Fixes [#576](https://github.com/akonwi/git-plus/issues/576)
+- Remove the experimental tag from the 'Verbose Commits' feature
+- Only show the `Init` command in the atom palette when there is no repo in the project
+
+### 5.29.1
+- Fixes [#568](https://github.com/akonwi/git-plus/issues/568)
+- Fixes [#405](https://github.com/akonwi/git-plus/issues/405)
+
+### 5.29.0
+- Fixes [#531](https://github.com/akonwi/git-plus/issues/531)
+- Fixes [#292](https://github.com/akonwi/git-plus/issues/292)
+- Remove the experimental tag from the 'Always pull from upstream' feature
+
+### 5.28.0
+- Display keyboard shortcuts for the commands in the Git Plus menu (@metatalker-[pr-566](https://github.com/akonwi/git-plus/pull/566))
+
+### 5.27.0
+- Added more commands to the tree-view context-menu
+  - `Add`, `Add + commit`, `Diff`, `Unstage`, `Checkout`
+
 ### 5.25.5
-- Fix [#533](https://github.com/akonwi/git-plus/issues/533)
+- Fix [#553](https://github.com/akonwi/git-plus/issues/553)
 - Refactoring
 
 ### 5.25.4

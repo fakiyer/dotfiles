@@ -40,19 +40,22 @@ module.exports =
     enum: ['oneline', 'short', 'medium', 'full', 'fuller', 'email', 'raw', 'none']
   pullBeforePush:
     description: 'Pull from remote before pushing'
-    type: 'string'
-    default: 'no'
-    enum: ['no', 'pull', 'pull --rebase']
+    type: 'boolean'
+    default: false
+  pullRebase:
+    description: 'Pull with --rebase flag'
+    type: 'boolean'
+    default: false
   experimental:
     description: 'Enable beta features and behavior'
     type: 'boolean'
     default: false
   verboseCommits:
-    description: '(Experimental) Show diffs in commit pane?'
+    description: 'Show diffs in commit pane?'
     type: 'boolean'
     default: false
   alwaysPullFromUpstream:
-    description: '(Experimental) Always pull from current branch upstream?'
+    description: 'Always pull from current branch upstream?'
     type: 'boolean'
     default: false
   enableStatusBarIcon:

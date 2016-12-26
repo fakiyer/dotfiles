@@ -6,10 +6,6 @@ notifier = require '../notifier'
 OutputViewManager = require '../output-view-manager'
 PullBranchListView = require './pull-branch-list-view'
 
-experimentalFeaturesEnabled = () ->
-  gitPlus = atom.config.get('git-plus')
-  gitPlus.alwaysPullFromUpstream and gitPlus.experimental
-
 module.exports =
 class ListView extends SelectListView
   initialize: (@repo, @data, {@mode, @tag, @extraArgs}={}) ->
@@ -47,10 +43,10 @@ class ListView extends SelectListView
       @li name
 
   pull: (remoteName) ->
-    if experimentalFeaturesEnabled()
+    if atom.config.get('git-plus.alwaysPullFromUpstream')
       _pull @repo, extraArgs: [@extraArgs]
     else
-      git.cmd(['branch', '-r'], cwd: @repo.getWorkingDirectory())
+      git.cmd(['branch', '--no-color', '-r'], cwd: @repo.getWorkingDirectory())
       .then (data) =>
         new PullBranchListView(@repo, data, remoteName, @extraArgs).result
 
@@ -61,9 +57,9 @@ class ListView extends SelectListView
       @mode = 'fetch'
       @execute name, '--prune'
     else if @mode is 'push'
-      pullOption = atom.config.get 'git-plus.pullBeforePush'
-      @extraArgs = if pullOption?.includes '--rebase' then '--rebase' else ''
-      unless pullOption? and pullOption is 'no'
+      pullBeforePush = atom.config.get('git-plus.pullBeforePush')
+      @extraArgs = '--rebase' if pullBeforePush and atom.config.get('git-plus.pullRebase')
+      if pullBeforePush
         @pull(name).then => @execute name
       else
         @execute name

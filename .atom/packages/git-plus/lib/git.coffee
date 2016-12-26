@@ -15,9 +15,6 @@ _prettify = (data) ->
   data = data.split(/\0/)[...-1]
   [] = for mode, i in data by 2
     {mode, path: data[i+1] }
-  # data = data.split(/\n/)
-  # data.filter((file) -> file isnt '').map (file) ->
-  #   {mode: file[0], path: file.substring(1).trim()}
 
 _prettifyUntracked = (data) ->
   return [] if data is ''
@@ -129,6 +126,23 @@ module.exports = git =
           resolve(new RepoListView(repos).result)
         else
           resolve(repos[0])
+
+  getRepoForPath: (path) ->
+    if not path?
+      Promise.reject "No file to find repository for"
+    else
+      new Promise (resolve, reject) ->
+        project = atom.project
+        directory = project.getDirectories().filter((d) -> d.contains(path) or d.getPath() is path)[0]
+        if directory?
+          project.repositoryForDirectory(directory)
+          .then (repo) ->
+            submodule = repo.repo.submoduleForPath(path)
+            if submodule? then resolve(submodule) else resolve(repo)
+          .catch (e) ->
+            reject(e)
+        else
+          reject "no current file"
 
   getSubmodule: (path) ->
     path ?= atom.workspace.getActiveTextEditor()?.getPath()

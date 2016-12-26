@@ -2,45 +2,62 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161029-54656-1ml6izi/package.tgz",
+        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161126-8084-3jhpst/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161029-54656-1ml6izi/package.tgz",
-        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161029-54656-1ml6izi/package.tgz",
+        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161126-8084-3jhpst/package.tgz",
+        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161126-8084-3jhpst/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-1161029-54656-1uh3h5n"
+      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-1161126-8084-cd5kb"
     ]
   ],
-  "_from": "../d-1161029-54656-1ml6izi/package.tgz",
-  "_id": "linter-ruby@1.2.3",
+  "_from": "../d-1161126-8084-3jhpst/package.tgz",
+  "_id": "linter-ruby@1.2.4",
   "_inCache": true,
   "_installable": true,
   "_location": "/linter-ruby",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161029-54656-1ml6izi/package.tgz",
+    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161126-8084-3jhpst/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161029-54656-1ml6izi/package.tgz",
-    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161029-54656-1ml6izi/package.tgz",
+    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161126-8084-3jhpst/package.tgz",
+    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161126-8084-3jhpst/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-1161029-54656-1ml6izi/package.tgz",
-  "_shasum": "afb06727e07e194772545b444725b00945e06b72",
+  "_resolved": "file:../d-1161126-8084-3jhpst/package.tgz",
+  "_shasum": "6d4ce572eb54eeb92da10efdf49639036eb1036d",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161029-54656-1ml6izi/package.tgz",
-  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-1161029-54656-1uh3h5n",
+  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161126-8084-3jhpst/package.tgz",
+  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-1161126-8084-cd5kb",
   "activationHooks": [
-    "language-ruby:grammar-used"
+    "language-ruby:grammar-used",
+    "language-ruby-on-rails:grammar-used"
   ],
   "bugs": {
     "url": "https://github.com/AtomLinter/linter-ruby/issues"
+  },
+  "configSchema": {
+    "rubyExecutablePath": {
+      "type": "string",
+      "default": "ruby"
+    },
+    "ignoredExtensions": {
+      "type": "array",
+      "default": [
+        "erb",
+        "md"
+      ],
+      "items": {
+        "type": "string"
+      }
+    }
   },
   "dependencies": {
     "atom-linter": "^8.0.0",
@@ -48,19 +65,29 @@
   },
   "description": "Lint Ruby on the fly, using ruby -wc",
   "devDependencies": {
-    "eslint": "latest"
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb-base": "^10.0.1",
+    "eslint-plugin-import": "^2.1.0"
   },
   "engines": {
-    "atom": ">0.180.0"
+    "atom": ">=1.4.0 <2.0.0"
   },
   "eslintConfig": {
+    "extends": "airbnb-base",
+    "rules": {
+      "global-require": "off",
+      "import/no-unresolved": [
+        "error",
+        {
+          "ignore": [
+            "atom"
+          ]
+        }
+      ]
+    },
     "env": {
-      "es6": true,
       "browser": true,
       "node": true
-    },
-    "ecmaFeatures": {
-      "modules": true
     },
     "globals": {
       "atom": true
@@ -87,5 +114,9 @@
     "type": "git",
     "url": "git+https://github.com/AtomLinter/linter-ruby.git"
   },
-  "version": "1.2.3"
+  "scripts": {
+    "lint": "eslint .",
+    "test": "apm test"
+  },
+  "version": "1.2.4"
 }

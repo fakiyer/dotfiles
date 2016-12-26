@@ -1,7 +1,8 @@
 'use babel';
 
-import path from 'path';
+// eslint-disable-next-line import/extensions, import/no-extraneous-dependencies
 import { CompositeDisposable } from 'atom';
+import path from 'path';
 import * as helper from 'atom-linter';
 import yaml from 'js-yaml';
 
@@ -19,11 +20,12 @@ export default {
 
   activate() {
     require('atom-package-deps').install('linter-js-yaml');
+
     this.subscriptions = new CompositeDisposable();
-    this.subscriptions.add(atom.config.observe('linter-js-yaml.customTags', customTags => {
-      this.Schema = yaml.Schema.create(customTags.map(tag => {
-        return new yaml.Type(tag, { kind: 'scalar' });
-      }));
+    this.subscriptions.add(atom.config.observe('linter-js-yaml.customTags', (customTags) => {
+      this.Schema = yaml.Schema.create(customTags.map(tag =>
+        new yaml.Type(tag, { kind: 'scalar' }),
+      ));
     }));
   },
 
@@ -51,18 +53,18 @@ export default {
           }
           const column = message.mark.column;
           return {
-            type: type,
+            type,
             text: message.reason,
-            filePath: filePath,
+            filePath,
             range: helper.rangeFromLineNumber(TextEditor, line, column),
           };
         };
 
         try {
-          yaml.safeLoadAll(fileText, () => {}, {
+          yaml.safeLoadAll(fileText, () => ({}), {
             filename: path.basename(filePath),
             schema: this.Schema,
-            onWarning: warning => {
+            onWarning: (warning) => {
               messages.push(processMessage('Warning', warning));
             },
           });

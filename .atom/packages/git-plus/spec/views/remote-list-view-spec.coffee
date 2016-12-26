@@ -5,6 +5,8 @@ options = {cwd: repo.getWorkingDirectory()}
 colorOptions = {color: true}
 remotes = "remote1\nremote2"
 pullBeforePush = 'git-plus.pullBeforePush'
+pullRebase = 'git-plus.pullRebase'
+alwaysPullFromUpstream = 'git-plus.alwaysPullFromUpstream'
 
 describe "RemoteListView", ->
   it "displays a list of remotes", ->
@@ -13,8 +15,7 @@ describe "RemoteListView", ->
 
   describe "when mode is pull", ->
     it "it calls git.cmd to get the remote branches", ->
-      atom.config.set('git-plus.alwaysPullFromUpstream', false)
-      atom.config.set('git-plus.experimental', false)
+      atom.config.set(alwaysPullFromUpstream, false)
       view = new RemoteListView(repo, remotes, mode: 'pull')
       spyOn(git, 'cmd').andCallFake ->
         Promise.resolve 'branch1\nbranch2'
@@ -22,7 +23,7 @@ describe "RemoteListView", ->
       view.confirmSelection()
       waitsFor -> git.cmd.callCount > 0
       runs ->
-        expect(git.cmd).toHaveBeenCalledWith ['branch', '-r'], options
+        expect(git.cmd).toHaveBeenCalledWith ['branch', '--no-color', '-r'], options
 
   describe "when mode is fetch", ->
     it "it calls git.cmd to with ['fetch'] and the remote name", ->
@@ -48,14 +49,12 @@ describe "RemoteListView", ->
 
   describe "when mode is push", ->
     it "calls git.cmd with ['push']", ->
-      atom.config.set('git-plus.alwaysPullFromUpstream', false)
-      atom.config.set('git-plus.experimental', false)
       spyOn(git, 'cmd').andReturn Promise.resolve 'pushing text'
 
       view = new RemoteListView(repo, remotes, mode: 'push')
       view.confirmSelection()
 
-      waitsFor -> git.cmd.callCount > 1
+      waitsFor -> git.cmd.callCount > 0
       runs ->
         expect(git.cmd).toHaveBeenCalledWith ['push', 'remote1'], options, colorOptions
 
@@ -72,9 +71,8 @@ describe "RemoteListView", ->
     describe "when the the config for pull before push is set to true", ->
       it "calls git.cmd with ['pull'], remote name, and branch name and then with ['push']", ->
         spyOn(git, 'cmd').andReturn Promise.resolve 'branch1'
-        atom.config.set(pullBeforePush, 'pull')
-        atom.config.set('git-plus.alwaysPullFromUpstream', false)
-        atom.config.set('git-plus.experimental', false)
+        atom.config.set(pullBeforePush, true)
+        atom.config.set(alwaysPullFromUpstream, false)
 
         view = new RemoteListView(repo, remotes, mode: 'push')
         view.confirmSelection()
@@ -87,9 +85,8 @@ describe "RemoteListView", ->
       describe "when the config for alwaysPullFromUpstream is set to true", ->
         it "calls the function from the _pull module", ->
           spyOn(git, 'cmd').andReturn Promise.resolve 'branch1'
-          atom.config.set(pullBeforePush, 'pull')
-          atom.config.set('git-plus.alwaysPullFromUpstream', true)
-          atom.config.set('git-plus.experimental', true)
+          atom.config.set(pullBeforePush, true)
+          atom.config.set(alwaysPullFromUpstream, true)
 
           view = new RemoteListView(repo, remotes, mode: 'push')
           view.confirmSelection()
@@ -99,15 +96,16 @@ describe "RemoteListView", ->
             expect(git.cmd).not.toHaveBeenCalledWith ['pull', 'remote1', 'branch1'], options, colorOptions
             expect(git.cmd).toHaveBeenCalledWith ['push', 'remote1'], options, colorOptions
 
-    describe "when the the config for pull before push is set to 'Pull --rebase'", ->
-      it "calls git.cmd with ['pull', '--rebase'], remote name, and branch name and then with ['push']", ->
-        spyOn(git, 'cmd').andReturn Promise.resolve 'branch1'
-        atom.config.set(pullBeforePush, 'pull --rebase')
+      describe "when the the config for pullRebase is set to true", ->
+        it "calls git.cmd with ['pull', '--rebase'], remote name, and branch name and then with ['push']", ->
+          spyOn(git, 'cmd').andReturn Promise.resolve 'branch1'
+          atom.config.set(pullBeforePush, true)
+          atom.config.set(pullRebase, true)
 
-        view = new RemoteListView(repo, remotes, mode: 'push')
-        view.confirmSelection()
+          view = new RemoteListView(repo, remotes, mode: 'push')
+          view.confirmSelection()
 
-        waitsFor -> git.cmd.callCount > 2
-        runs ->
-          expect(git.cmd).toHaveBeenCalledWith ['pull', '--rebase', 'remote1', 'branch1'], options, colorOptions
-          expect(git.cmd).toHaveBeenCalledWith ['push', 'remote1'], options, colorOptions
+          waitsFor -> git.cmd.callCount > 2
+          runs ->
+            expect(git.cmd).toHaveBeenCalledWith ['pull', '--rebase', 'remote1', 'branch1'], options, colorOptions
+            expect(git.cmd).toHaveBeenCalledWith ['push', 'remote1'], options, colorOptions
