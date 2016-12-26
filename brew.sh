@@ -22,7 +22,9 @@ fi;
 # Install more recent versions of some macOS tools.
 brew install vim
 brew install neovim/neovim/neovim
+brew install python
 brew install python3
+pip  install neovim
 pip3 install neovim
 
 # Install Fzf
