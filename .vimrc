@@ -128,6 +128,10 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>s :wq<CR>
 inoremap jj <ESC>
 
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
 " auto command
 " --------------------
 augroup BufferAu
