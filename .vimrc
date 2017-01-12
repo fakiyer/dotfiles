@@ -122,8 +122,11 @@ imap <c-j> <DOWN>
 imap <c-k> <UP>
 imap <c-l> <Right>
 imap <C-Space> <C-x><C-o>
-inoremap jj <ESC>
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>s :wq<CR>
+inoremap jj <ESC>
 
 " auto command
 " --------------------
