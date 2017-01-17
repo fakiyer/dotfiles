@@ -83,9 +83,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-bindkey -v
-bindkey -M viins 'jj' vi-cmd-mode
-
 ### Custom
 function allupdate() {
   brew upgrade && brew update && brew cleanup &&
