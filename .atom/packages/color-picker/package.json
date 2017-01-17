@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161016-78460-ph3y6a/package.tgz",
+        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117016-8981-105rxba/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161016-78460-ph3y6a/package.tgz",
-        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161016-78460-ph3y6a/package.tgz",
+        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117016-8981-105rxba/package.tgz",
+        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117016-8981-105rxba/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-1161016-78460-pm94rr"
+      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117016-8981-1e8hdpl"
     ]
   ],
-  "_from": "../d-1161016-78460-ph3y6a/package.tgz",
-  "_id": "color-picker@2.2.3",
+  "_from": "../d-117016-8981-105rxba/package.tgz",
+  "_id": "color-picker@2.2.4",
   "_inCache": true,
   "_installable": true,
   "_location": "/color-picker",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161016-78460-ph3y6a/package.tgz",
+    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117016-8981-105rxba/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161016-78460-ph3y6a/package.tgz",
-    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161016-78460-ph3y6a/package.tgz",
+    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117016-8981-105rxba/package.tgz",
+    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117016-8981-105rxba/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-1161016-78460-ph3y6a/package.tgz",
-  "_shasum": "92db8283dc645ad5416d83bcbc528c8bec943b35",
+  "_resolved": "file:../d-117016-8981-105rxba/package.tgz",
+  "_shasum": "a26fbb240c4dc7176dc1d2ceb0999d85ab07bea8",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161016-78460-ph3y6a/package.tgz",
-  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-1161016-78460-pm94rr",
+  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117016-8981-105rxba/package.tgz",
+  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117016-8981-1e8hdpl",
   "bugs": {
     "url": "https://github.com/thomaslindstrom/color-picker/issues"
   },
@@ -69,5 +69,5 @@
     "type": "git",
     "url": "git+https://github.com/thomaslindstrom/color-picker.git"
   },
-  "version": "2.2.3"
+  "version": "2.2.4"
 }
