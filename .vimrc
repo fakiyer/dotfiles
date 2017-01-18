@@ -123,6 +123,8 @@ imap <c-k> <UP>
 imap <c-l> <Right>
 imap <C-Space> <C-x><C-o>
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+noremap <Leader>h ^
+noremap <Leader>l $
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>s :wq<CR>
