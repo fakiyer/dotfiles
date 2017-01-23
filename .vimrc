@@ -39,6 +39,8 @@ call dein#add('git-commit')
 call dein#add('ekalinin/Dockerfile.vim')
 call dein#add('osyo-manga/vim-monster')
 call dein#add('lifepillar/vim-solarized8')
+call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
+call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
 
 call dein#end()
 
@@ -128,6 +130,8 @@ noremap <Leader>l $
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>s :wq<CR>
+nnoremap <Leader>o :ProjectFiles<CR>
+nnoremap <Leader>r :History<CR>
 inoremap jj <ESC>
 
 vnoremap <silent> y y`]
@@ -231,8 +235,16 @@ function! LightLineMode()
   return winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
 
+
 " fzf
 set rtp+=/usr/local/opt/fzf
+
+function! s:find_git_root()
+  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+
+command! ProjectFiles execute 'Files' s:find_git_root()
+
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
