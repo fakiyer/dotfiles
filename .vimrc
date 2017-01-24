@@ -152,8 +152,10 @@ augroup END
 " NERD Commenter
 let NERDShutUp = 1 "no alart undfined filetype
 
+
 " rails.vim
 let g:rails_level=3
+
 
 " own
 let g:rubycomplete_buffer_loading = 1
@@ -163,15 +165,44 @@ let loaded_matchparen = 1
 "hi LineNr ctermfg=DarkGray ctermbg=Black
 hi LineNr ctermfg=DarkGray
 
+
 " NERD_tree.vim
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeDirArrows=0
 let g:NERDTreeMouseMode=0
 
+
 " vim-indent-guides
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black   ctermbg=235
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgray ctermbg=236
+
+
+" fzf
+set rtp+=/usr/local/opt/fzf
+
+function! s:find_git_root()
+  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+
+command! ProjectFiles execute 'Files' s:find_git_root()
+
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
+
+" vim-monster
+let g:monster#completion#rcodetools#backend = "async_rct_complete"
+let g:deoplete#sources#omni#input_patterns = {
+\   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
+\}
+
+
+" solarized8
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 
 " lightline
 let g:lightline = {
@@ -234,27 +265,3 @@ endfunction
 function! LightLineMode()
   return winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
-
-
-" fzf
-set rtp+=/usr/local/opt/fzf
-
-function! s:find_git_root()
-  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
-endfunction
-
-command! ProjectFiles execute 'Files' s:find_git_root()
-
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
-
-" vim-monster
-let g:monster#completion#rcodetools#backend = "async_rct_complete"
-let g:deoplete#sources#omni#input_patterns = {
-\   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
-\}
-
-" solarized8
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
