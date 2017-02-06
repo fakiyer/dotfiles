@@ -41,6 +41,7 @@ call dein#add('osyo-manga/vim-monster')
 call dein#add('lifepillar/vim-solarized8')
 call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
 call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
+call dein#add('rust-lang/rust.vim')
 
 call dein#end()
 
