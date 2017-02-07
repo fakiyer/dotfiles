@@ -96,7 +96,9 @@ export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 
 ### rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then
+  eval "$(rbenv init -)"
+fi
 
 ### docker
 alias doc="docker"
