@@ -95,10 +95,8 @@ alias ggfpush='git push --force-with-lease origin $(git_current_branch)'
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 
 ### rbenv
-if which rbenv > /dev/null; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 ### docker
 alias doc="docker"
