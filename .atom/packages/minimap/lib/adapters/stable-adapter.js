@@ -97,6 +97,13 @@ module.exports = class StableAdapter {
     let maxScrollTop
     if (this.textEditorElement.getMaxScrollTop) {
       maxScrollTop = this.textEditorElement.getMaxScrollTop()
+
+      if (parseFloat(atom.getVersion()) >= 1.13) {
+        if (this.scrollPastEnd) {
+          const lineHeight = this.textEditor.getLineHeightInPixels()
+          maxScrollTop -= this.getHeight() - 3 * lineHeight
+        }
+      }
     } else {
       maxScrollTop = this.textEditorElement.getScrollHeight() - this.getHeight()
 
@@ -116,6 +123,7 @@ module.exports = class StableAdapter {
   editorDestroyed () {
     return !this.textEditor ||
            this.textEditor.isDestroyed() ||
+           !this.textEditorElement.component ||
            !this.textEditorElement.getModel() ||
            !this.textEditorElement.parentNode
   }

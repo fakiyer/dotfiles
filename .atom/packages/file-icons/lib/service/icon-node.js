@@ -2,6 +2,7 @@
 
 const {CompositeDisposable, Disposable} = require("atom");
 const {isString} = require("../utils/general.js");
+const EntityType = require("../filesystem/entity-type.js");
 const FileSystem = require("../filesystem/filesystem.js");
 const Options = require("../options.js");
 const UI = require("../ui.js");
@@ -51,6 +52,8 @@ class IconNode{
 		if(!this.destroyed){
 			this.disposables.dispose();
 			iconsByElement.delete(this.element);
+			this.appliedClasses = null;
+			this.classes   = null;
 			this.resource  = null;
 			this.element   = null;
 			this.destroyed = true;
@@ -136,14 +139,21 @@ class IconNode{
 	 * @public
 	 * @static
 	 *
-	 * @param {HTMLElement} element - DOM element receiving the icon-classes.
-	 * @param {String}         path - Absolute filesystem path
+	 * @param {HTMLElement} element
+	 *    DOM element receiving the icon-classes.
+	 *
+	 * @param {String} path
+	 *    Absolute filesystem path
+	 *
+	 * @param {EntityType} [typeHint={@link EntityType.FILE}]
+	 *    Resource type to assume for unreadable or remote paths.
+	 *    Defaults to a regular file.
 	 *
 	 * @returns {Disposable}
 	 *    A Disposable that destroys the {IconNode} when disposed of. Authors
 	 *    are encouraged to do so once the element is no longer needed.
 	 */
-	static forElement(element, path){
+	static forElement(element, path, typeHint = EntityType.FILE){
 		if(!element) return null;
 		const icon = iconsByElement.get(element);
 		
@@ -154,7 +164,7 @@ class IconNode{
 			if(!path)
 				throw new TypeError("Cannot create icon-node for empty path");
 			
-			const rsrc = FileSystem.get(path);
+			const rsrc = FileSystem.get(path, false, typeHint);
 			const node = new IconNode(rsrc, element);
 			
 			const disp = new Disposable(() => {
@@ -182,4 +192,5 @@ class IconNode{
 }
 
 
+IconNode.prototype.destroyed = false;
 module.exports = IconNode;

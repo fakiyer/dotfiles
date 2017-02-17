@@ -1,0 +1,60 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117117-90765-8rhdxi/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117117-90765-8rhdxi/package.tgz",
+        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117117-90765-8rhdxi/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117117-90765-na1fgy"
+    ]
+  ],
+  "_from": "../d-117117-90765-8rhdxi/package.tgz",
+  "_id": "language-slim@0.5.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/language-slim",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117117-90765-8rhdxi/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117117-90765-8rhdxi/package.tgz",
+    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117117-90765-8rhdxi/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117117-90765-8rhdxi/package.tgz",
+  "_shasum": "9864968085d2e01ce815ebd1d4dba800fe7774dc",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117117-90765-8rhdxi/package.tgz",
+  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117117-90765-na1fgy",
+  "bugs": {
+    "url": "https://github.com/slim-template/language-slim/issues"
+  },
+  "dependencies": {},
+  "description": "Slim language package for Atom.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "homepage": "https://github.com/slim-template/language-slim#readme",
+  "license": "MIT",
+  "name": "language-slim",
+  "optionalDependencies": {},
+  "private": true,
+  "readme": "# Slim Atom language package [![endorse](http://api.coderwall.com/fredwu/endorsecount.png)](http://coderwall.com/fredwu)\n\n## Description\n\nThis is the [Atom](http://atom.io/) language package, converted from the [Slim TextMate/Sublime bundle](https://github.com/slim-template/ruby-slim.tmbundle).\n\n## Author\n\n[Fred Wu](http://fredwu.me/)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slim-template/language-slim.git"
+  },
+  "version": "0.5.0"
+}

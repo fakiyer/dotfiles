@@ -18,7 +18,7 @@ class TreeView extends Consumer {
 		
 		this.disposables.set("project",
 			UI.onProjectsAvailable(() => {
-				this.show();
+				this.show(true);
 				this.disposables.dispose("project");
 			})
 		);
@@ -32,11 +32,12 @@ class TreeView extends Consumer {
 	
 	
 	activate(){
-		this.show();
-		this.element       = this.packageModule.treeView;
-		this.entryElements = this.element[0].getElementsByClassName("entry");
+		this.show(true);
+		const {treeView}   = this.packageModule;
+		this.element       = treeView;
+		this.entryElements = (treeView[0] || treeView.element).getElementsByClassName("entry");
 		
-		// TODO: Remove check when atom/tree-view#966 is merged/shipped
+		// TODO: Remove check when/if atom/tree-view#966 is merged/shipped
 		if("function" === typeof this.element.onEntryMoved){
 			const onMove = this.element.onEntryMoved(paths => {
 				FileSystem.fixPath(paths.oldPath, paths.newPath);
@@ -189,7 +190,9 @@ class TreeView extends Consumer {
 	 *
 	 * @private
 	 */
-	show(){
+	show(startup=false){
+		if(startup && false === atom.config.get("file-icons.revealTreeView"))
+			return;
 		const workspace = atom.views.getView(atom.workspace);
 		atom.commands.dispatch(workspace, "tree-view:show");
 	}
