@@ -1,6 +1,19 @@
 ## Changelog
 
-### 7.2.3
+### 7.3.3
+- Fixed [#631](https://github.com/akonwi/git-plus/issues/631)
+
+### 7.3.2
+- Fixed [#627](https://github.com/akonwi/git-plus/issues/627)
+- Removed `Pull using rebase` command from the packages menu in OS status bar
+- The `run` function for custom commands now returns a promise that resolves with the git output. Which allows for chaining for more complicated commands.
+
+### 7.3.1
+- Fixes [#626](https://github.com/akonwi/git-plus/issues/626)
+- Change location of the split-diff generated file
+- Removed some dependencies
+
+### 7.3.0
 - [Experimental Features] Show diffs between branches (@yacut)
 - [Experimental Features] Use the split-diff package to show diffs for a single file (@yacut)
 

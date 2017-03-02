@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117116-46619-1ct6k3x/package.tgz",
+        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11722-20456-1m7b0vd/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117116-46619-1ct6k3x/package.tgz",
-        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117116-46619-1ct6k3x/package.tgz",
+        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11722-20456-1m7b0vd/package.tgz",
+        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11722-20456-1m7b0vd/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117116-46619-16sk34y"
+      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-11722-20456-1oow9xg"
     ]
   ],
-  "_from": "../d-117116-46619-1ct6k3x/package.tgz",
-  "_id": "git-plus@7.3.0",
+  "_from": "../d-11722-20456-1m7b0vd/package.tgz",
+  "_id": "git-plus@7.3.3",
   "_inCache": true,
   "_installable": true,
   "_location": "/git-plus",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117116-46619-1ct6k3x/package.tgz",
+    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11722-20456-1m7b0vd/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117116-46619-1ct6k3x/package.tgz",
-    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117116-46619-1ct6k3x/package.tgz",
+    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11722-20456-1m7b0vd/package.tgz",
+    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11722-20456-1m7b0vd/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117116-46619-1ct6k3x/package.tgz",
-  "_shasum": "cd8c6cf37f5360254fd4350a72bbdb54536310d2",
+  "_resolved": "file:../d-11722-20456-1m7b0vd/package.tgz",
+  "_shasum": "f86741aeff7dc3a3e53addb961a56cafcc30cd0b",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117116-46619-1ct6k3x/package.tgz",
-  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117116-46619-16sk34y",
+  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11722-20456-1m7b0vd/package.tgz",
+  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-11722-20456-1oow9xg",
   "bugs": {
     "url": "https://github.com/akonwi/git-plus/issues"
   },
@@ -57,10 +57,7 @@
     "atom-space-pen-views": "^2.0.3",
     "fs-plus": "^2.2.0",
     "fuzzaldrin": "^1.2.0",
-    "underscore": "^1.8.3",
-    "underscore-plus": "^1.6.6",
-    "universal-analytics": "^0.4.8",
-    "uuid": "^3.0.1"
+    "underscore-plus": "^1.6.6"
   },
   "description": "Do git things without the terminal",
   "devDependencies": {
@@ -91,5 +88,5 @@
     "type": "git",
     "url": "git+https://github.com/akonwi/git-plus.git"
   },
-  "version": "7.3.0"
+  "version": "7.3.3"
 }

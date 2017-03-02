@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161126-8084-3jhpst/package.tgz",
+        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11722-20474-2tl7al/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161126-8084-3jhpst/package.tgz",
-        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161126-8084-3jhpst/package.tgz",
+        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11722-20474-2tl7al/package.tgz",
+        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11722-20474-2tl7al/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-1161126-8084-cd5kb"
+      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-11722-20474-gdp0a4"
     ]
   ],
-  "_from": "../d-1161126-8084-3jhpst/package.tgz",
-  "_id": "linter-ruby@1.2.4",
+  "_from": "../d-11722-20474-2tl7al/package.tgz",
+  "_id": "linter-ruby@1.2.5",
   "_inCache": true,
   "_installable": true,
   "_location": "/linter-ruby",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161126-8084-3jhpst/package.tgz",
+    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11722-20474-2tl7al/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161126-8084-3jhpst/package.tgz",
-    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161126-8084-3jhpst/package.tgz",
+    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11722-20474-2tl7al/package.tgz",
+    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11722-20474-2tl7al/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-1161126-8084-3jhpst/package.tgz",
-  "_shasum": "6d4ce572eb54eeb92da10efdf49639036eb1036d",
+  "_resolved": "file:../d-11722-20474-2tl7al/package.tgz",
+  "_shasum": "642fead367b97f26ceebcbd18394bd6d8d786251",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-1161126-8084-3jhpst/package.tgz",
-  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-1161126-8084-cd5kb",
+  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11722-20474-2tl7al/package.tgz",
+  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-11722-20474-gdp0a4",
   "activationHooks": [
     "language-ruby:grammar-used",
     "language-ruby-on-rails:grammar-used"
@@ -60,14 +60,14 @@
     }
   },
   "dependencies": {
-    "atom-linter": "^8.0.0",
+    "atom-linter": "^9.0.0",
     "atom-package-deps": "^4.0.1"
   },
   "description": "Lint Ruby on the fly, using ruby -wc",
   "devDependencies": {
-    "eslint": "^3.9.1",
-    "eslint-config-airbnb-base": "^10.0.1",
-    "eslint-plugin-import": "^2.1.0"
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0"
   },
   "engines": {
     "atom": ">=1.4.0 <2.0.0"
@@ -118,5 +118,5 @@
     "lint": "eslint .",
     "test": "apm test"
   },
-  "version": "1.2.4"
+  "version": "1.2.5"
 }
