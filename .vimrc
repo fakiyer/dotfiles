@@ -192,6 +192,7 @@ command! ProjectFiles execute 'Files' s:find_git_root()
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_complete_delay = 10
 
 
 " vim-monster
