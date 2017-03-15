@@ -134,6 +134,9 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>s :wq<CR>
 nnoremap <Leader>o :ProjectFiles<CR>
 nnoremap <Leader>r :History<CR>
+nnoremap <Leader>m :Emodel
+nnoremap <Leader>v :Eview
+nnoremap <Leader>c :Econtroller
 inoremap jj <ESC>
 
 vnoremap <silent> y y`]
