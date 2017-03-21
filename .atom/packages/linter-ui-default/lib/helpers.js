@@ -63,9 +63,9 @@ export function filterMessages(messages: Array<LinterMessage>, filePath: ?string
   return filtered
 }
 
-export function filterMessagesByRangeOrPoint(messages: Set<LinterMessage>, filePath: string, rangeOrPoint: Point | Range): Array<LinterMessage> {
+export function filterMessagesByRangeOrPoint(messages: Set<LinterMessage> | Array<LinterMessage>, filePath: string, rangeOrPoint: Point | Range): Array<LinterMessage> {
   const filtered = []
-  const expectedRange = rangeOrPoint.constructor.name === 'Point' ? new Range(rangeOrPoint, rangeOrPoint) : rangeOrPoint
+  const expectedRange = rangeOrPoint.constructor.name === 'Point' ? new Range(rangeOrPoint, rangeOrPoint) : Range.fromObject(rangeOrPoint)
   messages.forEach(function(message) {
     const file = $file(message)
     const range = $range(message)

@@ -1,21 +1,25 @@
 /* @flow */
 
+import { Range } from 'atom'
 import { CompositeDisposable, Emitter } from 'sb-event-kit'
+import type { Panel } from 'atom'
 import type { Disposable } from 'sb-event-kit'
 
-import { filterMessages } from '../helpers'
+import { filterMessages, filterMessagesByRangeOrPoint } from '../helpers'
 import type { LinterMessage } from '../types'
 
 export default class PanelDelegate {
+  panel: Panel;
   emitter: Emitter;
   messages: Array<LinterMessage>;
   visibility: boolean;
   panelHeight: number;
   subscriptions: CompositeDisposable;
-  panelRepresents: 'Entire Project' | 'Current File';
+  panelRepresents: 'Entire Project' | 'Current File' | 'Current Line';
   panelTakesMinimumHeight: boolean;
 
-  constructor() {
+  constructor(panel: Panel) {
+    this.panel = panel
     this.emitter = new Emitter()
     this.messages = []
     this.subscriptions = new CompositeDisposable()
@@ -24,7 +28,7 @@ export default class PanelDelegate {
       const notInitial = typeof this.panelRepresents !== 'undefined'
       this.panelRepresents = panelRepresents
       if (notInitial) {
-        this.update(this.messages)
+        this.update()
       }
     }))
     this.subscriptions.add(atom.config.observe('linter-ui-default.panelHeight', (panelHeight) => {
@@ -41,16 +45,38 @@ export default class PanelDelegate {
         this.emitter.emit('observe-panel-config')
       }
     }))
-    this.subscriptions.add(atom.workspace.onDidChangeActivePaneItem((paneItem) => {
-      const shouldUpdate = typeof this.visibility !== 'undefined' && this.panelRepresents !== 'Entire Project'
+
+    let changeSubscription
+    this.subscriptions.add(atom.workspace.observeActivePaneItem((paneItem) => {
+      if (changeSubscription) {
+        changeSubscription.dispose()
+        changeSubscription = null
+      }
       this.visibility = atom.workspace.isTextEditor(paneItem)
       this.emitter.emit('observe-visibility', this.visibility)
+      if (this.visibility) {
+        if (this.panelRepresents !== 'Entire Project') {
+          this.update()
+        }
+        let oldRow = -1
+        changeSubscription = paneItem.onDidChangeCursorPosition(({ newBufferPosition }) => {
+          if (oldRow !== newBufferPosition.row && this.panelRepresents === 'Current Line') {
+            oldRow = newBufferPosition.row
+            this.update()
+          }
+        })
+      }
+      const shouldUpdate = typeof this.visibility !== 'undefined' && this.panelRepresents !== 'Entire Project'
 
-      if (shouldUpdate) {
-        this.update(this.messages)
+      if (this.visibility && shouldUpdate) {
+        this.update()
       }
     }))
-    this.visibility = !!atom.workspace.getActiveTextEditor()
+    this.subscriptions.add(function() {
+      if (changeSubscription) {
+        changeSubscription.dispose()
+      }
+    })
   }
   get filteredMessages(): Array<LinterMessage> {
     let filteredMessages = []
@@ -58,15 +84,20 @@ export default class PanelDelegate {
       filteredMessages = this.messages
     } else if (this.panelRepresents === 'Current File') {
       const activeEditor = atom.workspace.getActiveTextEditor()
-      const editorPath = activeEditor ? activeEditor.getPath() : ''
-      if (editorPath) {
-        filteredMessages = filterMessages(this.messages, editorPath)
-      }
+      if (!activeEditor) return []
+      filteredMessages = filterMessages(this.messages, activeEditor.getPath())
+    } else if (this.panelRepresents === 'Current Line') {
+      const activeEditor = atom.workspace.getActiveTextEditor()
+      if (!activeEditor) return []
+      const activeLine = activeEditor.getCursors()[0].getBufferRow()
+      filteredMessages = filterMessagesByRangeOrPoint(this.messages, activeEditor.getPath(), Range.fromObject([[activeLine, 0], [activeLine, Infinity]]))
     }
     return filteredMessages
   }
-  update(messages: Array<LinterMessage>): void {
-    this.messages = messages
+  update(messages: ?Array<LinterMessage> = null): void {
+    if (Array.isArray(messages)) {
+      this.messages = messages
+    }
     this.emitter.emit('observe-messages', this.filteredMessages)
   }
   updatePanelHeight(panelHeight: number): void {
@@ -80,6 +111,13 @@ export default class PanelDelegate {
   }
   onDidChangePanelConfig(callback: (() => any)): Disposable {
     return this.emitter.on('observe-panel-config', callback)
+  }
+  setPanelVisibility(visibility: boolean): void {
+    if (visibility && !this.panel.isVisible()) {
+      this.panel.show()
+    } else if (!visibility && this.panel.isVisible()) {
+      this.panel.hide()
+    }
   }
   dispose() {
     this.subscriptions.dispose()

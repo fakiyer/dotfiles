@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117214-32935-cpvih1/package.tgz",
+        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117221-60678-ym7qd4/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117214-32935-cpvih1/package.tgz",
-        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117214-32935-cpvih1/package.tgz",
+        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117221-60678-ym7qd4/package.tgz",
+        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117221-60678-ym7qd4/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117214-32935-qn4338"
+      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117221-60678-c6hwgz"
     ]
   ],
-  "_from": "../d-117214-32935-cpvih1/package.tgz",
-  "_id": "linter-ui-default@1.0.0",
+  "_from": "../d-117221-60678-ym7qd4/package.tgz",
+  "_id": "linter-ui-default@1.2.1",
   "_inCache": true,
   "_installable": true,
   "_location": "/linter-ui-default",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117214-32935-cpvih1/package.tgz",
+    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117221-60678-ym7qd4/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117214-32935-cpvih1/package.tgz",
-    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117214-32935-cpvih1/package.tgz",
+    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117221-60678-ym7qd4/package.tgz",
+    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117221-60678-ym7qd4/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117214-32935-cpvih1/package.tgz",
-  "_shasum": "fd90bd32a33f9169c05fd94c0696e5878ff1f65b",
+  "_resolved": "file:../d-117221-60678-ym7qd4/package.tgz",
+  "_shasum": "360548a21e02564da999c83cee3da091b959a07c",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117214-32935-cpvih1/package.tgz",
-  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117214-32935-qn4338",
+  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117221-60678-ym7qd4/package.tgz",
+  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117221-60678-c6hwgz",
   "bugs": {
     "url": "https://github.com/steelbrain/linter-ui-default/issues"
   },
@@ -48,6 +48,12 @@
     },
     "showTooltip": {
       "description": "Show inline issue tooltips",
+      "type": "boolean",
+      "default": true,
+      "order": 1
+    },
+    "showStatusBar": {
+      "description": "Show status bar with error / warning / info count at the bottom",
       "type": "boolean",
       "default": true,
       "order": 1
@@ -86,9 +92,20 @@
       "type": "string",
       "enum": [
         "Entire Project",
-        "Current File"
+        "Current File",
+        "Current Line"
       ],
       "default": "Current File",
+      "order": 2
+    },
+    "statusBarPosition": {
+      "title": "Statusbar Position",
+      "type": "string",
+      "enum": [
+        "Left",
+        "Right"
+      ],
+      "default": "Left",
       "order": 2
     },
     "statusBarRepresents": {
@@ -122,7 +139,7 @@
       "order": 2
     },
     "gutterPosition": {
-      "title": "Position of Gutter Highlights",
+      "title": "Gutter Highlights Position",
       "description": "Relative to the line numbers",
       "type": "string",
       "enum": [
@@ -155,14 +172,13 @@
   "dependencies": {
     "atom-package-deps": "^4.3.1",
     "disposable-event": "^1.0.3",
-    "disposify": "^1.0.0",
     "marked": "^0.3.6",
     "react": "^15.3.1",
     "react-dom": "^15.3.2",
     "react-resizable-box": "^1.8.1",
     "sb-debounce": "^1.0.1",
     "sb-event-kit": "^3.0.0",
-    "sb-react-table": "^1.0.0"
+    "sb-react-table": "^1.0.1"
   },
   "description": "Default UI for the Linter package",
   "devDependencies": {
@@ -210,5 +226,5 @@
   "scripts": {
     "test": "(apm test) && (flow check) && (eslint . )"
   },
-  "version": "1.0.0"
+  "version": "1.2.1"
 }

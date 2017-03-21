@@ -80,7 +80,7 @@ export default {
           { stdin: text.replace(/<%=/g, '<%'), cwd: fileDir },
         ).then((erbOut) => {
           // Run Ruby on the "de-templatized" code
-          const rubyProcessOpt = { stdin: erbOut, stream: 'stderr', allowEmptyStderr: true };
+          const rubyProcessOpt = { stdin: erbOut, stream: 'stderr', allowEmptyStderr: true, cwd: fileDir };
           return helpers.exec(this.rubyPath, rubyArgs, rubyProcessOpt).then((output) => {
             const regex = /.+:(\d+):\s+(?:.+?)[,:]\s(.+)/g;
             const messages = [];
@@ -91,7 +91,7 @@ export default {
                 text: match[2],
                 filePath,
                 // Bump line number down 2 instead of 1 due to inserted extra line
-                range: helpers.rangeFromLineNumber(textEditor, match[1] - 2),
+                range: helpers.generateRange(textEditor, match[1] - 2),
               });
               match = regex.exec(output);
             }

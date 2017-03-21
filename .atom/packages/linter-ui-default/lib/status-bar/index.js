@@ -1,7 +1,6 @@
 /* @flow */
 
 import { CompositeDisposable } from 'sb-event-kit'
-import disposify from 'disposify'
 
 import Element from './element'
 import { $file } from '../helpers'
@@ -34,9 +33,12 @@ export default class StatusBar {
         this.update()
       }
     }))
+    this.subscriptions.add(atom.config.observe('linter-ui-default.showStatusBar', (showStatusBar) => {
+      this.element.setVisibility('config', showStatusBar)
+    }))
     this.subscriptions.add(atom.workspace.observeActivePaneItem((paneItem) => {
       const isTextEditor = atom.workspace.isTextEditor(paneItem)
-      this.element.setVisibility(isTextEditor)
+      this.element.setVisibility('pane', isTextEditor)
       if (isTextEditor && this.statusBarRepresents === 'Current File') {
         this.update()
       }
@@ -78,10 +80,22 @@ export default class StatusBar {
     this.element.update(count.error, count.warning, count.info)
   }
   attach(statusBarRegistry: Object) {
-    this.subscriptions.add(disposify(statusBarRegistry.addLeftTile({
-      item: this.element.item,
-      priority: 5,
-    })))
+    let statusBar = null
+
+    this.subscriptions.add(atom.config.observe('linter-ui-default.statusBarPosition', (statusBarPosition) => {
+      if (statusBar) {
+        statusBar.destroy()
+      }
+      statusBar = statusBarRegistry[`add${statusBarPosition}Tile`]({
+        item: this.element.item,
+        priority: statusBarPosition === 'Left' ? 0 : 1000,
+      })
+    }))
+    this.subscriptions.add(function() {
+      if (statusBar) {
+        statusBar.destroy()
+      }
+    })
   }
   dispose() {
     this.subscriptions.dispose()
