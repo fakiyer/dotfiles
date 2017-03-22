@@ -178,12 +178,6 @@ let g:NERDTreeDirArrows=0
 let g:NERDTreeMouseMode=0
 
 
-" vim-indent-guides
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black   ctermbg=235
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgray ctermbg=236
-
-
 " fzf
 set rtp+=/usr/local/opt/fzf
 
