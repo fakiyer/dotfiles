@@ -137,6 +137,7 @@ nnoremap <Leader>r :History<CR>
 nnoremap <Leader>m :Emodel
 nnoremap <Leader>v :Eview
 nnoremap <Leader>c :Econtroller
+nnoremap <Leader>d :Denite
 inoremap jj <ESC>
 
 vnoremap <silent> y y`]
