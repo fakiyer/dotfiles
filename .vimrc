@@ -138,6 +138,7 @@ nnoremap <Leader>m :Emodel
 nnoremap <Leader>v :Eview
 nnoremap <Leader>c :Econtroller
 nnoremap <Leader>d :Denite
+nnoremap <Leader>dy :Denite neoyank<CR>
 inoremap jj <ESC>
 
 vnoremap <silent> y y`]
