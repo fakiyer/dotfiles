@@ -123,20 +123,9 @@ export function openExternally(message: LinterMessage): void {
     return
   }
 
-  let link
-  let searchTerm = ''
-  if (message.version === 2) {
-    if (message.url) {
-      link = message.url
-    } else {
-      searchTerm = message.excerpt
-    }
-  } else {
-    searchTerm = `${message.linterName} ${message.excerpt || message.text || htmlToText(message.html || '')}`
+  if (message.version === 2 && message.url) {
+    shell.openExternal(message.url)
   }
-  // $FlowIgnore: Flow has a bug where it thinks the above line produces a mixed result instead of string
-  link = link || `https://google.com/search?q=${encodeURIComponent(searchTerm)}`
-  shell.openExternal(link)
 }
 
 export function sortMessages(sortInfo: Array<{ column: string, type: 'asc' | 'desc' }>, rows: Array<LinterMessage>): Array<LinterMessage> {

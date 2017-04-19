@@ -1,6 +1,23 @@
+## 1.2.3
+
+* Improve tooltip hiding logic
+* Fix two borders on the Bottom Table
+* Make description in Bottom Panel clickable
+* Use wavy underlines in tree view and editor
+* Use theme variable for Bottom Panel font size
+* Fix inconsistent border radius of Linter Status
+* Fix current line marker in gutter for soft wraps
+* Only show url icon on tooltip if specified by linter provider
+
+## 1.2.2
+
+* Fix mouse tooltips for some users
+* Fix a crash in TreeView handling a file outside Project Path
+* Make busy signal installation and integration optional with `useBusySignal` config
+
 ## 1.2.1
 
-- Fix a deprecation warning caused by out-of-date Atom `TextEditor#markBufferRange.properties`
+* Fix a deprecation warning caused by out-of-date Atom `TextEditor#markBufferRange.properties`
 
 ## 1.2.0
 

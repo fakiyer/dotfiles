@@ -26,6 +26,9 @@ This view can be toggled by clicking the 'git+' icon in the bottom right of the 
 
 ![screenshot](https://dl.dropboxusercontent.com/s/oe3x8wyt6lnmbv7/git%2B.png)
 
+### Auto-Fetch
+Keeps your local repo bang up to date by automatically fetching from all remotes in the background every minute by default. But this can be set to any interval up to an hour, or disabled if you prefer. A notification can also be set to keep you informed.
+
 ### Commands
 _Commands are accessible for keybindings by dasherizing the command title._
 > Git Add ==  `git-plus:add`
@@ -47,8 +50,8 @@ _Commands are accessible for keybindings by dasherizing the command title._
 | `Git Add All Commit And Push` | Commit all changes and push to a remote repo. | `Cmd-Shift-A P` |
 | `Git Commit Amend` | Amend the previous commit. |  |
 | `Git Checkout Current File` | Undo changes and reset the current file to HEAD. | |
-| `Git Checkout `*`[ref]`* | Change to another ref (branch or tag). | |
-| `Git Checkout New branch` | Create a new branch. | |
+| `Git Checkout `*`[ref]`* | Change to another ref (branch or tag). | `Click` on status bar branch indicator. |
+| `Git Checkout New branch` | Create a new branch. | `Alt-Click` (by default) or right click on status bar branch indicator. |
 | `Git Diff [All]` | Show the diff for the current file, or all files. The diff can either be against the staged or un-staged tree, as selected in the options. | |
 | `Git Diff Branches` | Show the diff for the current branch all files against another branch. | |
 | `Git Diff Branche Files` | Show the diff for the current branch file against another branch version. | |

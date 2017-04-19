@@ -7,7 +7,7 @@ import { $range, severityNames, sortMessages, visitMessage, openExternally, getP
 import type Delegate from './delegate'
 import type { LinterMessage } from '../types'
 
-export default class PanelComponent extends React.Component {
+class PanelComponent extends React.Component {
   props: {
     delegate: Delegate,
   };
@@ -15,11 +15,15 @@ export default class PanelComponent extends React.Component {
     messages: Array<LinterMessage>,
     visibility: boolean,
     tempHeight: ?number,
-  } = {
-    messages: [],
-    visibility: false,
-    tempHeight: null,
   };
+  constructor(props: Object, context: ?Object) {
+    super(props, context)
+    this.state = {
+      messages: this.props.delegate.filteredMessages,
+      visibility: this.props.delegate.visibility,
+      tempHeight: null,
+    }
+  }
   componentDidMount() {
     this.props.delegate.onDidChangeMessages((messages) => {
       this.setState({ messages })
@@ -30,7 +34,6 @@ export default class PanelComponent extends React.Component {
     this.props.delegate.onDidChangePanelConfig(() => {
       this.setState({ tempHeight: null })
     })
-    this.setState({ messages: this.props.delegate.filteredMessages, visibility: this.props.delegate.visibility })
   }
   onClick = (e: MouseEvent, row: LinterMessage) => {
     if (process.platform === 'darwin' ? e.metaKey : e.ctrlKey) {
@@ -54,7 +57,7 @@ export default class PanelComponent extends React.Component {
     const columns = [
       { key: 'severity', label: 'Severity', sortable: true },
       { key: 'linterName', label: 'Provider', sortable: true },
-      { key: 'excerpt', label: 'Description' },
+      { key: 'excerpt', label: 'Description', onClick: this.onClick },
       { key: 'line', label: 'Line', sortable: true, onClick: this.onClick },
     ]
     if (delegate.panelRepresents === 'Entire Project') {
@@ -88,7 +91,7 @@ export default class PanelComponent extends React.Component {
             renderBodyColumn={PanelComponent.renderRowColumn}
 
             style={{ width: '100%' }}
-            className='linter'
+            className="linter"
           />
         </div>
       </ResizableBox>
@@ -117,3 +120,5 @@ export default class PanelComponent extends React.Component {
     }
   }
 }
+
+module.exports = PanelComponent
