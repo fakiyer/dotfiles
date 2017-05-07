@@ -143,3 +143,6 @@ export ANDROID_HOME=/usr/local/opt/android-sdk
 
 ### neovim
 alias vim="nvim"
+
+### anaconda
+export PATH="$HOME/anaconda/bin:$PATH"
