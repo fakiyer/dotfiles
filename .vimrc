@@ -189,6 +189,10 @@ endfunction
 command! ProjectFiles execute 'Files' s:find_git_root()
 
 
+" nvim
+let g:python3_host_prog = expand('/usr/local/bin/python3')
+
+
 " deoplete
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete_delay = 10
