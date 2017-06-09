@@ -126,11 +126,19 @@ fshow() {
 FZF-EOF"
 }
 
-# frepo
+# frepo - find ghq repo
 frepo() {
   local dir
   dir=$(ghq list > /dev/null | fzf-tmux --reverse +m) &&
     cd $(ghq root)/$dir
+}
+
+# fbr - checkout git branch
+fbr() {
+  local branches branch
+  branches=$(git branch -vv) &&
+  branch=$(echo "$branches" | fzf +m) &&
+  git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
 }
 
 ### node.js
