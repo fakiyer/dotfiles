@@ -43,14 +43,8 @@ module.exports =
         default: "Down"
         description: "Where should new panes go?"
         enum: ["Up", "Right", "Down", "Left"]
-      messageTimeout:
-        order: 6
-        title: "Output view timeout"
-        type: "integer"
-        default: 5
-        description: "For how many seconds should the output view above the status-bar stay open?"
       showFormat:
-        order: 7
+        order: 6
         title: "Format option for 'Git Show'"
         type: "string"
         default: "full"
@@ -78,7 +72,7 @@ module.exports =
         order: 2
         title: "Word diff"
         type: "boolean"
-        default: true
+        default: false
         description: "Should diffs be generated with the `--word-diff` flag?"
       syntaxHighlighting:
         order: 3

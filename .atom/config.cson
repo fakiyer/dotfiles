@@ -24,6 +24,8 @@
   "linter-jscs":
     esnext: true
   "linter-jshint": {}
+  "linter-ui-default":
+    panelHeight: 69
   "one-dark-ui": {}
   react: {}
   "remote-edit": {}

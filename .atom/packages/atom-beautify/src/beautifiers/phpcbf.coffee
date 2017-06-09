@@ -11,12 +11,10 @@ module.exports = class PHPCBF extends Beautifier
   isPreInstalled: false
 
   options: {
-    _:
-      standard: ["standard", (standard) ->
-        if (standard) then \
-          standard else "PEAR"
-      ]
-    PHP: true
+    PHP:
+      phpcbf_path: true
+      phpcbf_version: true
+      standard: true
   }
 
   beautify: (text, language, options) ->
@@ -50,9 +48,9 @@ module.exports = class PHPCBF extends Beautifier
 
           @run(exec, [
             phpcbfPath unless isExec
-            "--no-patch"
+            "--no-patch" unless options.phpcbf_version is 3
             "--standard=#{options.standard}" if options.standard
-            tempFile = @tempFile("temp", text)
+            tempFile = @tempFile("temp", text, ".php")
             ], {
               ignoreReturnCode: true
               help: {
@@ -78,7 +76,7 @@ module.exports = class PHPCBF extends Beautifier
       )
     else
       @run("phpcbf", [
-        "--no-patch"
+        "--no-patch" unless options.phpcbf_version is 3
         "--standard=#{options.standard}" if options.standard
         tempFile = @tempFile("temp", text)
         ], {
