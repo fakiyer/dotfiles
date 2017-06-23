@@ -27,6 +27,13 @@
   "linter-ui-default":
     panelHeight: 69
   "one-dark-ui": {}
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+    prettierOptions:
+      bracketSpacing: false
+      singleQuote: true
+    useEslint: true
   react: {}
   "remote-edit": {}
   "seti-syntax": {}
