@@ -7,9 +7,6 @@
     app: "/Applications/iTerm.app"
   core:
     audioBeep: false
-    disabledPackages: [
-      "prettier-atom"
-    ]
     telemetryConsent: "no"
   editor:
     fontFamily: "Ricty Diminished for Powerline"
@@ -33,10 +30,11 @@
   "prettier-atom":
     formatOnSaveOptions:
       enabled: true
+    prettierEslintOptions: {}
     prettierOptions:
       bracketSpacing: false
       singleQuote: true
-    useEslint: true
+      trailingComma: "all"
   react: {}
   "remote-edit": {}
   "seti-syntax": {}
