@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+PATH="$(brew --prefix)/bin:$PATH"
+dir="$(git rev-parse --git-dir)"
+trap 'rm -f "$dir/$$.tags"' EXIT
+git ls-files | \
+  ctags --tag-relative=always -L - -f"$dir/$$.tags"
+mv "$dir/$$.tags" "$dir/tags"

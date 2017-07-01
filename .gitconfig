@@ -19,3 +19,5 @@
 	required = true
 [web]
 	browser = google-chrome
+[init]
+	templatedir = ~/.git_template
