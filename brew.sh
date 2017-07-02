@@ -44,6 +44,7 @@ brew install tree
 brew install pt
 brew tap universal-ctags/universal-ctags
 brew install --HEAD universal-ctags
+brew install git-secrets
 pip3 install pip-review
 
 # Remove outdated versions from the cellar.
