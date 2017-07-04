@@ -4,6 +4,7 @@ const {
   getCurrentFilePath,
   isCurrentScopeTypescriptScope,
   isCurrentScopeCssScope,
+  isCurrentScopeJsonScope,
 } = require('../editorInterface');
 const { shouldUseEditorConfig, getPrettierOptions, getAtomTabLength } = require('../atomInterface');
 const buildEditorConfigOptions = require('./buildEditorConfigOptions');
@@ -33,6 +34,11 @@ const buildPrettierOptions = (editor: TextEditor) => {
 
   if (isCurrentScopeCssScope(editor)) {
     optionsFromSettings.parser = 'postcss';
+  }
+
+  if (isCurrentScopeJsonScope(editor)) {
+    optionsFromSettings.parser = 'json';
+    optionsFromSettings.trailingComma = 'none';
   }
 
   return {
