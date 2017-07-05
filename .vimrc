@@ -215,6 +215,9 @@ let g:python3_host_prog = expand('/usr/local/bin/python3')
 " deoplete
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete_delay = 10
+let g:deoplete#sources = {}
+let g:deoplete#sources._ = ['buffer', 'tag']
+let deoplete#tag#cache_limit_size = 5000000
 
 
 " vim-monster
