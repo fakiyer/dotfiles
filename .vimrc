@@ -27,7 +27,7 @@ call dein#add('vim-scripts/AnsiEsc.vim')
 call dein#add('nathanaelkane/vim-indent-guides')
 call dein#add('terryma/vim-expand-region')
 call dein#add('itchyny/lightline.vim')
-call dein#add('vim-ruby/vim-ruby')
+call dein#add('vim-ruby/vim-ruby', { 'on_ft': 'ruby' })
 call dein#add('tpope/vim-rails')
 call dein#add('scrooloose/nerdtree')
 call dein#add('tpope/vim-rake')
@@ -36,14 +36,14 @@ call dein#add('tpope/vim-projectionist')
 call dein#add('jlanzarotta/bufexplorer')
 call dein#add('vim-scripts/ruby-matchit')
 call dein#add('vim-scripts/git-commit')
-call dein#add('ekalinin/Dockerfile.vim')
+call dein#add('ekalinin/Dockerfile.vim', { 'on_ft': ['Dockerfile', 'docker-compose']})
 call dein#add('osyo-manga/vim-monster')
 call dein#add('lifepillar/vim-solarized8')
 call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
 call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
-call dein#add('rust-lang/rust.vim')
-call dein#add('slim-template/vim-slim')
-call dein#add('kchmck/vim-coffee-script')
+call dein#add('rust-lang/rust.vim', { 'on_ft': 'rust' })
+call dein#add('slim-template/vim-slim', { 'on_ft': 'slim' })
+call dein#add('kchmck/vim-coffee-script', { 'on_ft': 'coffee' })
 
 call dein#end()
 
@@ -214,9 +214,9 @@ let g:python3_host_prog = expand('/usr/local/bin/python3')
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_delay = 10
+" let g:deoplete#auto_complete_delay = 10
 let g:deoplete#sources = {}
-let g:deoplete#sources._ = ['buffer', 'tag']
+let g:deoplete#sources._ = ['buffer', 'tag', 'file', 'neosnippet']
 let deoplete#tag#cache_limit_size = 5000000
 
 
