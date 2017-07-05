@@ -133,13 +133,14 @@ noremap <Leader>l $
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>s :wq<CR>
-nnoremap <Leader>o :ProjectFiles<CR>
-nnoremap <Leader>r :History<CR>
 nnoremap <Leader>m :Emodel
 nnoremap <Leader>v :Eview
 nnoremap <Leader>c :Econtroller
 nnoremap <Leader>d :Denite
 nnoremap <Leader>dy :Denite neoyank<CR>
+nnoremap <Leader>f :ProjectFiles<CR>
+nnoremap <Leader>r :History<CR>
+nnoremap <Leader>p :Pt<CR>
 inoremap jj <ESC>
 
 vnoremap <silent> y y`]
@@ -188,6 +189,23 @@ function! s:find_git_root()
 endfunction
 
 command! ProjectFiles execute 'Files' s:find_git_root()
+
+" Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of pt:
+command! -bang -nargs=* Pt
+  \ call fzf#vim#grep(
+  \   'pt --column '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
+" Likewise, Files command with preview window
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+" Command for git grep
+" - fzf#vim#grep(command, with_column, [options], [fullscreen])
+command! -bang -nargs=* GGrep
+  \ call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
 
 
 " nvim
