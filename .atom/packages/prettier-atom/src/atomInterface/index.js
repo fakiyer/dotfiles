@@ -21,8 +21,6 @@ const shouldUseEslint = () => getConfigOption('useEslint');
 
 const shouldUseEditorConfig = () => getConfigOption('useEditorConfig');
 
-const shouldDisplayErrors = () => !getConfigOption('silenceErrors');
-
 const isFormatOnSaveEnabled = () => getConfigOption('formatOnSaveOptions.enabled');
 
 const isDisabledIfNotInPackageJson = () =>
@@ -74,6 +72,14 @@ const addWarningNotification = (message: string, options?: Atom$Notifications$Op
 const addErrorNotification = (message: string, options?: Atom$Notifications$Options) =>
   atom.notifications.addError(message, options);
 
+const attemptWithErrorNotification = (func: Function, ...args: Array<any>) => {
+  try {
+    func(...args);
+  } catch (e) {
+    addErrorNotification(e.message, { dismissable: true, stack: e.stack });
+  }
+};
+
 const runLinter = (editor: TextEditor) =>
   isLinterLintCommandDefined(editor) &&
   atom.commands.dispatch(atom.views.getView(editor), LINTER_LINT_COMMAND);
@@ -99,9 +105,9 @@ module.exports = {
   isFormatOnSaveEnabled,
   isLinterEslintAutofixEnabled,
   runLinter,
-  shouldDisplayErrors,
   shouldRespectEslintignore,
   shouldUseEditorConfig,
   shouldUseEslint,
   toggleFormatOnSave,
+  attemptWithErrorNotification,
 };
