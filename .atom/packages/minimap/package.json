@@ -2,40 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117423-1850-j82u5w.q988v9529/package.tgz",
+        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26877-1ptyi80.lwqaicc8fr/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117423-1850-j82u5w.q988v9529/package.tgz",
-        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117423-1850-j82u5w.q988v9529/package.tgz",
+        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26877-1ptyi80.lwqaicc8fr/package.tgz",
+        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26877-1ptyi80.lwqaicc8fr/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117423-1850-382avh.i67bgtx1or"
+      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117618-26877-1f1qlpm.paqhncdi"
     ]
   ],
-  "_from": "../d-117423-1850-j82u5w.q988v9529/package.tgz",
-  "_id": "minimap@4.28.2",
+  "_from": "../d-117618-26877-1ptyi80.lwqaicc8fr/package.tgz",
+  "_id": "minimap@4.28.3",
   "_inCache": true,
-  "_installable": true,
   "_location": "/minimap",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117423-1850-j82u5w.q988v9529/package.tgz",
+    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26877-1ptyi80.lwqaicc8fr/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117423-1850-j82u5w.q988v9529/package.tgz",
-    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117423-1850-j82u5w.q988v9529/package.tgz",
+    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26877-1ptyi80.lwqaicc8fr/package.tgz",
+    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26877-1ptyi80.lwqaicc8fr/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117423-1850-j82u5w.q988v9529/package.tgz",
-  "_shasum": "2adfbda9695b5b629946e9311596ea8e2e0f30fd",
+  "_resolved": "file:../d-117618-26877-1ptyi80.lwqaicc8fr/package.tgz",
+  "_shasum": "b51eafd7ffbc565e92aaf49e943a081177a1e025",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117423-1850-j82u5w.q988v9529/package.tgz",
-  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117423-1850-382avh.i67bgtx1or",
+  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26877-1ptyi80.lwqaicc8fr/package.tgz",
+  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117618-26877-1f1qlpm.paqhncdi",
   "author": {
     "name": "Fangdun Cai",
     "email": "cfddream@gmail.com"
@@ -260,7 +259,7 @@
       "IntersectionObserver"
     ]
   },
-  "version": "4.28.2",
+  "version": "4.28.3",
   "viewProviders": [
     "minimapViewProvider"
   ],
@@ -279,7 +278,7 @@
       },
       {
         "name": "balanced-match",
-        "version": "0.4.2",
+        "version": "1.0.0",
         "path": "node_modules/balanced-match/index.js"
       },
       {
@@ -289,7 +288,7 @@
       },
       {
         "name": "brace-expansion",
-        "version": "1.1.7",
+        "version": "1.1.8",
         "path": "node_modules/brace-expansion/index.js"
       },
       {
@@ -319,7 +318,7 @@
       },
       {
         "name": "es5-ext",
-        "version": "0.10.21",
+        "version": "0.10.24",
         "path": "node_modules/es5-ext/index.js"
       },
       {
@@ -1067,7 +1066,7 @@
           "node_modules/brace-expansion"
         ],
         "dependencies": {
-          "balanced-match": "^0.4.1",
+          "balanced-match": "^1.0.0",
           "concat-map": "0.0.1"
         }
       },
