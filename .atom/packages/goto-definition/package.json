@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117529-79401-1rf2zsp.j3piudi/package.tgz",
+        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26875-baiyp.oeu4mcmcxr/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117529-79401-1rf2zsp.j3piudi/package.tgz",
-        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117529-79401-1rf2zsp.j3piudi/package.tgz",
+        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26875-baiyp.oeu4mcmcxr/package.tgz",
+        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26875-baiyp.oeu4mcmcxr/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117529-79401-ix5l7h.bm52ep14i"
+      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117618-26875-wtw0r7.f2athuxr"
     ]
   ],
-  "_from": "../d-117529-79401-1rf2zsp.j3piudi/package.tgz",
-  "_id": "goto-definition@1.3.3",
+  "_from": "../d-117618-26875-baiyp.oeu4mcmcxr/package.tgz",
+  "_id": "goto-definition@1.3.4",
   "_inCache": true,
   "_location": "/goto-definition",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117529-79401-1rf2zsp.j3piudi/package.tgz",
+    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26875-baiyp.oeu4mcmcxr/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117529-79401-1rf2zsp.j3piudi/package.tgz",
-    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117529-79401-1rf2zsp.j3piudi/package.tgz",
+    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26875-baiyp.oeu4mcmcxr/package.tgz",
+    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26875-baiyp.oeu4mcmcxr/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117529-79401-1rf2zsp.j3piudi/package.tgz",
-  "_shasum": "5e64a546f6d0970add882d297c0aa6ea22ec1c8c",
+  "_resolved": "file:../d-117618-26875-baiyp.oeu4mcmcxr/package.tgz",
+  "_shasum": "04fabb56d77592d581b847528c12f1efcd1308d6",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117529-79401-1rf2zsp.j3piudi/package.tgz",
-  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117529-79401-ix5l7h.bm52ep14i",
+  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26875-baiyp.oeu4mcmcxr/package.tgz",
+  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117618-26875-wtw0r7.f2athuxr",
   "author": {
     "name": "faceair"
   },
@@ -75,7 +75,7 @@
     "lint": "eslint .",
     "test": "apm test"
   },
-  "version": "1.3.3",
+  "version": "1.3.4",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -91,7 +91,7 @@
       },
       {
         "name": "etch",
-        "version": "0.12.4",
+        "version": "0.12.5",
         "path": "node_modules/etch/lib/index.js"
       },
       {
@@ -129,6 +129,17 @@
         "node_modules/atom-select-list/node_modules/etch/lib/svg-tags.js",
         "node_modules/atom-select-list/node_modules/etch/lib/update-props.js",
         "node_modules/atom-select-list/src/select-list-view.js",
+        "node_modules/etch/dist/component-helpers.js",
+        "node_modules/etch/dist/default-scheduler.js",
+        "node_modules/etch/dist/dom.js",
+        "node_modules/etch/dist/event-listener-props.js",
+        "node_modules/etch/dist/index.js",
+        "node_modules/etch/dist/patch.js",
+        "node_modules/etch/dist/render.js",
+        "node_modules/etch/dist/scheduler-assignment.js",
+        "node_modules/etch/dist/svg-attribute-translations.js",
+        "node_modules/etch/dist/svg-tags.js",
+        "node_modules/etch/dist/update-props.js",
         "node_modules/etch/lib/component-helpers.js",
         "node_modules/etch/lib/default-scheduler.js",
         "node_modules/etch/lib/dom.js",
