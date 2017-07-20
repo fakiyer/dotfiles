@@ -27,5 +27,3 @@
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 [color]
 	ui = true
-[fetch]
-	prune = true
