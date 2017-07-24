@@ -139,6 +139,7 @@ nnoremap <Leader>dy :Denite neoyank<CR>
 nnoremap <Leader>f :ProjectFiles<CR>
 nnoremap <Leader>r :History<CR>
 nnoremap <Leader>p :Pt<CR>
+nnoremap <Leader>t :terminal<CR>
 inoremap jj <ESC>
 
 vnoremap <silent> y y`]
