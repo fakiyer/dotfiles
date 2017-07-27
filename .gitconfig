@@ -27,3 +27,5 @@
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 [color]
 	ui = true
+[alias]
+  delete-merged = !git checkout master && git branch --merged | grep -v '*' | xargs -I % git branch -d %
