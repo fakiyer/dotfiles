@@ -90,6 +90,8 @@ function allupdate() {
   nvim -e -R -c "call dein#update()" -c "q"
 }
 
+alias re="source ~/.zshrc"
+
 ### git
 alias ggfpush='git push --force-with-lease origin $(git_current_branch)'
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
