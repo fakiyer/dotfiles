@@ -154,3 +154,6 @@ alias vim="nvim"
 
 ### anaconda
 export PATH="$HOME/anaconda/bin:$PATH"
+
+### rails
+alias be="bundle exec"
