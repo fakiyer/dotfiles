@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26879-1c6ko9b.i21uzyqfr/package.tgz",
+        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117631-5595-skd18j.3fps1exw29/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26879-1c6ko9b.i21uzyqfr/package.tgz",
-        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26879-1c6ko9b.i21uzyqfr/package.tgz",
+        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117631-5595-skd18j.3fps1exw29/package.tgz",
+        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117631-5595-skd18j.3fps1exw29/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117618-26879-1133hps.pc43nv1jor"
+      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117631-5595-1awkpwo.isafr2uik9"
     ]
   ],
-  "_from": "../d-117618-26879-1c6ko9b.i21uzyqfr/package.tgz",
-  "_id": "prettier-atom@0.36.1",
+  "_from": "../d-117631-5595-skd18j.3fps1exw29/package.tgz",
+  "_id": "prettier-atom@0.37.0",
   "_inCache": true,
   "_location": "/prettier-atom",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26879-1c6ko9b.i21uzyqfr/package.tgz",
+    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117631-5595-skd18j.3fps1exw29/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26879-1c6ko9b.i21uzyqfr/package.tgz",
-    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26879-1c6ko9b.i21uzyqfr/package.tgz",
+    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117631-5595-skd18j.3fps1exw29/package.tgz",
+    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117631-5595-skd18j.3fps1exw29/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117618-26879-1c6ko9b.i21uzyqfr/package.tgz",
-  "_shasum": "86d434a42be4ceed21d2cb7d1345cf9c9d437e74",
+  "_resolved": "file:../d-117631-5595-skd18j.3fps1exw29/package.tgz",
+  "_shasum": "9a142dcd5a00693b9b9461c7f8744f42ebd0038f",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117618-26879-1c6ko9b.i21uzyqfr/package.tgz",
-  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117618-26879-1133hps.pc43nv1jor",
+  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117631-5595-skd18j.3fps1exw29/package.tgz",
+  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117631-5595-1awkpwo.isafr2uik9",
   "bugs": {
     "url": "https://github.com/prettier/prettier-atom/issues"
   },
@@ -64,7 +64,7 @@
     "ignore": "^3.3.3",
     "lodash": "^4.17.4",
     "loophole": "^1.1.0",
-    "prettier": "^1.5.2",
+    "prettier": "^1.5.3",
     "prettier-eslint": "^6.4.2",
     "read-pkg-up": "^2.0.0"
   },
@@ -80,16 +80,16 @@
     "codecov": "^2.2.0",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.0.0",
-    "eslint": "^4.1.1",
+    "eslint": "^4.3.0",
     "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-plugin-flowtype": "^2.34.1",
+    "eslint-plugin-flowtype": "^2.35.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jest": "^20.0.3",
-    "flow-bin": "^0.49.1",
-    "flow-typed": "^2.1.2",
+    "flow-bin": "^0.51.0",
+    "flow-typed": "^2.1.5",
     "husky": "^0.14.3",
     "jest-cli": "^20.0.4",
-    "nps": "^5.3.2",
+    "nps": "^5.6.0",
     "opt-cli": "^1.5.1",
     "prettier-eslint-cli": "^4.1.1",
     "rimraf": "^2.6.1"
@@ -139,7 +139,7 @@
     "start": "nps",
     "test": "nps test"
   },
-  "version": "0.36.1",
+  "version": "0.37.0",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -275,7 +275,7 @@
       },
       {
         "name": "circular-json",
-        "version": "0.3.1",
+        "version": "0.3.3",
         "path": "node_modules/circular-json/build/circular-json.node.js"
       },
       {
@@ -550,7 +550,7 @@
       },
       {
         "name": "indent-string",
-        "version": "3.1.0",
+        "version": "3.2.0",
         "path": "node_modules/indent-string/index.js"
       },
       {
@@ -635,7 +635,7 @@
       },
       {
         "name": "js-yaml",
-        "version": "3.9.0",
+        "version": "3.9.1",
         "path": "node_modules/js-yaml/index.js"
       },
       {
@@ -860,7 +860,7 @@
       },
       {
         "name": "ansi-styles",
-        "version": "3.1.0",
+        "version": "3.2.0",
         "path": "node_modules/pretty-format/node_modules/ansi-styles/index.js"
       },
       {
@@ -920,7 +920,7 @@
       },
       {
         "name": "resolve",
-        "version": "1.3.3",
+        "version": "1.4.0",
         "path": "node_modules/resolve/index.js"
       },
       {
@@ -985,7 +985,7 @@
       },
       {
         "name": "semver",
-        "version": "5.3.0",
+        "version": "5.4.1",
         "path": "node_modules/semver/semver.js"
       },
       {
@@ -1075,7 +1075,7 @@
       },
       {
         "name": "string-width",
-        "version": "2.1.0",
+        "version": "2.1.1",
         "path": "node_modules/table/node_modules/string-width/index.js"
       },
       {
@@ -5671,7 +5671,7 @@
           "ignore": "^3.3.3",
           "lodash": "^4.17.4",
           "loophole": "^1.1.0",
-          "prettier": "^1.5.2",
+          "prettier": "^1.5.3",
           "prettier-eslint": "^6.4.2",
           "read-pkg-up": "^2.0.0"
         }
@@ -6706,7 +6706,7 @@
           "node_modules/pretty-format/node_modules/ansi-styles"
         ],
         "dependencies": {
-          "color-convert": "^1.0.0"
+          "color-convert": "^1.9.0"
         }
       },
       {
@@ -6793,6 +6793,8 @@
           "node_modules/resolve/test/precedence/bbb",
           "node_modules/resolve/test/resolver/baz",
           "node_modules/resolve/test/resolver",
+          "node_modules/resolve/test/resolver/dot_main",
+          "node_modules/resolve/test/resolver/dot_slash_main",
           "node_modules/resolve/test/resolver/incorrect_main",
           "node_modules/resolve/test/resolver/other_path/lib",
           "node_modules/resolve/test/resolver/other_path",
