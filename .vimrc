@@ -13,35 +13,34 @@ call dein#add('Shougo/dein.vim')
 
 call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/neosnippet-snippets')
-call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+call dein#add('Shougo/vimproc.vim',       {'build' : 'make'})
 call dein#add('Shougo/denite.nvim')
 call dein#add('Shougo/neoyank.vim')
 call dein#add('Shougo/neomru.vim')
 call dein#add('Shougo/deoplete.nvim')
 
 call dein#add('tpope/vim-fugitive')
-call dein#add('vim-scripts/surround.vim')
+call dein#add('tpope/vim-surround')
+call dein#add('tpope/vim-endwise',        { 'on_i': 1 })
 call dein#add('tomtom/tcomment_vim')
-call dein#add('tpope/vim-endwise')
-call dein#add('vim-scripts/AnsiEsc.vim')
 call dein#add('nathanaelkane/vim-indent-guides')
 call dein#add('terryma/vim-expand-region')
 call dein#add('itchyny/lightline.vim')
 call dein#add('scrooloose/nerdtree')
 call dein#add('jlanzarotta/bufexplorer')
-call dein#add('vim-scripts/git-commit')
+call dein#add('vim-scripts/AnsiEsc.vim')
 call dein#add('lifepillar/vim-solarized8')
-call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
-call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
-call dein#add('vim-ruby/vim-ruby', { 'on_ft': 'ruby' })
-call dein#add('tpope/vim-rails')
-call dein#add('tpope/vim-bundler')
+call dein#add('junegunn/fzf',             { 'build': './install --all', 'merged': 0 })
+call dein#add('junegunn/fzf.vim',         { 'depends': 'fzf' })
+" call dein#add('tpope/vim-rails')
+" call dein#add('tpope/vim-bundler')
 call dein#add('vim-scripts/ruby-matchit')
-call dein#add('osyo-manga/vim-monster')
-call dein#add('rust-lang/rust.vim', { 'on_ft': 'rust' })
-call dein#add('slim-template/vim-slim', { 'on_ft': 'slim' })
+call dein#add('vim-ruby/vim-ruby',        { 'on_ft': 'ruby' })
+call dein#add('osyo-manga/vim-monster',   { 'on_ft': 'ruby' })
+call dein#add('rust-lang/rust.vim',       { 'on_ft': 'rust' })
+call dein#add('slim-template/vim-slim',   { 'on_ft': 'slim' })
 call dein#add('kchmck/vim-coffee-script', { 'on_ft': 'coffee' })
-call dein#add('ekalinin/Dockerfile.vim', { 'on_ft': ['Dockerfile', 'docker-compose']})
+call dein#add('ekalinin/Dockerfile.vim',  { 'on_ft': ['Dockerfile', 'docker-compose']})
 
 call dein#end()
 
@@ -131,9 +130,9 @@ noremap <Leader>l $
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>s :wq<CR>
-nnoremap <Leader>m :Emodel
-nnoremap <Leader>v :Eview
-nnoremap <Leader>c :Econtroller
+" nnoremap <Leader>m :Emodel
+" nnoremap <Leader>v :Eview
+" nnoremap <Leader>c :Econtroller
 nnoremap <Leader>d :Denite
 nnoremap <Leader>dy :Denite neoyank<CR>
 nnoremap <Leader>f :ProjectFiles<CR>
