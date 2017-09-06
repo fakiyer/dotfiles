@@ -29,6 +29,10 @@ export default {
       lintOnFly: true,
       lint: async (textEditor) => {
         const filePath = textEditor.getPath();
+        if (!filePath) {
+          // We somehow got called without a file path
+          return null;
+        }
         const fileText = textEditor.getText();
         const fileExtension = extname(filePath).substr(1);
 
@@ -36,7 +40,13 @@ export default {
           return [];
         }
 
-        const execArgs = ['-wc', '-Eutf-8'];
+        const execArgs = [
+          '-c', // Check syntax only, no execution
+          '-w', // Turns on warnings
+          // Set the encoding to UTF-8
+          '--external-encoding=utf-8',
+          '--internal-encoding=utf-8',
+        ];
         const execOpts = {
           stdin: fileText,
           stream: 'stderr',
