@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117631-5593-h19w0u.9elvr3haor/package.tgz",
+        "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11785-17722-1s90nok.t8gc01wcdi/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117631-5593-h19w0u.9elvr3haor/package.tgz",
-        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117631-5593-h19w0u.9elvr3haor/package.tgz",
+        "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11785-17722-1s90nok.t8gc01wcdi/package.tgz",
+        "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11785-17722-1s90nok.t8gc01wcdi/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117631-5593-clwppg.ry9qw7b9"
+      "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-11785-17722-1jlkxoi.debem6lxr"
     ]
   ],
-  "_from": "../d-117631-5593-h19w0u.9elvr3haor/package.tgz",
-  "_id": "platformio-ide-terminal@2.5.4",
+  "_from": "../d-11785-17722-1s90nok.t8gc01wcdi/package.tgz",
+  "_id": "platformio-ide-terminal@2.6.0",
   "_inCache": true,
   "_location": "/platformio-ide-terminal",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117631-5593-h19w0u.9elvr3haor/package.tgz",
+    "raw": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11785-17722-1s90nok.t8gc01wcdi/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117631-5593-h19w0u.9elvr3haor/package.tgz",
-    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117631-5593-h19w0u.9elvr3haor/package.tgz",
+    "rawSpec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11785-17722-1s90nok.t8gc01wcdi/package.tgz",
+    "spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11785-17722-1s90nok.t8gc01wcdi/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117631-5593-h19w0u.9elvr3haor/package.tgz",
-  "_shasum": "6907b459f66380cda3c97679cb1d29dbd4156bfe",
+  "_resolved": "file:../d-11785-17722-1s90nok.t8gc01wcdi/package.tgz",
+  "_shasum": "2cea9f3583ec0da4d181c4601ec713a456c95f40",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-117631-5593-h19w0u.9elvr3haor/package.tgz",
-  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-117631-5593-clwppg.ry9qw7b9",
+  "_spec": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/d-11785-17722-1s90nok.t8gc01wcdi/package.tgz",
+  "_where": "/private/var/folders/ct/n7hjn86j5m34yygr29bgdz0r0000gp/T/apm-install-dir-11785-17722-1jlkxoi.debem6lxr",
   "activationHooks": [
     "core:loaded-shell-environment"
   ],
@@ -113,7 +113,7 @@
     "type": "git",
     "url": "git+https://github.com/platformio/platformio-atom-ide-terminal.git"
   },
-  "version": "2.5.4",
+  "version": "2.6.0",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -134,7 +134,7 @@
       },
       {
         "name": "es5-ext",
-        "version": "0.10.24",
+        "version": "0.10.30",
         "path": "node_modules/es5-ext/index.js"
       },
       {
@@ -309,6 +309,7 @@
         "node_modules/es5-ext/array/#/indexes-of.js",
         "node_modules/es5-ext/array/#/intersection.js",
         "node_modules/es5-ext/array/#/is-copy.js",
+        "node_modules/es5-ext/array/#/is-empty.js",
         "node_modules/es5-ext/array/#/is-uniq.js",
         "node_modules/es5-ext/array/#/keys/implement.js",
         "node_modules/es5-ext/array/#/keys/index.js",
@@ -532,6 +533,8 @@
         "node_modules/es5-ext/object/copy.js",
         "node_modules/es5-ext/object/count.js",
         "node_modules/es5-ext/object/create.js",
+        "node_modules/es5-ext/object/ensure-array.js",
+        "node_modules/es5-ext/object/ensure-finite-number.js",
         "node_modules/es5-ext/object/ensure-natural-number-value.js",
         "node_modules/es5-ext/object/ensure-natural-number.js",
         "node_modules/es5-ext/object/ensure-promise.js",
@@ -550,6 +553,7 @@
         "node_modules/es5-ext/object/is-copy-deep.js",
         "node_modules/es5-ext/object/is-copy.js",
         "node_modules/es5-ext/object/is-empty.js",
+        "node_modules/es5-ext/object/is-finite-number.js",
         "node_modules/es5-ext/object/is-number-value.js",
         "node_modules/es5-ext/object/is-object.js",
         "node_modules/es5-ext/object/is-plain-object.js",
@@ -583,6 +587,7 @@
         "node_modules/es5-ext/object/validate-array-like.js",
         "node_modules/es5-ext/object/validate-stringifiable-value.js",
         "node_modules/es5-ext/object/validate-stringifiable.js",
+        "node_modules/es5-ext/optional-chaining.js",
         "node_modules/es5-ext/reg-exp/#/index.js",
         "node_modules/es5-ext/reg-exp/#/is-sticky.js",
         "node_modules/es5-ext/reg-exp/#/is-unicode.js",
@@ -665,6 +670,7 @@
         "node_modules/es5-ext/string/raw/index.js",
         "node_modules/es5-ext/string/raw/is-implemented.js",
         "node_modules/es5-ext/string/raw/shim.js",
+        "node_modules/es5-ext/to-short-string-representation.js",
         "node_modules/es6-iterator/#/chain.js",
         "node_modules/es6-iterator/array.js",
         "node_modules/es6-iterator/for-of.js",
@@ -830,20 +836,6 @@
         "package.json"
       ],
       ".node": [
-        "node_modules/pty.js/bin/darwin/ia32.m46.node",
-        "node_modules/pty.js/bin/darwin/x64.m46.node",
-        "node_modules/pty.js/bin/darwin/x64.m47.node",
-        "node_modules/pty.js/bin/darwin/x64.m49.node",
-        "node_modules/pty.js/bin/linux/ia32.m46.node",
-        "node_modules/pty.js/bin/linux/x64.m46.node",
-        "node_modules/pty.js/bin/linux/x64.m47.node",
-        "node_modules/pty.js/bin/linux/x64.m49.node",
-        "node_modules/pty.js/bin/win32/ia32.m46.node",
-        "node_modules/pty.js/bin/win32/ia32.m47.node",
-        "node_modules/pty.js/bin/win32/ia32.m49.node",
-        "node_modules/pty.js/bin/win32/x64.m46.node",
-        "node_modules/pty.js/bin/win32/x64.m47.node",
-        "node_modules/pty.js/bin/win32/x64.m49.node",
         "node_modules/pty.js/build/Release/pty.node"
       ]
     },
@@ -1140,9 +1132,6 @@
       },
       {
         "paths": [
-          "node_modules/pty.js/bin/darwin",
-          "node_modules/pty.js/bin/linux",
-          "node_modules/pty.js/bin/win32",
           "node_modules/pty.js/build/Release",
           "node_modules/pty.js",
           "node_modules/pty.js/lib",

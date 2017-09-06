@@ -1,3 +1,15 @@
+## 2.6.0 - PlatformIO
+
+* Add predawn theme (#296)
+* Optional --login shell (#294)
+* Toolbar button with atom styleguide (#345)
+* Fix labels rendering outside of Atom's 'editor mini' panel (#339)
+* Fix "Some installed packages could not be loaded..." with a new Atom 1.19
+
+## 2.5.5 - PlatformIO
+
+* Add compatibility for Atom 1.19
+
 ## 2.5.4 - PlatformIO
 
 * Updated One Dark theme foreground color to match Atom
