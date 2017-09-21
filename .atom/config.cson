@@ -29,7 +29,7 @@
   "one-dark-ui": {}
   "prettier-atom":
     formatOnSaveOptions:
-      enabled: true
+      showInStatusBar: true
     prettierEslintOptions: {}
     prettierOptions:
       bracketSpacing: false
@@ -41,7 +41,6 @@
   "seti-ui":
     compactView: true
     font: "Default Atom Font"
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "tree-view": {}
   welcome:
     showOnStartup: false
