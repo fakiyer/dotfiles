@@ -23,9 +23,8 @@ export default {
 
     this.subscriptions = new CompositeDisposable();
     this.subscriptions.add(atom.config.observe('linter-js-yaml.customTags', (customTags) => {
-      this.Schema = yaml.Schema.create(customTags.map(tag =>
-        new yaml.Type(tag, { kind: 'scalar' }),
-      ));
+      this.Schema = yaml.Schema.create(customTags
+        .map(tag => new yaml.Type(tag, { kind: 'scalar' })));
     }));
   },
 
@@ -40,18 +39,25 @@ export default {
       name: 'Js-YAML',
       lintOnFly: true,
       lint: (TextEditor) => {
+        if (!atom.workspace.isTextEditor(TextEditor)) {
+          return null;
+        }
         const filePath = TextEditor.getPath();
+        if (!filePath) {
+          // Invalid path
+          return null;
+        }
         const fileText = TextEditor.getText();
 
         const messages = [];
         const processMessage = (type, message) => {
-          let line = message.mark.line;
+          let { line } = message.mark;
           // Workaround for https://github.com/nodeca/js-yaml/issues/218
           const maxLine = TextEditor.getLineCount() - 1;
           if (line > maxLine) {
             line = maxLine;
           }
-          const column = message.mark.column;
+          const { column } = message.mark;
           return {
             type,
             text: message.reason,
