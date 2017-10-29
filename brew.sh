@@ -40,7 +40,6 @@ brew install git
 brew install git-lfs
 brew install git-secrets
 brew install hub
-brew install node
 brew install reattach-to-user-namespace
 brew install tmux
 brew install tree
