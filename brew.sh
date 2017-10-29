@@ -34,9 +34,11 @@ brew install fzf
 /usr/local/opt/fzf/install
 
 # Install other useful binaries.
+brew install diff-so-fancy
 brew install ghq
 brew install git
 brew install git-lfs
+brew install git-secrets
 brew install hub
 brew install reattach-to-user-namespace
 brew install tmux
@@ -44,8 +46,6 @@ brew install tree
 brew install pt
 brew tap universal-ctags/universal-ctags
 brew install --HEAD universal-ctags
-brew install git-secrets
-brew install diff-so-fancy
 pip3 install pip-review
 
 # Remove outdated versions from the cellar.
