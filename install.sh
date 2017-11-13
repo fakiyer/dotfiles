@@ -13,3 +13,4 @@ ln -sf ~/dotfiles/karabiner-elements/karabiner.json ~/.config/karabiner/karabine
 ln -sf ~/dotfiles/karabiner-elements/assets/complex_modifications/mouse.json ~/.config/karabiner/assets/complex_modifications/mouse.json
 
 sh ~/dotfiles/brew.sh
+sh ~/dotfiles/osx/keyrate.sh
