@@ -55,9 +55,9 @@ endif
 """"""""""""""""""""""""""""""
 " Display
 """"""""""""""""""""""""""""""
-colorscheme solarized8_dark
-set termguicolors
 set background=dark
+colorscheme solarized8
+set termguicolors
 
 """"""""""""""""""""""""""""""
 " Option
