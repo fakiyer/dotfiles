@@ -148,9 +148,6 @@ export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
 
-### android
-export ANDROID_HOME=/usr/local/opt/android-sdk
-
 ### neovim
 alias vim="nvim"
 
@@ -159,3 +156,7 @@ export PATH="$HOME/anaconda/bin:$PATH"
 
 ### rails
 alias be="bundle exec"
+
+### android
+# export ANDROID_HOME=/usr/local/opt/android-sdk
+export PATH="$PATH:/Applications/Genymotion.app/Contents/MacOS/tools/"
