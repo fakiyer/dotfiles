@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/54/svkyg4_n0253kjg5f6tm42_00000gn/T/d-117119-3474-sfqhkf.4zgxjbrzfr/package.tgz",
+        "raw": "/private/var/folders/54/svkyg4_n0253kjg5f6tm42_00000gn/T/d-1171110-23848-12dt7ok.9hjdmwjyvi/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/54/svkyg4_n0253kjg5f6tm42_00000gn/T/d-117119-3474-sfqhkf.4zgxjbrzfr/package.tgz",
-        "spec": "/private/var/folders/54/svkyg4_n0253kjg5f6tm42_00000gn/T/d-117119-3474-sfqhkf.4zgxjbrzfr/package.tgz",
+        "rawSpec": "/private/var/folders/54/svkyg4_n0253kjg5f6tm42_00000gn/T/d-1171110-23848-12dt7ok.9hjdmwjyvi/package.tgz",
+        "spec": "/private/var/folders/54/svkyg4_n0253kjg5f6tm42_00000gn/T/d-1171110-23848-12dt7ok.9hjdmwjyvi/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/54/svkyg4_n0253kjg5f6tm42_00000gn/T/apm-install-dir-117119-3474-p04q6u.dftv86w29"
+      "/private/var/folders/54/svkyg4_n0253kjg5f6tm42_00000gn/T/apm-install-dir-1171110-23848-5ouzeb.c5gtuwstt9"
     ]
   ],
-  "_from": "../d-117119-3474-sfqhkf.4zgxjbrzfr/package.tgz",
-  "_id": "prettier-atom@0.43.0",
+  "_from": "../d-1171110-23848-12dt7ok.9hjdmwjyvi/package.tgz",
+  "_id": "prettier-atom@0.43.1",
   "_inCache": true,
   "_location": "/prettier-atom",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/54/svkyg4_n0253kjg5f6tm42_00000gn/T/d-117119-3474-sfqhkf.4zgxjbrzfr/package.tgz",
+    "raw": "/private/var/folders/54/svkyg4_n0253kjg5f6tm42_00000gn/T/d-1171110-23848-12dt7ok.9hjdmwjyvi/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/54/svkyg4_n0253kjg5f6tm42_00000gn/T/d-117119-3474-sfqhkf.4zgxjbrzfr/package.tgz",
-    "spec": "/private/var/folders/54/svkyg4_n0253kjg5f6tm42_00000gn/T/d-117119-3474-sfqhkf.4zgxjbrzfr/package.tgz",
+    "rawSpec": "/private/var/folders/54/svkyg4_n0253kjg5f6tm42_00000gn/T/d-1171110-23848-12dt7ok.9hjdmwjyvi/package.tgz",
+    "spec": "/private/var/folders/54/svkyg4_n0253kjg5f6tm42_00000gn/T/d-1171110-23848-12dt7ok.9hjdmwjyvi/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117119-3474-sfqhkf.4zgxjbrzfr/package.tgz",
-  "_shasum": "7c3b4bdb9db18cb82c084ea1bc3b38b7a6d17503",
+  "_resolved": "file:../d-1171110-23848-12dt7ok.9hjdmwjyvi/package.tgz",
+  "_shasum": "1c0162823a2f46cb8084394fb447d4ef4745894a",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/54/svkyg4_n0253kjg5f6tm42_00000gn/T/d-117119-3474-sfqhkf.4zgxjbrzfr/package.tgz",
-  "_where": "/private/var/folders/54/svkyg4_n0253kjg5f6tm42_00000gn/T/apm-install-dir-117119-3474-p04q6u.dftv86w29",
+  "_spec": "/private/var/folders/54/svkyg4_n0253kjg5f6tm42_00000gn/T/d-1171110-23848-12dt7ok.9hjdmwjyvi/package.tgz",
+  "_where": "/private/var/folders/54/svkyg4_n0253kjg5f6tm42_00000gn/T/apm-install-dir-1171110-23848-5ouzeb.c5gtuwstt9",
   "bugs": {
     "url": "https://github.com/prettier/prettier-atom/issues"
   },
@@ -60,7 +60,7 @@
     "atom-package-deps": "^4.6.0",
     "atom-text-buffer-point": "^1.0.0",
     "atom-text-buffer-range": "^1.0.0",
-    "babel-polyfill": "^6.26.0",
+    "babel-runtime": "^6.26.0",
     "editorconfig": "^0.15.0",
     "ignore": "^3.3.7",
     "lodash": "^4.17.4",
@@ -76,6 +76,7 @@
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.3",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
     "codecov": "^3.0.0",
@@ -139,5 +140,5 @@
     "start": "nps",
     "test": "nps test"
   },
-  "version": "0.43.0"
+  "version": "0.43.1"
 }

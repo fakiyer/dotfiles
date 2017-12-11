@@ -29,10 +29,10 @@
   "one-dark-ui": {}
   "prettier-atom":
     formatOnSaveOptions:
+      enabled: true
       showInStatusBar: true
     prettierEslintOptions: {}
     prettierOptions:
-      bracketSpacing: false
       singleQuote: true
       trailingComma: "all"
   react: {}
