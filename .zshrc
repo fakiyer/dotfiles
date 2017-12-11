@@ -160,3 +160,8 @@ alias be="bundle exec"
 ### android
 # export ANDROID_HOME=/usr/local/opt/android-sdk
 export PATH="$PATH:/Applications/Genymotion.app/Contents/MacOS/tools/"
+
+### logbook
+function lb() {
+  vim ~/logbook/$(date '+%Y-%m-%d').md
+}
