@@ -15,6 +15,7 @@ call dein#add('Shougo/denite.nvim')
 call dein#add('Shougo/neoyank.vim')
 call dein#add('Shougo/neomru.vim')
 call dein#add('Shougo/deoplete.nvim')
+call dein#add('Lokaltog/vim-easymotion')
 
 call dein#add('tpope/vim-fugitive')
 call dein#add('tpope/vim-surround')
