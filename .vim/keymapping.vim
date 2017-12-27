@@ -8,6 +8,8 @@ set pastetoggle=<F10>
 
 nnoremap j gj
 nnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up>   gk
 set whichwrap=b,s,h,l,<,>,[,]
 
 imap <c-o> <END>
