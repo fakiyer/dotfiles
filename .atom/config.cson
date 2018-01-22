@@ -35,6 +35,7 @@
     prettierOptions:
       singleQuote: true
       trailingComma: "all"
+    useEslint: true
   react: {}
   "remote-edit": {}
   "seti-syntax": {}
