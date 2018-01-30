@@ -21,6 +21,10 @@ let g:NERDTreeDirArrows=0
 let g:NERDTreeMouseMode=0
 
 
+" indent-guides
+let g:indent_guides_guide_size=1
+
+
 " fzf
 set rtp+=/usr/local/opt/fzf
 
