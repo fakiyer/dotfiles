@@ -11,6 +11,7 @@ nnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up>   gk
 set whichwrap=b,s,h,l,<,>,[,]
+nmap <CR> i<CR><ESC>
 
 imap <c-o> <END>
 imap <c-a> <HOME>
