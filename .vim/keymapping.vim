@@ -18,7 +18,7 @@ imap <c-a> <HOME>
 imap <c-h> <LEFT>
 imap <c-j> <DOWN>
 imap <c-k> <UP>
-imap <c-l> <Right>
+imap <c-l> <RIGHT>
 imap <C-Space> <C-x><C-o>
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 noremap <Leader>h ^

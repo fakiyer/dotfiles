@@ -3,7 +3,7 @@ let NERDShutUp = 1 "no alart undfined filetype
 
 
 " rails.vim
-let g:rails_level=3
+let g:rails_level = 3
 
 
 " own
@@ -16,13 +16,13 @@ hi LineNr ctermfg=DarkGray
 
 
 " NERD_tree.vim
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-let g:NERDTreeDirArrows=0
-let g:NERDTreeMouseMode=0
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" let g:NERDTreeDirArrows=0
+" let g:NERDTreeMouseMode=0
 
 
 " indent-guides
-let g:indent_guides_guide_size=1
+let g:indent_guides_guide_size = 1
 
 
 " fzf
@@ -75,6 +75,10 @@ let g:deoplete#sources#omni#input_patterns = {
 " solarized8
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+
+" easymotion
+let g:EasyMotion_do_mapping = 0
 
 
 " lightline
@@ -138,6 +142,3 @@ endfunction
 function! LightLineMode()
   return winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
-
-" easymotion
-let g:EasyMotion_do_mapping = 0
