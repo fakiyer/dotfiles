@@ -1,3 +1,48 @@
+<a name="0.50.0"></a>
+# [0.50.0](https://github.com/prettier/prettier-atom/compare/v0.49.2...v0.50.0) (2018-02-09)
+
+
+### Code Refactoring
+
+* **buildPrettierOptions.js:** Exclusively use local config or plugin settings ([1141b2c](https://github.com/prettier/prettier-atom/commit/1141b2c)), closes [#370](https://github.com/prettier/prettier-atom/issues/370) [#218](https://github.com/prettier/prettier-atom/issues/218)
+
+
+### BREAKING CHANGES
+
+* **buildPrettierOptions.js:** The formatting configuration is now built according to different rules
+
+
+
+<a name="0.49.2"></a>
+## [0.49.2](https://github.com/prettier/prettier-atom/compare/v0.49.1...v0.49.2) (2018-02-03)
+
+
+### Bug Fixes
+
+* **executePrettier:** adjust for API inconsistencies + add type coverage ([800c0e2](https://github.com/prettier/prettier-atom/commit/800c0e2))
+
+
+
+<a name="0.49.1"></a>
+## [0.49.1](https://github.com/prettier/prettier-atom/compare/v0.49.0...v0.49.1) (2018-02-02)
+
+
+### Bug Fixes
+
+* **executePrettier:** fallback to `format` when `formatWithCursor` fails ([105f9e1](https://github.com/prettier/prettier-atom/commit/105f9e1))
+
+
+
+<a name="0.49.0"></a>
+# [0.49.0](https://github.com/prettier/prettier-atom/compare/v0.48.1...v0.49.0) (2018-01-30)
+
+
+### Features
+
+* **executePrettier:** Maintain cursor position on format ([159b2b2](https://github.com/prettier/prettier-atom/commit/159b2b2))
+
+
+
 <a name="0.48.1"></a>
 ## [0.48.1](https://github.com/prettier/prettier-atom/compare/v0.48.0...v0.48.1) (2018-01-25)
 
