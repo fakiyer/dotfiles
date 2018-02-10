@@ -3,6 +3,8 @@
     _analyticsUserId: "2f9444de-5b05-4540-bb34-5904ba065a5f"
     general:
       _analyticsUserId: "f94becbd-c6f1-4407-8926-4b87e35d8069"
+  "atom-package-deps":
+    ignored: []
   "atom-terminal":
     app: "/Applications/iTerm.app"
   core:
