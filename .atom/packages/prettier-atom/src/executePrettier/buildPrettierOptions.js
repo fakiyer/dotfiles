@@ -1,5 +1,7 @@
 // @flow
 const _ = require('lodash/fp');
+const editorconfig = require('editorconfig');
+const editorconfigToPretter = require('editorconfig-to-prettier');
 const {
   getCurrentFilePath,
   isCurrentScopeTypescriptScope,
@@ -10,10 +12,20 @@ const {
   isCurrentScopeVueScope,
 } = require('../editorInterface');
 const { shouldUseEditorConfig, getPrettierOptions, getAtomTabLength } = require('../atomInterface');
-const buildEditorConfigOptions = require('./buildEditorConfigOptions');
 const { getPrettierInstance } = require('../helpers');
 
+type EditorConfigToPretterResult = {
+  tabWidth?: number,
+  printWidth?: number,
+  useTabs?: boolean,
+};
+
 const isDefined: (x: any) => boolean = _.negate(_.isNil);
+
+const buildEditorConfigOptions: (file: FilePath) => EditorConfigToPretterResult = _.flow(
+  editorconfig.parseSync,
+  editorconfigToPretter,
+);
 
 const isAppropriateToBuildEditorConfigOptions: (filePath: FilePath) => boolean = _.overEvery([
   isDefined,
@@ -28,12 +40,25 @@ const buildEditorConfigOptionsIfAppropriate: (editor: TextEditor) => ?{} = _.flo
 const getPrettierConfigOptions: (editor: TextEditor) => ?{} = _.cond([
   [
     _.flow(getCurrentFilePath, isDefined),
-    editor =>
-      isDefined(getPrettierInstance(editor).resolveConfig.sync)
-        ? getPrettierInstance(editor).resolveConfig.sync(getCurrentFilePath(editor), {
-            editorconfig: shouldUseEditorConfig(),
-          })
-        : null,
+    editor => {
+      const hasResolveConfigSync = isDefined(getPrettierInstance(editor).resolveConfig.sync);
+      if (!hasResolveConfigSync) return null;
+
+      const resolveConfigSync = getPrettierInstance(editor).resolveConfig.sync;
+      const filePath = getCurrentFilePath(editor);
+
+      // TODO: when davidtheclark/cosmiconfig#107 is merged, this logic should
+      //   be modified to treat an empty file as an empty object.
+      let prettierConfig = resolveConfigSync(filePath);
+
+      // We only want to resolve with editorconfig when a prettier configuration
+      //   is found in the first place.
+      if (prettierConfig && shouldUseEditorConfig()) {
+        prettierConfig = resolveConfigSync(filePath, { editorconfig: true });
+      }
+
+      return prettierConfig || null;
+    },
   ],
 ]);
 

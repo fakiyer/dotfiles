@@ -4,11 +4,14 @@ const prettierEslint = require('prettier-eslint');
 const prettierStylelint = require('prettier-stylelint');
 const { allowUnsafeNewFunction } = require('loophole');
 
-const { shouldUseEslint, shouldUseStylelint, runLinter } = require('../atomInterface');
-const { isCurrentScopeCssScope } = require('../editorInterface');
+const {
+  getPrettierEslintOptions,
+  shouldUseEslint,
+  shouldUseStylelint,
+  runLinter,
+} = require('../atomInterface');
+const { getCurrentFilePath, isCurrentScopeCssScope } = require('../editorInterface');
 const { getPrettierInstance } = require('../helpers');
-const buildPrettierEslintOptions = require('./buildPrettierEslintOptions');
-const buildPrettierStylelintOptions = require('./buildPrettierStylelintOptions');
 const buildPrettierOptions = require('./buildPrettierOptions');
 const handleError = require('./handleError');
 
@@ -25,10 +28,23 @@ const executePrettierWithCursor = (
     cursorOffset,
   });
 
+const buildPrettierEslintOptions = (editor: TextEditor, text: string) => ({
+  text,
+  ...getPrettierEslintOptions(),
+  fallbackPrettierOptions: buildPrettierOptions(editor),
+  filePath: getCurrentFilePath(editor),
+});
+
 const executePrettierEslint = (editor: TextEditor, text: string): string =>
   allowUnsafeNewFunction(() => prettierEslint(buildPrettierEslintOptions(editor, text)));
 
-const executePrettierStylelint = (editor: TextEditor, text: string): string =>
+const buildPrettierStylelintOptions = (editor: TextEditor, text: string) => ({
+  text,
+  prettierOptions: buildPrettierOptions(editor),
+  filePath: getCurrentFilePath(editor),
+});
+
+const executePrettierStylelint = (editor: TextEditor, text: string): Promise<string> =>
   prettierStylelint.format(buildPrettierStylelintOptions(editor, text));
 
 const executePrettierOrIntegration = async (
