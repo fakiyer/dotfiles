@@ -29,10 +29,10 @@
   "linter-jshint": {}
   "linter-ui-default":
     panelHeight: 201
-    showPanel: true
   "one-dark-ui": {}
   "prettier-atom":
     formatOnSaveOptions:
+      enabled: true
       showInStatusBar: true
     prettierEslintOptions: {}
     prettierOptions:
