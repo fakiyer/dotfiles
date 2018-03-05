@@ -22,10 +22,10 @@ fi;
 # Install more recent versions of some macOS tools.
 brew install vim
 brew install neovim/neovim/neovim
+brew install python@2
 brew install python
-brew install python3
-pip2  install neovim
-pip3 install neovim
+# pip2 install neovim
+pip install neovim
 ln -s ~/.vim ~/.config/nvim
 ln -s ~/.vimrc ~/.config/nvim/init.vim
 
@@ -46,7 +46,7 @@ brew install tree
 brew install pt
 brew tap universal-ctags/universal-ctags
 brew install --HEAD universal-ctags
-pip3 install pip-review
+pip install pip-review
 
 # Remove outdated versions from the cellar.
 brew cleanup
