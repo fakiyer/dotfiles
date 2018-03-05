@@ -34,10 +34,18 @@ endfunction
 
 command! ProjectFiles execute 'Files' s:find_git_root()
 
-" Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of pt:
-command! -bang -nargs=* Pt
+" " Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of pt:
+" command! -bang -nargs=* Pt
+"   \ call fzf#vim#grep(
+"   \   'pt --column --ignore=.git --global-gitignore '.shellescape(<q-args>), 1,
+"   \   <bang>0 ? fzf#vim#with_preview('up:60%')
+"   \           : fzf#vim#with_preview({ 'dir': s:find_git_root() }),
+"   \   <bang>0)
+
+" Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
+command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'pt --column --ignore=.git --global-gitignore '.shellescape(<q-args>), 1,
+  \   'rg --column --line-number --no-heading '.shellescape(<q-args>), 1,
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview({ 'dir': s:find_git_root() }),
   \   <bang>0)

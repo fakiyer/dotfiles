@@ -43,7 +43,8 @@ brew install hub
 brew install reattach-to-user-namespace
 brew install tmux
 brew install tree
-brew install pt
+# brew install pt
+brew install ripgrep
 brew tap universal-ctags/universal-ctags
 brew install --HEAD universal-ctags
 pip install pip-review

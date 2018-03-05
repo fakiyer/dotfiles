@@ -33,7 +33,8 @@ nnoremap <Leader>d :Denite
 nnoremap <Leader>dy :Denite neoyank<CR>
 nnoremap <Leader>f :ProjectFiles<CR>
 nnoremap <Leader>r :History<CR>
-nnoremap <Leader>p :Pt<CR>
+" nnoremap <Leader>p :Pt<CR>
+nnoremap <Leader>p :Rg<CR>
 nnoremap <Leader>t :terminal<CR>
 
 " EasyMotion

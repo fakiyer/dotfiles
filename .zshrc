@@ -49,7 +49,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker docker-compose git github osx rails rust tmux zsh-syntax-highlighting)
+plugins=(docker docker-compose git github osx rust tmux zsh-syntax-highlighting)
 
 # User configuration
 
@@ -164,6 +164,9 @@ export PATH="$HOME/anaconda/bin:$PATH"
 
 ### rails
 alias be="bundle exec"
+alias devlog='tail -f log/development.log'
+alias prodlog='tail -f log/production.log'
+alias testlog='tail -f log/test.log'
 
 ### android
 # export ANDROID_HOME=/usr/local/opt/android-sdk
