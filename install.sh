@@ -11,6 +11,7 @@ ln -sf ~/dotfiles/.atom ~/.atom
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/.git_template ~/.git_template
 ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
+ln -sf ~/dotfiles/.ripgreprc ~/.ripgreprc
 
 #sh ~/dotfiles/karabiner/import.sh
 ln -sf ~/dotfiles/karabiner-elements/karabiner.json ~/.config/karabiner/karabiner.json

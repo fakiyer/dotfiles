@@ -176,3 +176,6 @@ export PATH="$PATH:/Applications/Genymotion.app/Contents/MacOS/tools/"
 function lb() {
   vim ~/logbook/$(date '+%Y-%m-%d').md
 }
+
+### ripgrep
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
