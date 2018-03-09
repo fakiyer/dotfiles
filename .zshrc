@@ -49,7 +49,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker docker-compose git github osx rust tmux zsh-syntax-highlighting)
+plugins=(git tmux zsh-syntax-highlighting)
 
 # User configuration
 
