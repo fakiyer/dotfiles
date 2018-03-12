@@ -24,7 +24,7 @@ brew install vim
 brew install neovim/neovim/neovim
 brew install python@2
 brew install python
-# pip2 install neovim
+pip2 install neovim
 pip install neovim
 ln -s ~/.vim ~/.config/nvim
 ln -s ~/.vimrc ~/.config/nvim/init.vim
