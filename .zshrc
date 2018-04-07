@@ -154,9 +154,6 @@ alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
 ### neovim
 alias vim="nvim"
 
-### anaconda
-export PATH="$HOME/anaconda/bin:$PATH"
-
 ### rails
 alias be="bundle exec"
 alias devlog='tail -f log/development.log'
