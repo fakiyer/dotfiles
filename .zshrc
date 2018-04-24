@@ -19,7 +19,7 @@ ZSH_THEME="af-magic"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -105,7 +105,6 @@ docrm() { docker rm $(docker ps -a -q); }
 docrmi() { docker rmi $(docker images | awk '/^<none>/ { print $3 }'); }
 
 ### tmux
-DISABLE_AUTO_TITLE=true
 unsetopt share_history
 
 ### fzf
