@@ -31,6 +31,7 @@ nnoremap <Leader>s :wq<CR>
 " nnoremap <Leader>c :Econtroller
 nnoremap <Leader>d :Denite
 nnoremap <Leader>dy :Denite neoyank<CR>
+nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>f :ProjectFiles<CR>
 nnoremap <Leader>r :History<CR>
 nnoremap <Leader>g :Rg<CR>
