@@ -12,6 +12,8 @@ ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/.git_template ~/.git_template
 ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
 ln -sf ~/dotfiles/.ripgreprc ~/.ripgreprc
+ln -s ~/dotfiles/VSCode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/dotfiles/VSCode/snippets/ ~/Library/Application\ Support/Code/User/snippets
 
 #sh ~/dotfiles/karabiner/import.sh
 ln -sf ~/dotfiles/karabiner-elements/karabiner.json ~/.config/karabiner/karabiner.json

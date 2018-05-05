@@ -1,0 +1,9 @@
+{
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.fontSize": 13,
+    "editor.fontFamily": "Ricty Diminished for Powerline",
+}
