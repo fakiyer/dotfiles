@@ -170,3 +170,6 @@ function lb() {
 
 ### ripgrep
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+
+### VSCode
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
