@@ -92,10 +92,10 @@ alias ggfpush='git push --force-with-lease origin $(git_current_branch)'
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 
 ### rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-if which rbenv > /dev/null; then
-  eval "$(rbenv init -)"
-fi
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# if which rbenv > /dev/null; then
+#   eval "$(rbenv init -)"
+# fi
 
 ### docker
 alias doc="docker"
@@ -174,3 +174,13 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
 ### VSCode
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+### anyenv
+if [ -d ${HOME}/.anyenv ] ; then
+  export PATH="$HOME/.anyenv/bin:$PATH"
+  eval "$(anyenv init -)"
+  for D in `ls $HOME/.anyenv/envs`
+  do
+    export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
+  done
+fi
