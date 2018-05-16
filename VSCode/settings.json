@@ -6,4 +6,5 @@
     "workbench.iconTheme": "vscode-icons",
     "editor.fontSize": 13,
     "editor.fontFamily": "Ricty Diminished for Powerline",
+    "workbench.statusBar.feedback.visible": false,
 }
