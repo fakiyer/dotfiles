@@ -152,6 +152,7 @@ alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
 
 ### neovim
 alias vim="nvim"
+alias v="nvim"
 
 ### rails
 alias be="bundle exec"
