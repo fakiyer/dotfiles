@@ -21,8 +21,9 @@ hi LineNr ctermfg=DarkGray
 " let g:NERDTreeMouseMode=0
 
 
-" indent-guides
-let g:indent_guides_guide_size = 1
+" indentline
+let g:indentLine_enabled = 0
+let g:indentLine_color_gui = '#2c3e50'
 
 
 " fzf

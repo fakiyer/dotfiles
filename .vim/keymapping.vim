@@ -2,7 +2,8 @@ let mapleader = "\<Space>"
 
 noremap <CR> o<ESC>
 nnoremap <f2> :NERDTreeToggle<CR>
-nmap <silent> <F8> <Plug>IndentGuidesToggle
+" nmap <silent> <F8> <Plug>IndentGuidesToggle
+nmap <silent> <F8> :IndentLinesToggle<CR>
 nnoremap <F9> :set nonumber!<CR>
 set pastetoggle=<F10>
 
