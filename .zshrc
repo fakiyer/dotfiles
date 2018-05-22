@@ -184,3 +184,8 @@ if [ -d ${HOME}/.anyenv ] ; then
     export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
   done
 fi
+
+### hub
+alias hubb="hub browse"
+alias hubbi="hub browse -- issues"
+alias hubbp="hub browse -- pulls"
