@@ -48,6 +48,8 @@ brew install ripgrep
 brew tap universal-ctags/universal-ctags
 brew install --HEAD universal-ctags
 pip install pip-review
+brew tap moncho/dry
+brew install dry
 
 # Remove outdated versions from the cellar.
 brew cleanup
