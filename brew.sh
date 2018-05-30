@@ -50,6 +50,7 @@ brew install --HEAD universal-ctags
 pip install pip-review
 brew tap moncho/dry
 brew install dry
+brew install jq
 
 # Remove outdated versions from the cellar.
 brew cleanup
