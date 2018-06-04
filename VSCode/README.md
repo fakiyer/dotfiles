@@ -6,7 +6,6 @@
 * [Braver's Solarized](https://marketplace.visualstudio.com/items?itemName=Braver.vscode-solarized)
 * [Color Picker](https://marketplace.visualstudio.com/items?itemName=anseki.vscode-color)
 * [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
-* 
 * [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 * [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 * [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
