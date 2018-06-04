@@ -1,10 +1,55 @@
 {
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
-    "workbench.colorTheme": "One Dark Pro",
-    "workbench.iconTheme": "vscode-icons",
-    "editor.fontSize": 13,
-    "editor.fontFamily": "Ricty Diminished for Powerline",
-    "workbench.statusBar.feedback.visible": false,
+  "css.validate": true,
+  "editor.cursorBlinking": "solid",
+  "editor.fontSize": 14,
+  "editor.fontFamily": "Ricty Diminished for Powerline",
+  "editor.insertSpaces": true,
+  "editor.minimap.enabled": false,
+  "editor.renderIndentGuides": true,
+  "editor.renderLineHighlight": "gutter",
+  "editor.rulers": [
+    80
+  ],
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "eslint.autoFixOnSave": true,
+  "eslint.enable": true,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.autoUpdate": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.historyExplorer.enabled": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "npm.enableScriptExplorer": true,
+  "prettier.eslintIntegration": true,
+  "stylelint.enable": true,
+  "tslint.enable": true,
+  "tslint.autoFixOnSave": true,
+  "typescript.tsserver.trace": "verbose",
+  "vim.cmdLineInitialColon": true,
+  "vim.cursorStylePerMode" : {
+    "insert": "line-thin",
+    "replace": "block-outline"
+  },
+  "vim.hlsearch": true,
+  "vim.otherModesKeyBindingsNonRecursive": [
+    {
+      "before": ["u"],
+      "after": [],
+      "commands": [{ "command": "undo" }]
+    }
+  ],
+  "vim.useCtrlKeys": true,
+  "vim.useSystemClipboard": false,
+  "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Solarized Light",
+  "workbench.editor.enablePreview": false,
+  "workbench.statusBar.feedback.visible": false,
+  "workbench.iconTheme": "vscode-icons",
 }
