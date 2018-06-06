@@ -18,13 +18,6 @@
   "extensions.autoUpdate": true,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "gitlens.advanced.messages": {
-    "suppressShowKeyBindingsNotice": true
-  },
-  "gitlens.historyExplorer.enabled": true,
-  "[markdown]": {
-    "files.trimTrailingWhitespace": false
-  },
   "npm.enableScriptExplorer": true,
   "prettier.eslintIntegration": true,
   "stylelint.enable": true,
@@ -41,7 +34,21 @@
           "after": ["<Esc>"]
       }
   ],
+  "vim.otherModesKeyBindingsNonRecursive": [
+    {
+      "before": ["leader", "w"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.files.save",
+          "args": []
+        }
+      ]
+    }
+  ],
   "vim.leader": "<space>",
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "/usr/local/bin/nvim",
   "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Solarized Light",
