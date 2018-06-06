@@ -31,21 +31,17 @@
   "tslint.enable": true,
   "tslint.autoFixOnSave": true,
   "typescript.tsserver.trace": "verbose",
-  "vim.cmdLineInitialColon": true,
-  "vim.cursorStylePerMode" : {
-    "insert": "line-thin",
-    "replace": "block-outline"
-  },
-  "vim.hlsearch": true,
-  "vim.otherModesKeyBindingsNonRecursive": [
-    {
-      "before": ["u"],
-      "after": [],
-      "commands": [{ "command": "undo" }]
-    }
-  ],
+  "vim.easymotion": true,
+  "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
-  "vim.useSystemClipboard": false,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+      {
+          "before": ["j","j"],
+          "after": ["<Esc>"]
+      }
+  ],
+  "vim.leader": "<space>",
   "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Solarized Light",
