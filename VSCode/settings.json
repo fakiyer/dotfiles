@@ -44,6 +44,14 @@
           "args": []
         }
       ]
+    },
+    {
+      "before": ["leader", "h"],
+      "after": ["^"]
+    },
+    {
+      "before": ["leader", "l"],
+      "after": ["$"]
     }
   ],
   "vim.leader": "<space>",
