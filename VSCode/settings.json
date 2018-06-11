@@ -25,6 +25,8 @@
   "tslint.autoFixOnSave": true,
   "typescript.tsserver.trace": "verbose",
   "vim.easymotion": true,
+  "vim.easymotionMarkerHeight": 20,
+  "vim.easymotionMarkerFontFamily": "Ricty Diminished for Powerline",
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
@@ -46,13 +48,17 @@
       ]
     },
     {
+      "before": ["s"],
+      "after": ["leader", "leader", "2", "s"],
+    },
+    {
       "before": ["leader", "h"],
       "after": ["^"]
     },
     {
       "before": ["leader", "l"],
       "after": ["$"]
-    }
+    },
   ],
   "vim.leader": "<space>",
   "vim.enableNeovim": true,
