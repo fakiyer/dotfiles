@@ -5,4 +5,9 @@
     "command": "editor.action.commentLine",
     "when": "editorTextFocus && !editorReadonly"
   },
+  {
+    "key": "ctrl+space o",
+    "command": "workbench.action.focusNextGroup",
+    "when": "editorTextFocus"
+  },
 ]

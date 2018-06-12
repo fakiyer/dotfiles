@@ -30,22 +30,18 @@
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
-  "vim.insertModeKeyBindings": [
-      {
-          "before": ["j","j"],
-          "after": ["<Esc>"]
-      }
-  ],
+  "vim.insertModeKeyBindings": [{
+    "before": ["j", "j"],
+    "after": ["<Esc>"]
+  }],
   "vim.otherModesKeyBindingsNonRecursive": [
     {
       "before": ["leader", "w"],
       "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.files.save",
-          "args": []
-        }
-      ]
+      "commands": [{
+        "command": "workbench.action.files.save",
+        "args": []
+      }]
     },
     {
       "before": ["s"],
