@@ -48,6 +48,10 @@
       "after": ["leader", "leader", "2", "s"],
     },
     {
+      "before": ["ctrl+]"],
+      "after": ["F12"]
+    },
+    {
       "before": ["leader", "h"],
       "after": ["^"]
     },
