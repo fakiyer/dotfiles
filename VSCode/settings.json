@@ -59,6 +59,22 @@
       "before": ["leader", "l"],
       "after": ["$"]
     },
+    {
+      "before": ["leader", "f"],
+      "after": [],
+      "commands": [{
+        "command": "workbench.action.quickOpen",
+        "args": []
+      }]
+    },
+    {
+      "before": ["leader", "g"],
+      "after": [],
+      "commands": [{
+        "command": "workbench.view.search",
+        "args": []
+      }]
+    },
   ],
   "vim.leader": "<space>",
   "vim.enableNeovim": true,
