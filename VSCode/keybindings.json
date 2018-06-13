@@ -18,5 +18,6 @@
   {
     "key": "space g",
     "command": "workbench.view.search",
+    "when": "editorTextFocus"
   },
 ]
