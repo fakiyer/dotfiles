@@ -14,4 +14,17 @@
     "command": "workbench.action.splitEditor",
     "when": "editorTextFocus"
   },
+  {
+    "key": "ctrl+space x",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorTextFocus"
+  },
+  {
+      "key": "cmd+right",
+      "command": "workbench.action.nextEditor"
+  },
+  {
+      "key": "cmd+left",
+      "command": "workbench.action.previousEditor"
+  }
 ]
