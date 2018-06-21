@@ -34,8 +34,7 @@
     "before": ["j", "j"],
     "after": ["<Esc>"]
   }],
-  "vim.otherModesKeyBindingsNonRecursive": [
-    {
+  "vim.normalModeKeyBindingsNonRecursive": [{
       "before": ["leader", "w"],
       "after": [],
       "commands": [{
