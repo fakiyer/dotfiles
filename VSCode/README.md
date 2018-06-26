@@ -1,6 +1,7 @@
 # Visual Studio Code settings
 ## Installed plugins
 * [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
+* [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
 * [Beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
 * [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
 * [Braver's Solarized](https://marketplace.visualstudio.com/items?itemName=Braver.vscode-solarized)
