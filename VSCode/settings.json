@@ -75,13 +75,28 @@
       }]
     },
   ],
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors": {
+    "normal": ["#8FBCBB", "#434C5E"],
+    "insert": "#BF616A",
+    "visual": "#B48EAD",
+    "visualline": "#B48EAD",
+    "visualblock": "#A3BE8C",
+    "replace": "#D08770"
+  },
   "vim.leader": "<space>",
   "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/local/bin/nvim",
   "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
   "window.zoomLevel": 0,
-  "workbench.colorTheme": "Solarized Light",
+  "workbench.colorTheme": "Braver's Solarized Light",
   "workbench.editor.enablePreview": false,
   "workbench.statusBar.feedback.visible": false,
   "workbench.iconTheme": "vscode-icons",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#8FBCBB",
+    "statusBar.noFolderBackground": "#8FBCBB",
+    "statusBar.debuggingBackground": "#8FBCBB",
+    "statusBar.foreground": "#434C5E"
+  },
 }
