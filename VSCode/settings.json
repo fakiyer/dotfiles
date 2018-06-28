@@ -1,7 +1,7 @@
 {
   "css.validate": true,
   "editor.cursorBlinking": "solid",
-  "editor.fontSize": 14,
+  "editor.fontSize": 16,
   "editor.fontFamily": "Ricty Diminished for Powerline",
   "editor.insertSpaces": true,
   "editor.minimap.enabled": false,
@@ -75,7 +75,7 @@
       }]
     },
   ],
-  "vim.statusBarColorControl": true,
+  "vim.statusBarColorControl": false,
   "vim.statusBarColors": {
     "normal": ["#8FBCBB", "#434C5E"],
     "insert": "#BF616A",
@@ -93,10 +93,4 @@
   "workbench.editor.enablePreview": false,
   "workbench.statusBar.feedback.visible": false,
   "workbench.iconTheme": "vscode-icons",
-  "workbench.colorCustomizations": {
-    "statusBar.background": "#8FBCBB",
-    "statusBar.noFolderBackground": "#8FBCBB",
-    "statusBar.debuggingBackground": "#8FBCBB",
-    "statusBar.foreground": "#434C5E"
-  },
 }
