@@ -1,7 +1,7 @@
 {
   "css.validate": true,
   "editor.cursorBlinking": "solid",
-  "editor.fontSize": 17,
+  "editor.fontSize": 14,
   "editor.fontFamily": "Ricty Diminished for Powerline",
   "editor.insertSpaces": true,
   "editor.minimap.enabled": false,
@@ -88,7 +88,7 @@
   "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/local/bin/nvim",
   "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "workbench.colorTheme": "Braver's Solarized Light",
   "workbench.editor.enablePreview": false,
   "workbench.statusBar.feedback.visible": false,
