@@ -1,5 +1,13 @@
 // Place your key bindings in this file to overwrite the defaults
 [{
+    "key": "space f",
+    "command": "workbench.action.quickOpen",
+  },
+  {
+    "key": "space g",
+    "command": "workbench.view.search",
+  },
+  {
     "key": "ctrl+[IntlRo] ctrl+[IntlRo]",
     "command": "editor.action.commentLine",
     "when": "editorTextFocus && !editorReadonly"
