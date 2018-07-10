@@ -59,6 +59,22 @@
       "after": ["$"]
     },
     {
+      "before": ["leader", "f"],
+      "after": [],
+      "commands": [{
+        "command": "workbench.action.quickOpen",
+        "args": []
+      }]
+    },
+    {
+      "before": ["leader", "g"],
+      "after": [],
+      "commands": [{
+        "command": "workbench.view.search",
+        "args": []
+      }]
+    },
+    {
       "before": ["<Esc>", "<Esc>"],
       "after": [],
       "commands": [{
