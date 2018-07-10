@@ -74,6 +74,13 @@
         "args": []
       }]
     },
+    {
+      "before": ["<Esc>", "<Esc>"],
+      "after": [],
+      "commands": [{
+        "command": ":nohl"
+      }]
+    },
   ],
   "vim.statusBarColorControl": false,
   "vim.statusBarColors": {
