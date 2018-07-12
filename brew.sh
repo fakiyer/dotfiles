@@ -51,6 +51,7 @@ pip install pip-review
 brew tap moncho/dry
 brew install dry
 brew install jq
+brew install rlwrap
 
 # Remove outdated versions from the cellar.
 brew cleanup
