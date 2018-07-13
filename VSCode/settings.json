@@ -47,7 +47,7 @@
       "after": ["leader", "leader", "2", "s"],
     },
     {
-      "before": ["ctrl+]"],
+      "before": ["ctrl", "]"],
       "after": ["F12"]
     },
     {
