@@ -95,9 +95,10 @@
   "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/local/bin/nvim",
   "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
-  "window.zoomLevel": 1,
-  "workbench.colorTheme": "Braver's Solarized Light",
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Braver's Solarized Dark",
   "workbench.editor.enablePreview": false,
   "workbench.statusBar.feedback.visible": false,
   "workbench.iconTheme": "vscode-icons",
+  "typescript.updateImportsOnFileMove.enabled": "always",
 }
