@@ -25,6 +25,9 @@
 ### Install Tmux Plugin Manager
 * https://github.com/tmux-plugins/tpm
 
+### Install Visual Studio Code
+* https://code.visualstudio.com/
+
 ## Font
 ### Install RictyDiminished
 * https://github.com/mzyy94/RictyDiminished-for-Powerline
