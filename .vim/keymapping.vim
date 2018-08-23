@@ -26,7 +26,7 @@ noremap <Leader>h ^
 noremap <Leader>l $
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
-nnoremap <Leader>s :wq<CR>
+nnoremap <Leader>ss :wq<CR>
 " nnoremap <Leader>m :Emodel
 " nnoremap <Leader>v :Eview
 " nnoremap <Leader>c :Econtroller
@@ -34,7 +34,7 @@ nnoremap <Leader>d :Denite
 nnoremap <Leader>dy :Denite neoyank<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>f :ProjectFiles<CR>
-nnoremap <Leader>r :History<CR>
+nnoremap <Leader>rr :History<CR>
 nnoremap <Leader>g :Rg<CR>
 " nnoremap <Leader>p :Pt<CR>
 nnoremap <Leader>t :terminal<CR>
