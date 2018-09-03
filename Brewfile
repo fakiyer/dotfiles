@@ -32,3 +32,23 @@ brew "vim"
 brew "zsh", args: ["without-etcdir"]
 brew "moncho/dry/dry"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
+
+# Apps
+cask 'alfred'
+cask 'clipy'
+cask 'docker'
+cask 'google-chrome'
+cask 'google-japanese-ime'
+cask 'iterm2'
+cask 'jasper'
+cask 'karabiner-elements'
+cask 'licecap'
+cask 'ngrok'
+cask 'sequel-pro'
+cask 'shiftit'
+cask 'slack'
+cask 'spotify'
+cask 'visual-studio-code'
+
+mas 'Be Focused Pro', id: 961632517
+mas 'Todoist', id: 585829637
