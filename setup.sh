@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Check for Homebrew and install if we don't have it
+if test ! $(which brew); then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+sh ~/dotfiles/install.sh
+sh ~/dotfiles/brew.sh
+sh ~/dotfiles/osx/keyrate.sh
+
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.vim/basic.vim ~/.vim/basic.vim
 ln -sf ~/dotfiles/.vim/bundle.vim ~/.vim/bundle.vim
@@ -19,12 +28,3 @@ ln -s ~/dotfiles/VSCode/snippets/ ~/Library/Application\ Support/Code/User/snipp
 # sh ~/dotfiles/karabiner/import.sh
 ln -sf ~/dotfiles/karabiner-elements/karabiner.json ~/.config/karabiner/karabiner.json
 ln -sf ~/dotfiles/karabiner-elements/assets/complex_modifications/mouse.json ~/.config/karabiner/assets/complex_modifications/mouse.json
-
-# Check for Homebrew and install if we don't have it
-if test ! $(which brew); then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
-sh ~/dotfiles/install.sh
-sh ~/dotfiles/brew.sh
-sh ~/dotfiles/osx/keyrate.sh
