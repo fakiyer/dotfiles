@@ -34,6 +34,7 @@ brew install fzf
 /usr/local/opt/fzf/install
 
 # Install other useful binaries.
+brew install bat
 brew install diff-so-fancy
 brew install ghq
 brew install git

@@ -189,3 +189,6 @@ fi
 alias hubb="hub browse"
 alias hubbi="hub browse -- issues"
 alias hubbp="hub browse -- pulls"
+
+### bat
+alias cat="bat"
