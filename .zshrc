@@ -192,3 +192,6 @@ alias hubbp="hub browse -- pulls"
 
 ### bat
 alias cat="bat"
+
+### rust
+export PATH="$PATH:$HOME/.cargo/bin"
