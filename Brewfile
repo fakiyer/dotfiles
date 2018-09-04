@@ -35,20 +35,27 @@ brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 
 # Apps
 cask 'alfred'
+cask 'android-file-transfer'
+cask 'cheatsheet'
 cask 'clipy'
 cask 'docker'
+cask 'figma'
 cask 'google-chrome'
 cask 'google-japanese-ime'
 cask 'iterm2'
 cask 'jasper'
 cask 'karabiner-elements'
+cask 'kindle'
 cask 'licecap'
 cask 'ngrok'
 cask 'sequel-pro'
 cask 'shiftit'
 cask 'slack'
 cask 'spotify'
+cask 'typora'
 cask 'visual-studio-code'
+cask 'vivaldi'
 
+mas 'Amphetamin', id: 937984704
 mas 'Be Focused Pro', id: 961632517
 mas 'Todoist', id: 585829637
