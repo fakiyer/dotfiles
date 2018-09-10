@@ -36,6 +36,7 @@ brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 # Apps
 cask 'alfred'
 cask 'android-file-transfer'
+cask 'google-backup-and-sync'
 cask 'cheatsheet'
 cask 'clipy'
 cask 'docker'
