@@ -90,6 +90,16 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let g:EasyMotion_do_mapping = 0
 
 
+" neoterm
+let g:neoterm_default_mod='belowright'
+let g:neoterm_autoinsert = 1
+
+
+" vim-test
+let test#strategy = 'neoterm'
+let test#ruby#rspec#executable = 'rspec'
+
+
 " lightline
 let g:lightline = {
       \ 'colorscheme': 'solarized',

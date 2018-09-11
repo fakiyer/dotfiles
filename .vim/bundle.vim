@@ -33,6 +33,8 @@ call dein#add('junegunn/fzf',             { 'build': './install --all', 'merged'
 call dein#add('junegunn/fzf.vim',         { 'depends': 'fzf' })
 " call dein#add('tpope/vim-rails')
 " call dein#add('tpope/vim-bundler')
+call dein#add('kassio/neoterm')
+call dein#add('janko-m/vim-test')
 call dein#add('vim-scripts/ruby-matchit')
 call dein#add('vim-ruby/vim-ruby',        { 'on_ft': 'ruby' })
 call dein#add('osyo-manga/vim-monster',   { 'on_ft': 'ruby' })

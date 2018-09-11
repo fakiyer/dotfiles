@@ -37,7 +37,7 @@ nnoremap <Leader>f :ProjectFiles<CR>
 nnoremap <Leader>rr :History<CR>
 nnoremap <Leader>g :Rg<CR>
 " nnoremap <Leader>p :Pt<CR>
-nnoremap <Leader>t :terminal<CR>
+" nnoremap <Leader>t :terminal<CR>
 
 " EasyMotion
 " s{char}{char} to move to {char}{char}
@@ -46,6 +46,11 @@ vmap s <Plug>(easymotion-bd-f2)
 " Move to line
 map <Leader>L <Plug>(easymotion-bd-jk)
 nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" vim-test
+nnoremap <Leader>tn :TestNearest<CR>
+nnoremap <Leader>tf :TestFile<CR>
+
 
 inoremap jj <ESC>
 
