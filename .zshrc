@@ -192,6 +192,7 @@ alias hubbp="hub browse -- pulls"
 
 ### bat
 alias cat="bat"
+export BAT_THEME="OneHalfDark"
 
 ### rust
 export PATH="$PATH:$HOME/.cargo/bin"
