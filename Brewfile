@@ -7,6 +7,7 @@ tap "homebrew/core"
 tap "moncho/dry"
 tap "neovim/neovim"
 tap "universal-ctags/universal-ctags"
+tap "kyoshidajp/ghkw"
 brew "bat"
 brew "diff-so-fancy"
 brew "fd"
@@ -32,6 +33,7 @@ brew "vim"
 brew "zsh", args: ["without-etcdir"]
 brew "moncho/dry/dry"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
+brew "ghkw"
 
 # Apps
 cask 'alfred'
