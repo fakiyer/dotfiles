@@ -101,4 +101,12 @@
   "workbench.statusBar.feedback.visible": false,
   "workbench.iconTheme": "vscode-icons",
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "todo-tree.defaultHighlight": {
+    "foreground": "green",
+    "type": "none"
+  },
+  "todo-tree.customHighlight": {
+    "TODO": {},
+    "FIXME": {}
+  },
 }
