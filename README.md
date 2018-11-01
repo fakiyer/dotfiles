@@ -31,3 +31,7 @@
 ## Font
 ### Install RictyDiminished
 * https://github.com/mzyy94/RictyDiminished-for-Powerline
+
+## keyboard driver
+### HHKB
+* https://www.pfu.fujitsu.com/hhkeyboard/macdownload.html
