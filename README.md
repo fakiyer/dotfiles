@@ -28,10 +28,11 @@
 ### Install Visual Studio Code
 * https://code.visualstudio.com/
 
-## Font
 ### Install RictyDiminished
 * https://github.com/mzyy94/RictyDiminished-for-Powerline
 
-## keyboard driver
-### HHKB
+### Install HHKB driver 
 * https://www.pfu.fujitsu.com/hhkeyboard/macdownload.html
+
+### Install anyenv
+* https://github.com/riywo/anyenv
