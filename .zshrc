@@ -166,7 +166,7 @@ export PATH="$PATH:/Applications/Genymotion.app/Contents/MacOS/tools/"
 
 ### logbook
 function lb() {
-  vim ~/logbook/$(date '+%Y-%m-%d').md
+  vim ~/logbook/$(date "+%Y/%m/%d").md
 }
 
 ### ripgrep
