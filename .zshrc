@@ -81,6 +81,7 @@ source $ZSH/oh-my-zsh.sh
 ### Custom
 function allupdate() {
   brew upgrade && brew update && brew cleanup &&
+  upgrade_oh_my_zsh &&
   pip-review --auto &&
   nvim -e -R -c "call dein#update()" -c "q"
 }
