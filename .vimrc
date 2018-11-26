@@ -5,11 +5,11 @@ source ~/.vim/plugin.vim
 
 " auto command
 " --------------------
-augroup BufferAu
-autocmd!
+" augroup BufferAu
+" autocmd!
 " change current directory
 " autocmd BufNewFile,BufRead,BufEnter * if isdirectory(expand("%:p:h")) && bufname("%") !~ "NERD_tree" | cd %:p:h | endif
-augroup END
+" augroup END
 
 " Creating parent directories on save
 function s:MkNonExDir(file, buf)
