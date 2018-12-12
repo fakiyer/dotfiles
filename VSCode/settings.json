@@ -14,6 +14,15 @@
   "editor.wordWrap": "on",
   "eslint.autoFixOnSave": true,
   "eslint.enable": true,
+  "eslint.packageManager": "yarn",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
   "explorer.confirmDragAndDrop": false,
   "extensions.autoUpdate": true,
   "files.insertFinalNewline": true,
