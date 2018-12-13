@@ -167,7 +167,7 @@ endfunction
 let test#strategy = 'neoterm'
 let test#ruby#rspec#executable = 'rspec'
 function! DockerTransformer(cmd) abort
-  let container_id = system("docker ps -a | grep api | grep rails | awk '{print $1}'")
+  let container_id = system("docker ps | grep api | grep rails | awk '{print $1}'")
   return 'docker exec -t ' . container_id . ' bundle exec ' . a:cmd
 endfunction
 let g:test#custom_transformations = {'docker': function('DockerTransformer')}
