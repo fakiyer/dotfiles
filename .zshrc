@@ -63,6 +63,15 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
+if which nvim > /dev/null; then
+  export EDITOR='nvim'
+  alias vim="nvim"
+  alias v="nvim"
+else
+  export EDITOR='vim'
+  alias v="vim"
+fi
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -147,14 +156,19 @@ fcoc() {
   git checkout $(echo "$commit" | sed "s/ .*//")
 }
 
+# fe [FUZZY PATTERN] - Open the selected file with the default editor
+#   - Bypass fuzzy finder if there's only one match (--select-1)
+#   - Exit if there's no match (--exit-0)
+fe() {
+  local files
+  IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
+  [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
+}
+
 ### node.js
 export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
-
-### neovim
-alias vim="nvim"
-alias v="nvim"
 
 ### rails
 alias be="bundle exec"
