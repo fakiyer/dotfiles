@@ -219,3 +219,7 @@ export BAT_THEME="OneHalfDark"
 
 ### rust
 export PATH="$PATH:$HOME/.cargo/bin"
+
+### go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
