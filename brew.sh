@@ -16,6 +16,8 @@ pip3 install neovim
 pip2 install pip-review
 pip3 install pip-review
 
+gem install solargraph
+
 # Switch to using brew-installed zsh as default shell
 if ! fgrep -q '/usr/local/bin/zsh' /etc/shells; then
   echo '/usr/local/bin/zsh' | sudo tee -a /etc/shells;

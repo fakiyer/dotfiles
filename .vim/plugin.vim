@@ -75,7 +75,8 @@ let deoplete#tag#cache_limit_size = 5000000
 
 
 " vim-monster
-let g:monster#completion#rcodetools#backend = "async_rct_complete"
+let g:monster#completion#backend = "solargraph"
+let g:monster#completion#solargraph#backend = "async_solargraph_suggest"
 let g:deoplete#sources#omni#input_patterns = {
 \   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
 \}
