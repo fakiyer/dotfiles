@@ -191,6 +191,9 @@ function lb() {
 
   vim ~/logbook/$(date "+%Y/%m/%d").md
 }
+function lbpush() {
+  (cd ~/logbook && git commit -am "add" && git push)
+}
 
 ### ripgrep
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
