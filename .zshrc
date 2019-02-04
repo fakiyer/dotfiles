@@ -182,13 +182,6 @@ export PATH="$PATH:/Applications/Genymotion.app/Contents/MacOS/tools/"
 
 ### logbook
 function lb() {
-  if [ ! -f ~/logbook/$(date "+%Y/%m/%d").md ]; then
-    touch ~/logbook/$(date "+%Y/%m/%d").md
-    echo "## 勤務時間" >> ~/logbook/$(date "+%Y/%m/%d").md
-    echo " 〜 \n" >> ~/logbook/$(date "+%Y/%m/%d").md
-    echo "## 所感\n" >> ~/logbook/$(date "+%Y/%m/%d").md
-  fi
-
   vim ~/logbook/$(date "+%Y/%m/%d").md
 }
 function lbpush() {
