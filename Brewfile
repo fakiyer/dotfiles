@@ -63,5 +63,6 @@ cask 'visual-studio-code'
 cask 'vivaldi'
 
 mas 'Amphetamin', id: 937984704
-mas 'Be Focused Pro', id: 961632517
+mas "Day One", id: 1055511498
+mas 'Tomato One', id: 907364780
 mas 'Todoist', id: 585829637
