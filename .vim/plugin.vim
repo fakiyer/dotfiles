@@ -173,3 +173,7 @@ function! DockerTransformer(cmd) abort
 endfunction
 let g:test#custom_transformations = {'docker': function('DockerTransformer')}
 let g:test#transformation = 'docker'
+
+
+" jq
+command! Jqf %!jq '.'
