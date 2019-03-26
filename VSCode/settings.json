@@ -21,6 +21,14 @@
     {
       "language": "vue",
       "autoFix": true
+    },
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
     }
   ],
   "explorer.confirmDragAndDrop": false,
