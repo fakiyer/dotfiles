@@ -48,3 +48,13 @@ set nowrapscan
 " ----------------------
 set visualbell
 set t_vb=
+
+" for coc.nvim
+" https://github.com/neoclide/coc.nvim#example-vim-configuration
+" ----------------------
+set nobackup
+set nowritebackup
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes

@@ -16,6 +16,9 @@ pip3 install neovim
 pip2 install pip-review
 pip3 install pip-review
 
+# for coc.nvim
+curl -sL install-node.now.sh/lts | sh
+curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 gem install solargraph
 
 # Switch to using brew-installed zsh as default shell

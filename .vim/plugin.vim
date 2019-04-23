@@ -67,19 +67,49 @@ let g:python3_host_prog = expand('/usr/local/bin/python3')
 
 
 " deoplete
-let g:deoplete#enable_at_startup = 1
-" let g:deoplete#auto_complete_delay = 10
-let g:deoplete#sources = {}
-let g:deoplete#sources._ = ['buffer', 'tag', 'file', 'neosnippet']
-let deoplete#tag#cache_limit_size = 5000000
+" let g:deoplete#enable_at_startup = 1
+" " let g:deoplete#auto_complete_delay = 10
+" let g:deoplete#sources = {}
+" let g:deoplete#sources._ = ['buffer', 'tag', 'file', 'neosnippet']
+" let deoplete#tag#cache_limit_size = 5000000
 
 
 " vim-monster
-let g:monster#completion#backend = "solargraph"
-let g:monster#completion#solargraph#backend = "async_solargraph_suggest"
-let g:deoplete#sources#omni#input_patterns = {
-\   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
-\}
+" let g:monster#completion#backend = "solargraph"
+" let g:monster#completion#solargraph#backend = "async_solargraph_suggest"
+" let g:deoplete#sources#omni#input_patterns = {
+" \   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
+" \}
+
+
+" coc.nvim
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
 
 
 " solarized8
