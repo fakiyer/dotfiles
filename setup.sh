@@ -9,6 +9,7 @@ sh ~/dotfiles/install.sh
 sh ~/dotfiles/brew.sh
 sh ~/dotfiles/osx/keyrate.sh
 
+mkdir ~/.vim
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.vim/basic.vim ~/.vim/basic.vim
 ln -sf ~/dotfiles/.vim/bundle.vim ~/.vim/bundle.vim

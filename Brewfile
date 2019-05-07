@@ -10,6 +10,7 @@ tap "universal-ctags/universal-ctags"
 tap "kyoshidajp/ghkw"
 tap "wagoodman/dive"
 
+brew "anyenv"
 brew "bat"
 brew "diff-so-fancy"
 brew "dive"
