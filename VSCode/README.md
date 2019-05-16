@@ -18,6 +18,7 @@
 * [npm](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script)
 * [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme)
 * [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+* [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
 * [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 * [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)
 * [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode)
