@@ -97,6 +97,9 @@ function allupdate() {
 
 alias re="source ~/.zshrc"
 
+### ctags
+alias ctags="`brew --prefix`/bin/ctags"
+
 ### git
 alias ggfpush='git push --force-with-lease origin $(git_current_branch)'
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
