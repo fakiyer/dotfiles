@@ -34,9 +34,9 @@ nnoremap <Leader>f :ProjectFiles<CR>
 nnoremap <Leader>g :Rg<CR>
 nnoremap <Leader>ra :A<CR>
 nnoremap <Leader>re :R<CR>
-" nnoremap <Leader>rc :Econtroller
-" nnoremap <Leader>rm :Emodel
-" nnoremap <Leader>rv :Eview
+nnoremap <Leader>rc :Econtroller<CR>
+nnoremap <Leader>rm :Emodel<CR>
+nnoremap <Leader>rv :Eview<CR>
 nnoremap <Leader>rr :History<CR>
 " nnoremap <Leader>p :Pt<CR>
 " nnoremap <Leader>t :terminal<CR>
