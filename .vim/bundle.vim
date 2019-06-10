@@ -19,6 +19,7 @@ call dein#add('Lokaltog/vim-easymotion')
 
 call dein#add('tpope/vim-fugitive')
 call dein#add('tpope/vim-surround')
+call dein#add('tpope/vim-repeat')
 " call dein#add('tpope/vim-endwise',        { 'on_i': 1 })
 call dein#add('tomtom/tcomment_vim')
 call dein#add('Yggdroot/indentLine')
