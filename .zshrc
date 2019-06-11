@@ -226,3 +226,9 @@ export PATH="$PATH:$HOME/.cargo/bin"
 ### go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+### spotify
+alias sp="spotify"
+alias spp="spotify play"
+alias sps="spotify stop"
+alias spn="spotify next"
