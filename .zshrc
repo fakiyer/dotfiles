@@ -168,6 +168,14 @@ fe() {
   [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
 }
 
+# Select a docker container to attach to
+function da() {
+  local cid
+  cid=$(docker ps | sed 1d | fzf -1 -q "$1" | awk '{print $1}')
+
+  [ -n "$cid" ] && docker attach "$cid"
+}
+
 # using ripgrep combined with preview
 # find-in-file - usage: fif <searchTerm>
 fif() { rg --files-with-matches --no-messages $1 | fzf --preview "highlight -O ansi -l {} 2> /dev/null | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 $1 || rg --ignore-case --pretty --context 10 $1 {}" }
