@@ -4,7 +4,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
-tap "moncho/dry"
+tap "jesseduffield/lazydocker"
 tap "neovim/neovim"
 tap "universal-ctags/universal-ctags"
 tap "kyoshidajp/ghkw"
@@ -36,7 +36,7 @@ brew "tmux"
 brew "tree"
 brew "vim"
 brew "zsh", args: ["without-etcdir"]
-brew "moncho/dry/dry"
+brew "lazydocker"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 brew "ghkw"
 
