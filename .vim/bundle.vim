@@ -46,6 +46,7 @@ call dein#add('fatih/vim-go',             { 'on_ft': 'go'   })
 call dein#add('slim-template/vim-slim',   { 'on_ft': 'slim' })
 call dein#add('kchmck/vim-coffee-script', { 'on_ft': 'coffee' })
 call dein#add('ekalinin/Dockerfile.vim',  { 'on_ft': ['Dockerfile', 'docker-compose']})
+call dein#add('hashivim/vim-terraform',   { 'on_ft': 'terraform' })
 
 call dein#add('neoclide/coc.nvim',        { 'merge':0, 'build': './install.sh nightly' })
 
