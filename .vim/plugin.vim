@@ -211,3 +211,7 @@ let g:test#transformation = 'docker'
 
 " jq
 command! Jqf %!jq '.'
+
+
+" terraform
+autocmd BufNewFile,BufRead *.hcl set filetype=terraform " for terragrunt
