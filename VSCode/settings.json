@@ -100,14 +100,12 @@
     },
   ],
   "vim.statusBarColorControl": false,
-  "vim.statusBarColors": {
-    "normal": ["#8FBCBB", "#434C5E"],
-    "insert": "#BF616A",
-    "visual": "#B48EAD",
-    "visualline": "#B48EAD",
-    "visualblock": "#A3BE8C",
-    "replace": "#D08770"
-  },
+  "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
+  "vim.statusBarColors.insert": "#BF616A",
+  "vim.statusBarColors.visual": "#B48EAD",
+  "vim.statusBarColors.visualline": "#B48EAD",
+  "vim.statusBarColors.visualblock": "#A3BE8C",
+  "vim.statusBarColors.replace": "#D08770",
   "vim.leader": "<space>",
   "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/local/bin/nvim",
@@ -115,8 +113,7 @@
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Braver's Solarized Dark",
   "workbench.editor.enablePreview": false,
-  "workbench.statusBar.feedback.visible": false,
-  "workbench.iconTheme": "vscode-icons",
+  // "workbench.statusBar.feedback.visible": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "todo-tree.defaultHighlight": {
     "foreground": "green",
@@ -126,4 +123,8 @@
     "TODO": {},
     "FIXME": {}
   },
+  "workbench.iconTheme": "vscode-icons",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
