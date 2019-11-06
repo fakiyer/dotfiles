@@ -202,8 +202,8 @@ endfunction
 let test#strategy = 'neoterm'
 let test#ruby#rspec#executable = 'rspec'
 function! DockerTransformer(cmd) abort
-  let container_id = system("docker ps | grep api | grep rails | awk '{print $1}'")
-  return 'docker exec -t ' . container_id . ' bundle exec ' . a:cmd
+  let container_id = system("docker ps | grep app | awk '{print $1}' | head -n1")
+  return 'docker exec -t ' . container_id . ' ' . a:cmd
 endfunction
 let g:test#custom_transformations = {'docker': function('DockerTransformer')}
 let g:test#transformation = 'docker'
@@ -215,3 +215,7 @@ command! Jqf %!jq '.'
 
 " terraform
 autocmd BufNewFile,BufRead *.hcl set filetype=terraform " for terragrunt
+
+
+" ctags
+set tags+=.git/tags
