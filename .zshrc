@@ -176,6 +176,20 @@ function da() {
   [ -n "$cid" ] && docker attach "$cid"
 }
 
+# fpr - Show a PR
+fpr() {
+  local num
+  num=$(hub pr list > /dev/null | fzf-tmux --reverse +m | awk '{print $1}' | sed -e "s/#//g") &&
+    hub pr show $num
+}
+
+# fissue - Show a Issue
+fissue() {
+  local num
+  num=$(hub issue > /dev/null | fzf-tmux --reverse +m | awk '{print $1}' | sed -e "s/#//g") &&
+    hub issue show $num
+}
+
 # using ripgrep combined with preview
 # find-in-file - usage: fif <searchTerm>
 fif() { rg --files-with-matches --no-messages $1 | fzf --preview "highlight -O ansi -l {} 2> /dev/null | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 $1 || rg --ignore-case --pretty --context 10 $1 {}" }
