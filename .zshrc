@@ -177,10 +177,16 @@ function da() {
 }
 
 # fpr - Show a PR
-fpr() {
+fspr() {
   local num
   num=$(hub pr list > /dev/null | fzf-tmux --reverse +m | awk '{print $1}' | sed -e "s/#//g") &&
     hub pr show $num
+}
+
+fcpr() {
+  local num
+  num=$(hub pr list > /dev/null | fzf-tmux --reverse +m | awk '{print $1}' | sed -e "s/#//g") &&
+    hub pr checkout $num
 }
 
 # fissue - Show a Issue
