@@ -88,6 +88,9 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 ### Custom
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
 function allupdate() {
   brew upgrade && brew update && brew cleanup &&
   upgrade_oh_my_zsh &&
@@ -213,7 +216,9 @@ alias testlog='tail -f log/test.log'
 
 ### android
 # export ANDROID_HOME=/usr/local/opt/android-sdk
-export PATH="$PATH:/Applications/Genymotion.app/Contents/MacOS/tools/"
+# export PATH="$PATH:/Applications/Genymotion.app/Contents/MacOS/tools/"
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+
 
 ### logbook
 function lb() {
@@ -260,3 +265,6 @@ alias sp="spotify"
 alias spp="spotify play"
 alias sps="spotify stop"
 alias spn="spotify next"
+
+### flutter
+export PATH=$PATH:$HOME/dev/flutter/bin
