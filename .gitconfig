@@ -32,3 +32,5 @@
   delete-merged = !git checkout master && git branch --merged | grep -v '*' | xargs -I % git branch -d %
 [ghq]
 	root = ~/src
+[pull]
+	rebase = true
