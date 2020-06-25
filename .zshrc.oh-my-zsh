@@ -1,31 +1,67 @@
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
+export ZSH=$HOME/.oh-my-zsh
 
-zplug "themes/af-magic", from:oh-my-zsh, as:theme
-zplug "modules/history", from:prezto
-zplug "modules/directory", from:prezto
-zplug "modules/osx", from:prezto, if:"[[ $OSTYPE == *darwin* ]]"
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/tmux", from:oh-my-zsh
-zplug "lib/aliases", from:oh-my-zsh
-zplug "lib/directories", from:oh-my-zsh
-zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
-zplug "lib/prompt_info_functions", from:oh-my-zsh
-zplug "lib/spectrum", from:oh-my-zsh
-zplug "lib/theme-and-appearance", from:oh-my-zsh
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
+ZSH_THEME="af-magic"
 
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
 
-if ! zplug check --verbose; then zplug install;fi
-zplug load #--verbose
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
 
-autoload -Uz zmv
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
 
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git tmux zsh-syntax-highlighting)
+
+# User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin"
+# export MANPATH="/usr/local/man:$MANPATH"
+
+source $ZSH/oh-my-zsh.sh
+
+# You may need to manually set your language environment
 export LANG=ja_JP.UTF-8
 
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
 if which nvim > /dev/null; then
   export EDITOR='nvim'
@@ -36,13 +72,28 @@ else
   alias v="vim"
 fi
 
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
 
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+### Custom
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 function allupdate() {
   brew upgrade && brew update && brew cleanup &&
-  zplug update --force && zplug clean --force &&
+  upgrade_oh_my_zsh &&
   pip-review --auto &&
   nvim -e -R -c "call dein#update()" -c "q"
 }
@@ -52,18 +103,15 @@ alias re="source ~/.zshrc"
 ### ctags
 alias ctags="`brew --prefix`/bin/ctags"
 
-
 ### git
 alias ggfpush='git push --force-with-lease origin $(git_current_branch)'
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
-
 
 ### rbenv
 # export PATH="$HOME/.rbenv/bin:$PATH"
 # if which rbenv > /dev/null; then
 #   eval "$(rbenv init -)"
 # fi
-
 
 ### docker
 alias doc="docker"
@@ -73,10 +121,8 @@ docrm() { docker rm $(docker ps -a -q); }
 docrmi() { docker rmi $(docker images | awk '/^<none>/ { print $3 }'); }
 rails_id() { docker ps -a | grep api | grep rails | awk '{print $1}'; }
 
-
 ### tmux
 unsetopt share_history
-
 
 ### fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -157,12 +203,10 @@ fissue() {
 # find-in-file - usage: fif <searchTerm>
 fif() { rg --files-with-matches --no-messages $1 | fzf --preview "highlight -O ansi -l {} 2> /dev/null | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 $1 || rg --ignore-case --pretty --context 10 $1 {}" }
 
-
 ### node.js
-# export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-# alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
-
+alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
 
 ### rails
 alias be="bundle exec"
@@ -170,11 +214,10 @@ alias devlog='tail -f log/development.log'
 alias prodlog='tail -f log/production.log'
 alias testlog='tail -f log/test.log'
 
-
 ### android
 # export ANDROID_HOME=/usr/local/opt/android-sdk
 # export PATH="$PATH:/Applications/Genymotion.app/Contents/MacOS/tools/"
-# export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 
 
 ### logbook
@@ -185,14 +228,11 @@ function lbpush() {
   (cd ~/logbook && git add . && git commit -m "add" && git push)
 }
 
-
 ### ripgrep
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
-
 ### VSCode
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
 
 ### anyenv
 if [ -d ${HOME}/.anyenv ] ; then
@@ -204,26 +244,21 @@ if [ -d ${HOME}/.anyenv ] ; then
   done
 fi
 
-
 ### hub
 alias hubb="hub browse"
 alias hubbi="hub browse -- issues"
 alias hubbp="hub browse -- pulls"
 
-
 ### bat
 alias cat="bat"
 export BAT_THEME="OneHalfDark"
 
-
 ### rust
 export PATH="$PATH:$HOME/.cargo/bin"
-
 
 ### go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-
 
 ### spotify
 alias sp="spotify"
@@ -231,19 +266,19 @@ alias spp="spotify play"
 alias sps="spotify stop"
 alias spn="spotify next"
 
-
 ### flutter
-# export PATH=$PATH:$HOME/dev/flutter/bin
+export PATH=$PATH:$HOME/dev/flutter/bin
 
 
 ### mysql
-# export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-# ### imagemagick
-# export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
-# export PKG_CONFIG_PATH="/usr/local/opt/imagemagick@6/lib/pkgconfig"
-#
-# # export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
-# export DYLD_LIBRARY_PATH=/usr/local/opt/mysql@5.7/lib/:$DYLD_LIBRARY_PATH
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+### imagemagick
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+export PKG_CONFIG_PATH="/usr/local/opt/imagemagick@6/lib/pkgconfig"
+
+
+# export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH=/usr/local/opt/mysql@5.7/lib/:$DYLD_LIBRARY_PATH
 
 
 ### C++
