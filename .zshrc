@@ -10,6 +10,7 @@ zplug "plugins/tmux", from:oh-my-zsh
 zplug "lib/aliases", from:oh-my-zsh
 zplug "lib/directories", from:oh-my-zsh
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "lib/key-bindings", from:oh-my-zsh
 zplug "lib/prompt_info_functions", from:oh-my-zsh
 zplug "lib/spectrum", from:oh-my-zsh
 zplug "lib/theme-and-appearance", from:oh-my-zsh
@@ -42,7 +43,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 function allupdate() {
   brew upgrade && brew update && brew cleanup &&
-  zplug update --force && zplug clean --force &&
+  zplug update --force &&
   pip-review --auto &&
   nvim -e -R -c "call dein#update()" -c "q"
 }
