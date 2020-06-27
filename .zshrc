@@ -2,18 +2,18 @@ export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 zplug "themes/af-magic", from:oh-my-zsh, as:theme
+zplug "lib/prompt_info_functions", from:oh-my-zsh
+zplug "lib/spectrum", from:oh-my-zsh
+zplug "lib/theme-and-appearance", from:oh-my-zsh
+
 zplug "modules/history", from:prezto
-zplug "modules/directory", from:prezto
 zplug "modules/osx", from:prezto, if:"[[ $OSTYPE == *darwin* ]]"
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "lib/aliases", from:oh-my-zsh
-zplug "lib/directories", from:oh-my-zsh
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "lib/directories", from:oh-my-zsh
 zplug "lib/key-bindings", from:oh-my-zsh
-zplug "lib/prompt_info_functions", from:oh-my-zsh
-zplug "lib/spectrum", from:oh-my-zsh
-zplug "lib/theme-and-appearance", from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 
