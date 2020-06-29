@@ -7,8 +7,11 @@ zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "lib/aliases", from:oh-my-zsh
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "lib/completion", from:oh-my-zsh
 zplug "lib/directories", from:oh-my-zsh
 zplug "lib/key-bindings", from:oh-my-zsh
+zplug "lib/spectrum", from:oh-my-zsh
+zplug "lib/theme-and-appearance", from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 zplug "mafredri/zsh-async", from:github
@@ -81,6 +84,9 @@ unsetopt share_history
 
 ### fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # fshow - git commit browser
 fshow() {
