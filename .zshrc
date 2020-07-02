@@ -17,6 +17,7 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "mafredri/zsh-async", from:github
 zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 
+zstyle :prompt:pure:git:stash show yes
 zstyle :prompt:pure:git:dirty color yellow
 
 
@@ -46,9 +47,9 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 function allupdate() {
   brew upgrade && brew update && brew cleanup &&
-  zplug update --force &&
   pip-review --auto &&
-  nvim -e -R -c "call dein#update()" -c "q"
+  nvim -e -R -c "call dein#update()" -c "q" &&
+  zplug update --force
 }
 
 alias re="source ~/.zshrc"
