@@ -126,5 +126,17 @@
   "workbench.iconTheme": "vscode-icons",
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {},
+    "FIXME": {}
+  },
+  "todo-tree.highlights.defaultHighlight": {
+    "foreground": "green",
+    "type": "none"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "todo-tree.tree.showScanModeButton": false
 }
