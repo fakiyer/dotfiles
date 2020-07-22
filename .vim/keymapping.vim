@@ -28,8 +28,6 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>ss :wq<CR>
 nnoremap <Leader>b :Buffers<CR>
-nnoremap <Leader>d :Denite
-nnoremap <Leader>dy :Denite neoyank<CR>
 nnoremap <Leader>f :ProjectFiles<CR>
 nnoremap <Leader>g :Rg<CR>
 nnoremap <Leader>ra :A<CR>
@@ -151,3 +149,7 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+
+" coc-yank
+nnoremap <silent> <Leader>y  :<C-u>CocList -A --normal yank<cr>

@@ -83,7 +83,6 @@ let g:python3_host_prog = expand('/usr/local/bin/python3')
 
 
 " coc.nvim
-
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
@@ -107,6 +106,13 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
+let g:coc_global_extensions = []
+let g:coc_global_extensions += ['coc-yank']
+let g:coc_global_extensions += ['coc-json']
+let g:coc_global_extensions += ['coc-yaml']
+let g:coc_global_extensions += ['coc-solargraph']
+
+hi HighlightedyankRegion term=bold ctermbg=0 guibg=#13354A
 
 " solarized8
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
