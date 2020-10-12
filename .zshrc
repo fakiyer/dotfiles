@@ -20,7 +20,6 @@ zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 zstyle :prompt:pure:git:stash show yes
 zstyle :prompt:pure:git:dirty color yellow
 
-
 if ! zplug check --verbose; then zplug install;fi
 zplug load #--verbose
 
@@ -134,6 +133,26 @@ fe() {
   local files
   IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
   [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
+}
+
+# fuzzy grep open via rg
+vg() {
+  local file
+
+  file="$(rg --no-heading $@ | fzf -0 -1 | awk -F: '{print $1}')"
+
+  if [[ -n $file ]]
+  then
+     vim $file
+  fi
+}
+
+# fd - cd to selected directory
+fd() {
+  local dir
+  dir=$(find ${1:-.} -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
 }
 
 # Select a docker container to attach to
