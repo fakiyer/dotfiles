@@ -235,6 +235,10 @@ if [ -d ${HOME}/.anyenv ] ; then
 fi
 
 
+### direnv
+eval "$(direnv hook zsh)"
+
+
 ### hub
 alias hubb="hub browse"
 alias hubbi="hub browse -- issues"
