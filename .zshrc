@@ -254,6 +254,10 @@ export BAT_THEME="OneHalfDark"
 export PATH="$PATH:$HOME/.cargo/bin"
 
 
+### glow
+alias glow="glow -s dark"
+
+
 ### go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
