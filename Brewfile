@@ -25,6 +25,7 @@ brew "glow"
 brew "graphviz"
 brew "hub"
 brew "jq"
+brew "lf"
 brew "mdcat"
 brew "neovim"
 brew "python"
@@ -58,6 +59,7 @@ cask 'jasper'
 cask 'karabiner-elements'
 cask 'kindle'
 cask 'licecap'
+cask 'monitorcontrol'
 cask 'ngrok'
 cask 'sequel-pro'
 cask 'shiftit'
@@ -68,6 +70,8 @@ cask 'visual-studio-code'
 cask 'vivaldi'
 
 mas 'Amphetamin', id: 937984704
-mas "Day One", id: 1055511498
-mas 'Tomato One', id: 907364780
+mas 'Day One', id: 1055511498
+mas 'Habitify', id: 1111447047
 mas 'Todoist', id: 585829637
+mas 'Tomato 2', id: 1494210770
+mas 'Twitter', id: 1482454543
