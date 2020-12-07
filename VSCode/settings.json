@@ -138,5 +138,36 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "todo-tree.tree.showScanModeButton": false
+  "todo-tree.tree.showScanModeButton": false,
+  "emmet.excludeLanguages": [
+
+    "markdown"
+  ],
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "eslint.codeAction.showDocumentation": {
+
+    "enable": true
+  },
+  "auto-close-tag.activationOnLanguage": [
+
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "plaintext",
+    "markdown",
+    "vue",
+    "liquid",
+    "erb",
+    "lang-cfml",
+    "cfml",
+    "HTML (EEx)",
+    "HTML (Eex)",
+    "plist"
+  ]
 }
