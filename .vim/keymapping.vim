@@ -59,6 +59,10 @@ vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
 
+" floaterm + lf
+nmap - :FloatermNew lf<CR>
+
+
 " coc.nvim
 
 " Use tab for trigger completion with characters ahead and navigate.

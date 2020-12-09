@@ -124,13 +124,8 @@ let g:EasyMotion_do_mapping = 0
 
 
 " neoterm
-let g:neoterm_default_mod='belowright'
-let g:neoterm_autoinsert = 1
-
-
-" vim-test
-let test#strategy = 'neoterm'
-let test#ruby#rspec#executable = 'rspec'
+" let g:neoterm_default_mod='belowright'
+" let g:neoterm_autoinsert = 1
 
 
 " lightline
@@ -197,7 +192,7 @@ endfunction
 
 
 " vim-test
-let test#strategy = 'neoterm'
+let test#strategy = 'floaterm'
 let test#ruby#rspec#executable = 'rspec'
 function! DockerTransformer(cmd) abort
   let container_id = system("docker ps | grep app | awk '{print $1}' | head -n1")
