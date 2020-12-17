@@ -268,6 +268,7 @@ alias sp="spotify"
 alias spp="spotify play"
 alias sps="spotify stop"
 alias spn="spotify next"
+alias sppp="spotify prev"
 
 
 ### flutter
