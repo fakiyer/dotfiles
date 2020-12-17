@@ -15,6 +15,7 @@ pip2 install neovim
 pip3 install neovim
 pip2 install pip-review
 pip3 install pip-review
+pip3 install neovim-remote
 
 # for coc.nvim
 curl -sL install-node.now.sh/lts | sh
