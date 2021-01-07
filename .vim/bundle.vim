@@ -45,6 +45,7 @@ call dein#add('tpope/vim-rails',          { 'on_ft': 'ruby' })
 call dein#add('rust-lang/rust.vim',       { 'on_ft': 'rust' })
 call dein#add('ekalinin/Dockerfile.vim',  { 'on_ft': ['Dockerfile', 'docker-compose']})
 call dein#add('hashivim/vim-terraform',   { 'on_ft': 'terraform' })
+call dein#add('chr4/nginx.vim',           {'on_ft' : 'nginx'})
 
 call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
 
