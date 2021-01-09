@@ -209,10 +209,11 @@ alias testlog='tail -f log/test.log'
 
 ### logbook
 function lb() {
-  vim ~/logbook/$(date "+%Y/%m/%d").md
-}
-function lbpush() {
-  (cd ~/logbook && git add . && git commit -m "add" && git push)
+  x="+0"
+  if [[ ! -z "$1" ]]; then
+    x=$1
+  fi
+  $EDITOR ~/logbook/$(date -v "${x}d" '+%Y/%m/%d').md
 }
 
 
