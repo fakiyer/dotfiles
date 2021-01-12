@@ -72,6 +72,7 @@ cask 'vivaldi'
 mas 'Amphetamin', id: 937984704
 mas 'Day One', id: 1055511498
 mas 'Habitify', id: 1111447047
+mas 'Hidden Bar', id: 1452453066
 mas 'Todoist', id: 585829637
 mas 'Tomato 2', id: 1494210770
 mas 'Twitter', id: 1482454543
