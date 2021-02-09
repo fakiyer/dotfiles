@@ -128,6 +128,10 @@ let g:EasyMotion_do_mapping = 0
 " let g:neoterm_autoinsert = 1
 
 
+" lf.vim
+let g:lf_replace_netrw = 1
+
+
 " lightline
 let g:lightline = {
       \ 'colorscheme': 'solarized',
