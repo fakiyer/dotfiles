@@ -130,6 +130,9 @@ let g:EasyMotion_do_mapping = 0
 
 " lf.vim
 let g:lf_replace_netrw = 1
+let g:lf_map_keys = 0
+let g:lf_height = 0.9
+let g:lf_width = 0.9
 
 
 " lightline
@@ -208,10 +211,6 @@ let g:test#transformation = 'docker'
 
 " jq
 command! Jqf %!jq '.'
-
-
-" terraform
-autocmd BufNewFile,BufRead *.hcl set filetype=terraform " for terragrunt
 
 
 " rust
