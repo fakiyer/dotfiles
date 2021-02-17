@@ -60,7 +60,8 @@ nnoremap <silent> p p`]
 
 
 " floaterm + lf
-nmap - :FloatermNew --height=0.5 --width=0.98 --wintype=floating --position=bottom --autoclose=2 lf<CR>
+" nmap - :FloatermNew --height=0.5 --width=0.98 --wintype=floating --position=bottom --autoclose=2 lf<CR>
+nmap - :Lf<CR>
 
 
 " coc.nvim

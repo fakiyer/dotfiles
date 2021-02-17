@@ -128,11 +128,16 @@ let g:EasyMotion_do_mapping = 0
 " let g:neoterm_autoinsert = 1
 
 
+" floaterm
+let g:floaterm_width = 1.0
+let g:floaterm_height = 0.6
+let g:floaterm_position = 'bottom'
+let g:floaterm_opener = 'edit'
+
+
 " lf.vim
 let g:lf_replace_netrw = 1
 let g:lf_map_keys = 0
-let g:lf_height = 0.9
-let g:lf_width = 0.9
 
 
 " lightline
