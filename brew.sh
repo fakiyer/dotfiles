@@ -11,9 +11,9 @@ brew upgrade
 # Install all our dependencies with bundle (See Brewfile)
 brew bundle
 
-pip2 install neovim
+# pip2 install neovim
 pip3 install neovim
-pip2 install pip-review
+# pip2 install pip-review
 pip3 install pip-review
 pip3 install neovim-remote
 
