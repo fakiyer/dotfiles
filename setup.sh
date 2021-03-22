@@ -16,6 +16,8 @@ ln -sf ~/dotfiles/.vim/bundle.vim ~/.vim/bundle.vim
 ln -sf ~/dotfiles/.vim/filetype.vim ~/.vim/filetype.vim
 ln -sf ~/dotfiles/.vim/keymapping.vim ~/.vim/keymapping.vim
 ln -sf ~/dotfiles/.vim/plugin.vim ~/.vim/plugin.vim
+ln -sf ~/dotfiles/.vim/coc-settings.json ~/.vim/coc-settings.json
+ln -sf ~/dotfiles/.vim/UltiSnips ~/.vim/UltiSnips
 ln -sf ~/dotfiles/.vim/after ~/.vim/after
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/.zshrc ~/.zshrc

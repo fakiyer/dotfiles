@@ -111,6 +111,7 @@ let g:coc_global_extensions += ['coc-yank']
 let g:coc_global_extensions += ['coc-json']
 let g:coc_global_extensions += ['coc-yaml']
 let g:coc_global_extensions += ['coc-solargraph']
+let g:coc_global_extensions += ['coc-snippets']
 
 hi HighlightedyankRegion term=bold ctermbg=0 guibg=#13354A
 
