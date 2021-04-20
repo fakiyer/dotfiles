@@ -157,4 +157,4 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
 " coc-yank
-nnoremap <silent> <Leader>y  :<C-u>CocList -A --normal yank<cr>
+nnoremap <silent> <Leader>y  :<C-u>CocList yank<cr>
