@@ -206,10 +206,12 @@ endfunction
 
 " vim-test
 let test#strategy = 'floaterm'
-let test#ruby#rspec#executable = 'rspec'
+" let test#ruby#rspec#executable = 'rspec'
+let test#ruby#rspec#executable = 'docker-compose exec app rspec'
 function! DockerTransformer(cmd) abort
-  let container_id = system("docker ps | grep app | awk '{print $1}' | head -n1")
-  return 'docker exec -t ' . container_id . ' ' . a:cmd
+  " let container_id = system("docker ps | grep app | awk '{print $1}' | head -n1")
+  " return 'docker exec -t ' . container_id . ' ' . a:cmd
+  return a:cmd . ' ' . '--exclude-pattern "spec/system/**/*"'
 endfunction
 let g:test#custom_transformations = {'docker': function('DockerTransformer')}
 let g:test#transformation = 'docker'
