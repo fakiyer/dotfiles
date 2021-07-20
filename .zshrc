@@ -1,27 +1,45 @@
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+        print -P "%F{160}▓▒░ The clone has failed.%f%b"
+fi
 
-zplug "modules/history", from:prezto
-zplug "modules/osx", from:prezto, if:"[[ $OSTYPE == *darwin* ]]"
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/tmux", from:oh-my-zsh
-zplug "lib/aliases", from:oh-my-zsh
-zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
-zplug "lib/completion", from:oh-my-zsh
-zplug "lib/directories", from:oh-my-zsh
-zplug "lib/key-bindings", from:oh-my-zsh
-zplug "lib/spectrum", from:oh-my-zsh
-zplug "lib/theme-and-appearance", from:oh-my-zsh
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
 
-zplug "mafredri/zsh-async", from:github
-zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zinit-zsh/z-a-rust \
+    zinit-zsh/z-a-as-monitor \
+    zinit-zsh/z-a-patch-dl \
+    zinit-zsh/z-a-bin-gem-node
+
+zinit snippet PZTM::history/init.zsh
+zinit snippet PZTM::osx/init.zsh
+
+zinit snippet OMZL::clipboard.zsh
+zinit snippet OMZL::completion.zsh
+zinit snippet OMZL::directories.zsh
+zinit snippet OMZL::key-bindings.zsh
+zinit snippet OMZL::spectrum.zsh
+zinit snippet OMZL::theme-and-appearance.zsh
+zinit snippet OMZL::git.zsh
+zinit snippet OMZP::git
+zinit snippet OMZP::tmux
+
+
+zinit light zsh-users/zsh-syntax-highlighting
+
+zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
+zinit light sindresorhus/pure
 
 zstyle :prompt:pure:git:stash show yes
 zstyle :prompt:pure:git:dirty color yellow
-
-if ! zplug check --verbose; then zplug install;fi
-zplug load #--verbose
 
 
 autoload -Uz zmv
@@ -48,7 +66,8 @@ function allupdate() {
   brew upgrade && brew update && brew cleanup &&
   pip-review --auto &&
   nvim -e -R -c "call dein#update()" -c "q" &&
-  zplug update --force
+  zinit self-update &&
+  zinit update --parallel
 }
 
 alias re="source ~/.zshrc"
@@ -275,16 +294,6 @@ alias sppp="spotify prev"
 
 ### flutter
 # export PATH=$PATH:$HOME/dev/flutter/bin
-
-
-### mysql
-# export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-# ### imagemagick
-# export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
-# export PKG_CONFIG_PATH="/usr/local/opt/imagemagick@6/lib/pkgconfig"
-#
-# # export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
-# export DYLD_LIBRARY_PATH=/usr/local/opt/mysql@5.7/lib/:$DYLD_LIBRARY_PATH
 
 
 ### C++
