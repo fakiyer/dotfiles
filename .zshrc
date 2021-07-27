@@ -30,8 +30,7 @@ zinit snippet OMZL::spectrum.zsh
 zinit snippet OMZL::theme-and-appearance.zsh
 zinit snippet OMZL::git.zsh
 zinit snippet OMZP::git
-zinit snippet OMZP::tmux
-
+# zinit snippet OMZP::tmux
 
 zinit light zsh-users/zsh-syntax-highlighting
 
@@ -41,9 +40,12 @@ zinit light sindresorhus/pure
 zstyle :prompt:pure:git:stash show yes
 zstyle :prompt:pure:git:dirty color yellow
 
+autoload -Uz compinit
+compinit
+zinit cdreplay -q
+
 
 autoload -Uz zmv
-
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin"
 export LANG=ja_JP.UTF-8
