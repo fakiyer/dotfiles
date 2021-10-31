@@ -5,8 +5,8 @@ if test ! $(which brew); then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-sh ~/dotfiles/brew.sh
 sh ~/dotfiles/install.sh
+sh ~/dotfiles/brew.sh
 sh ~/dotfiles/osx/keyrate.sh
 
 mkdir ~/.vim

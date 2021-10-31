@@ -38,6 +38,7 @@ brew "shpotify"
 brew "tmux"
 brew "tree"
 brew "vim"
+brew "zplug"
 brew "zsh", args: ["without-etcdir"]
 brew "lazydocker"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
