@@ -21,25 +21,28 @@ zinit light-mode for \
 zinit snippet PZTM::history/init.zsh
 zinit snippet PZTM::osx/init.zsh
 
+zinit wait lucid for \
+  OMZL::git.zsh \
+  atload"unalias grv" \
+  OMZP::git
+
 zinit snippet OMZL::clipboard.zsh
 zinit snippet OMZL::completion.zsh
 zinit snippet OMZL::directories.zsh
 zinit snippet OMZL::key-bindings.zsh
 zinit snippet OMZL::spectrum.zsh
 zinit snippet OMZL::theme-and-appearance.zsh
-zinit snippet OMZL::git.zsh
-zinit snippet OMZP::git
+
 zinit snippet OMZP::tmux
 
-
-zinit light zsh-users/zsh-syntax-highlighting
+zinit wait lucid atinit"zicompinit; zicdreplay" blockf for \
+  zsh-users/zsh-syntax-highlighting
 
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 
 zstyle :prompt:pure:git:stash show yes
 zstyle :prompt:pure:git:dirty color yellow
-
 
 autoload -Uz zmv
 
