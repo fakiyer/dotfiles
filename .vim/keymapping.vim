@@ -64,6 +64,10 @@ nnoremap <silent> p p`]
 nmap - :Lf<CR>
 
 
+" terminal
+tnoremap <Esc> <C-\><C-n>
+
+
 " coc.nvim
 
 " Use tab for trigger completion with characters ahead and navigate.
