@@ -227,3 +227,10 @@ let g:rustfmt_autosave = 1
 
 " ctags
 set tags+=.git/tags
+" set tagfunc=CocTagFuncOrig
+
+" nvim で flag が入ってこないので暫定対応
+" https://github.com/neoclide/coc.nvim/blob/master/plugin/coc.vim#L52-L58
+" function! CocTagFuncOrig(pattern, flags, info) abort
+"   return coc#rpc#request('getTagList', [])
+" endfunction
