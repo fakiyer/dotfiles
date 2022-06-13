@@ -104,6 +104,12 @@ rails_id() { docker ps -a | grep api | grep rails | awk '{print $1}'; }
 unsetopt share_history
 
 
+### zoxide
+eval "$(zoxide init zsh)"
+alias j="z"
+alias ji="zi"
+
+
 ### fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

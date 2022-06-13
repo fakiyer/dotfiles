@@ -43,6 +43,7 @@ brew "zsh", args: ["without-etcdir"]
 brew "lazydocker"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 brew "ghkw"
+brew "zoxide"
 
 # Apps
 cask 'alfred'
