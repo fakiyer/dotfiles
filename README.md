@@ -1,8 +1,8 @@
 # dotfiles
 
 ## Zsh
-### Install zplug
-* https://github.com/zplug/zplug
+### Install zinit
+* https://github.com/zdharma-continuum/zinit
 
 ## Vim
 ### Install Dein.vim
