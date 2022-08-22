@@ -27,3 +27,6 @@ chmod +x ~/bin/cht.sh
 
 # zinit
 sh -c "$(curl -fsSL https://git.io/zinit-install)"
+
+# tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

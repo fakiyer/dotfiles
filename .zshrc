@@ -68,6 +68,7 @@ function allupdate() {
   brew upgrade && brew update && brew cleanup &&
   pip-review --auto &&
   nvim -e -R -c "call dein#update()" -c "q" &&
+  ~/.tmux/plugins/tpm/bin/update_plugins all &&
   zinit self-update &&
   zinit update --parallel
 }

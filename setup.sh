@@ -33,3 +33,5 @@ ln -s ~/dotfiles/VSCode/snippets/ ~/Library/Application\ Support/Code/User/snipp
 # sh ~/dotfiles/karabiner/import.sh
 ln -sf ~/dotfiles/karabiner-elements/karabiner.json ~/.config/karabiner/karabiner.json
 ln -sf ~/dotfiles/karabiner-elements/assets/complex_modifications/mouse.json ~/.config/karabiner/assets/complex_modifications/mouse.json
+
+~/.tmux/plugins/tpm/bin/install_plugins
