@@ -167,5 +167,5 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 nnoremap <silent> <Leader>y  :<C-u>CocList yank<cr>
 
 
-" vim-surround
+" nvim-surround
 nmap <Leader>sr ysiw

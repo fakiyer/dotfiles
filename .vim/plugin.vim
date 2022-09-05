@@ -234,3 +234,46 @@ set tags+=.git/tags
 " function! CocTagFuncOrig(pattern, flags, info) abort
 "   return coc#rpc#request('getTagList', [])
 " endfunction
+
+
+lua <<EOF
+require("nvim-surround").setup {}
+
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = {
+    "bash",
+    "css",
+    "dockerfile",
+    "hcl",
+    "html",
+    "javascript",
+    "json",
+    "lua",
+    "make",
+    "markdown",
+    "rst",
+    "ruby",
+    "rust",
+    "sql",
+    "tsx",
+    "typescript",
+    "vim",
+    "yaml",
+  },
+  endwise = {
+    enable = true,
+  },
+  highlight = {
+    enable = true,
+    disable = {
+      'ruby',
+    }
+  },
+  indent = {
+    enable = true,
+  },
+  matchup = {
+    enable = true,
+  },
+}
+EOF
