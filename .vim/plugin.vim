@@ -3,7 +3,7 @@ let NERDShutUp = 1 "no alart undfined filetype
 
 
 " rails.vim
-let g:rails_level = 3
+" let g:rails_level = 3
 
 
 " own
@@ -234,3 +234,74 @@ set tags+=.git/tags
 " function! CocTagFuncOrig(pattern, flags, info) abort
 "   return coc#rpc#request('getTagList', [])
 " endfunction
+
+
+lua <<EOF
+require("other-nvim").setup({
+  rememberBuffers = false,
+  mappings = {
+    {
+      pattern = "/app/models/(.*).rb",
+      target = {
+        { target = "/spec/models/%1_spec.rb", context = "spec" },
+        { target = "/spec/factories/%1.rb", context = "factory", transformer = "pluralize" },
+        { target = "/app/controllers/**/%1_controller.rb", context = "controller", transformer = "pluralize" },
+        { target = "/app/views/%1/**/*.html.*", context = "view", transformer = "pluralize" },
+      },
+    },
+    {
+      pattern = "/spec/models/(.*)_spec.rb",
+      target = {
+        { target = "/app/models/%1.rb", context = "model" },
+      },
+    },
+    {
+      pattern = "/spec/factories/(.*).rb",
+      target = {
+        { target = "/app/models/%1.rb", context = "model", transformer = "singularize" },
+        { target = "/spec/models/%1_spec.rb", context = "spec", transformer = "singularize" },
+      },
+    },
+    {
+      pattern = "/app/services/(.*).rb",
+      target = {
+        { target = "/spec/services/%1_spec.rb", context = "spec" },
+      },
+    },
+    {
+      pattern = "/spec/services/(.*)_spec.rb",
+      target = {
+        { target = "/app/services/%1.rb", context = "service" },
+      },
+    },
+    {
+      pattern = "/app/controllers/.*/(.*)_controller.rb",
+      target = {
+        { target = "/spec/controllers/%1_spec.rb", context = "spec" },
+        { target = "/spec/requests/%1_spec.rb", context = "spec" },
+        { target = "/spec/factories/%1.rb", context = "factory", transformer = "singularize" },
+        { target = "/app/models/%1.rb", context = "model", transformer = "singularize" },
+        { target = "/app/views/%1/**/*.html.*", context = "view" },
+      }
+    },
+    {
+      pattern = "/app/controllers/(.*)_controller.rb",
+      target = {
+        { target = "/spec/controllers/%1_spec.rb", context = "spec" },
+        { target = "/spec/requests/%1_spec.rb", context = "spec" },
+        { target = "/spec/factories/%1.rb", context = "factory", transformer = "singularize" },
+        { target = "/app/models/%1.rb", context = "model", transformer = "singularize" },
+        { target = "/app/views/%1/**/*.html.*", context = "view" },
+      }
+    },
+    {
+      pattern = "/app/views/(.*)/.*.html.*",
+      target = {
+        { target = "/spec/factories/%1.rb", context = "factory", transformer = "singularize" },
+        { target = "/app/models/%1.rb", context = "model", transformer = "singularize" },
+        { target = "/app/controllers/**/%1_controller.rb", context = "controller", transformer = "pluralize" },
+      },
+    }
+  },
+})
+EOF

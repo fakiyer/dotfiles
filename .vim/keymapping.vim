@@ -30,11 +30,12 @@ nnoremap <Leader>ss :wq<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>f :ProjectFiles<CR>
 nnoremap <Leader>g :Rg<CR>
-nnoremap <Leader>ra :A<CR>
-nnoremap <Leader>re :R<CR>
-nnoremap <Leader>rc :Econtroller
-nnoremap <Leader>rm :Emodel
-nnoremap <Leader>rv :Eview
+nnoremap <Leader>ra :Other<CR>
+" nnoremap <Leader>re :R<CR>
+nnoremap <Leader>rc :Other controller<CR>
+nnoremap <Leader>rm :Other model<CR>
+nnoremap <Leader>rv :Other view<CR>
+nnoremap <Leader>rs :Other spec<CR>
 nnoremap <Leader>rr :History<CR>
 " nnoremap <Leader>p :Pt<CR>
 " nnoremap <Leader>t :terminal<CR>

@@ -40,14 +40,16 @@ call dein#add('janko-m/vim-test')
 call dein#add('voldikss/vim-floaterm')
 call dein#add('ptzz/lf.vim')
 " call dein#add('vim-scripts/ruby-matchit')
-call dein#add('vim-ruby/vim-ruby',        { 'on_ft': 'ruby' })
-call dein#add('tpope/vim-rails',          { 'on_ft': 'ruby' })
+" call dein#add('vim-ruby/vim-ruby',        { 'on_ft': 'ruby' })
+" call dein#add('tpope/vim-rails',          { 'on_ft': 'ruby' })
 " call dein#add('osyo-manga/vim-monster',   { 'on_ft': 'ruby' })
 call dein#add('rust-lang/rust.vim',       { 'on_ft': 'rust' })
 call dein#add('ekalinin/Dockerfile.vim',  { 'on_ft': ['Dockerfile', 'docker-compose']})
 call dein#add('hashivim/vim-terraform',   { 'on_ft': 'terraform' })
 call dein#add('chr4/nginx.vim',           { 'on_ft': 'nginx' })
 call dein#add('mattn/vim-maketable',      { 'on_ft': 'markdown' })
+
+call dein#add('rgroli/other.nvim')
 
 call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
 
