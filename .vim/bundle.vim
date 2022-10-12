@@ -15,7 +15,9 @@ call dein#add('Shougo/vimproc.vim',       {'build' : 'make'})
 " call dein#add('Shougo/deoplete.nvim')
 " call dein#add('Shougo/neosnippet.vim')
 " call dein#add('Shougo/neosnippet-snippets')
-call dein#add('Lokaltog/vim-easymotion')
+
+" call dein#add('Lokaltog/vim-easymotion')
+call dein#add('ggandor/leap.nvim')
 
 call dein#add('tpope/vim-fugitive')
 call dein#add('tpope/vim-surround')

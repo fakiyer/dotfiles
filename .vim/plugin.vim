@@ -237,6 +237,8 @@ set tags+=.git/tags
 
 
 lua <<EOF
+require('leap').add_default_mappings()
+
 require("other-nvim").setup({
   rememberBuffers = false,
   mappings = {
