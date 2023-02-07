@@ -25,9 +25,6 @@
 ### Install Visual Studio Code
 * https://code.visualstudio.com/
 
-### Install RictyDiminished
-* https://github.com/mzyy94/RictyDiminished-for-Powerline
-
 ### Install HHKB driver 
 * https://www.pfu.fujitsu.com/hhkeyboard/macdownload.html
 
