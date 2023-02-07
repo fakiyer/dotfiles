@@ -158,16 +158,16 @@ let g:lightline = {
       \   'fileencoding': 'LightLineFileencoding',
       \   'mode': 'LightLineMode',
       \ },
+      \ 'separator': { 'left': "\uE0B0", 'right': "\uE0B2" },
+      \ 'subseparator': { 'left': "\uE0B1", 'right': "\uE0B3" }
       \ }
-      " \ 'separator': { 'left': '⮀', 'right': '⮂' },
-      " \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
 
 function! LightLineModified()
   return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
 endfunction
 
 function! LightLineReadonly()
-  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? '⭤' : ''
+  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? "\uE0A2" : ''
 endfunction
 
 function! LightLineFilename()
@@ -180,10 +180,14 @@ function! LightLineFilename()
 endfunction
 
 function! LightLineFugitive()
-  if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
-    let branch = fugitive#head()
-    return branch !=# '' ? '⭠ '.branch : ''
-  endif
+  try
+    if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*FugitiveHead')
+      let mark = "\uE0A0 "
+      let branch = FugitiveHead()
+      return branch !=# '' ? mark.branch : ''
+    endif
+  catch
+  endtry
   return ''
 endfunction
 
