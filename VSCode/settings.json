@@ -5,31 +5,18 @@
   "editor.fontFamily": "HackGen Console NFJ",
   "editor.insertSpaces": true,
   "editor.minimap.enabled": false,
-  "editor.renderIndentGuides": true,
   "editor.renderLineHighlight": "gutter",
   "editor.rulers": [
     80
   ],
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
-  "eslint.autoFixOnSave": true,
   "eslint.enable": true,
-  "eslint.packageManager": "yarn",
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    {
-      "language": "vue",
-      "autoFix": true
-    },
-    {
-      "language": "typescript",
-      "autoFix": true
-    },
-    {
-      "language": "typescriptreact",
-      "autoFix": true
-    }
+    "typescript",
+    "typescriptreact",
   ],
   "explorer.confirmDragAndDrop": false,
   "extensions.autoUpdate": true,
@@ -124,8 +111,17 @@
     "FIXME": {}
   },
   "workbench.iconTheme": "vscode-icons",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "todo-tree.highlights.customHighlight": {
     "TODO": {},
@@ -169,5 +165,13 @@
     "HTML (EEx)",
     "HTML (Eex)",
     "plist"
-  ]
+  ],
+  "editor.guides.indentation": true,
+  "editor.inlineSuggest.enabled": true,
+  "jest.jestCommandLine": "npm run test --",
+  "eslint.format.enable": true,
+  "eslint.workingDirectories": [
+
+  ],
+  "eslint.useESLintClass": true
 }
