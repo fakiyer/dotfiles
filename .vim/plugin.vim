@@ -307,7 +307,43 @@ require("other-nvim").setup({
         { target = "/app/models/%1.rb", context = "model", transformer = "singularize" },
         { target = "/app/controllers/**/%1_controller.rb", context = "controller", transformer = "pluralize" },
       },
-    }
+    },
+    {
+      pattern = "/app/graphql/resolvers/(.*)_resolver.rb",
+      target = {
+        { target = "/spec/graphql/resolvers/%1_resolver_spec.rb", context = "spec" },
+      }
+    },
+    {
+      pattern = "/spec/graphql/resolvers/(.*)_resolver_spec.rb",
+      target = {
+        { target = "/app/graphql/resolvers/%1_resolver.rb", context = "spec" },
+      }
+    },
+    {
+      pattern = "/app/graphql/mutations/(.*)_mutation.rb",
+      target = {
+        { target = "/spec/graphql/mutations/%1_mutation_spec.rb", context = "spec" },
+      }
+    },
+    {
+      pattern = "/app/graphql/resolvers/(.*)/(.*)_resolver.rb",
+      target = {
+        { target = "/spec/graphql/resolvers/%1/%2_resolver_spec.rb", context = "spec" },
+      }
+    },
+    {
+      pattern = "/app/graphql/mutations/(.*)/(.*)_mutation.rb",
+      target = {
+        { target = "/spec/graphql/mutations/%1/%2_mutation_spec.rb", context = "spec" },
+      }
+    },
+    {
+      pattern = "/spec/graphql/mutations/(.*)/(.*)_mutation_spec.rb",
+      target = {
+        { target = "/app/graphql/mutations/%1/%2_mutation.rb", context = "graphql" },
+      }
+    },
   },
 })
 EOF
