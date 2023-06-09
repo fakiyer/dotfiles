@@ -173,5 +173,8 @@
   "eslint.workingDirectories": [
 
   ],
-  "eslint.useESLintClass": true
+  "eslint.useESLintClass": true,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  }
 }
