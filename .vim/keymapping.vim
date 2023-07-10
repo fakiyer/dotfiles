@@ -113,7 +113,7 @@ hi CocMenuSel ctermbg=237 guibg=#44617b
 hi CocSearch ctermfg=12 guifg=#18A3FF
 
 " Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>rrn <Plug>(coc-rename)
 
 " Remap for format selected region
 " xmap <leader>f  <Plug>(coc-format-selected)
