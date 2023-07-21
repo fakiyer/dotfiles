@@ -12,6 +12,15 @@
           "snippetSupport": true
         }
       }
+    },
+    "rubocop": {
+      "command": "rubocop",
+      "args": ["--lsp"],
+      "filetypes": ["ruby"],
+      "rootPatterns": [".git", "Gemfile"],
+      "requireRootPattern": true
     }
-  }
+  },
+  "coc.preferences.formatOnSave": true,
+  "snippets.ultisnips.pythonPrompt": false
 }
