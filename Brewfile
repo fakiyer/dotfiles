@@ -17,8 +17,6 @@ brew "diff-so-fancy"
 brew "dive"
 brew "fd"
 brew "fzf"
-brew "font-hackgen"
-brew "font-hackgen-nerd"
 brew "ghq"
 brew "git"
 brew "git-lfs"
@@ -57,6 +55,8 @@ cask 'cheatsheet'
 cask 'clipy'
 cask 'docker'
 cask 'figma'
+cask "font-hackgen"
+cask "font-hackgen-nerd"
 cask 'google-chrome'
 cask 'google-japanese-ime'
 cask 'iterm2'
@@ -66,6 +66,7 @@ cask 'kindle'
 cask 'licecap'
 cask 'monitorcontrol'
 cask 'ngrok'
+cask 'obsidian'
 cask 'sequel-pro'
 cask 'shiftit'
 cask 'slack'
