@@ -132,7 +132,9 @@
     "type": "none"
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+
+    "source.fixAll.eslint": true,
+    "source.addMissingImports": true
   },
   "todo-tree.tree.showScanModeButton": false,
   "emmet.excludeLanguages": [
