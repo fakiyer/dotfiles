@@ -5,8 +5,8 @@
 * https://github.com/zdharma-continuum/zinit
 
 ## Vim
-### Install Dein.vim
-* https://github.com/Shougo/dein.vim (to ~/.vim/dein)
+### Install Lazy.nvim
+* https://github.com/folke/lazy.nvim
 
 ## iTerm
 ### Install iTerm
