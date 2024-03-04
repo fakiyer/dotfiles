@@ -67,10 +67,10 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 function allupdate() {
   brew upgrade && brew update && brew cleanup &&
   pip-review --auto &&
-  nvim -e -R -c "call dein#update()" -c "q" &&
   ~/.tmux/plugins/tpm/bin/update_plugins all &&
   zinit self-update &&
-  zinit update --parallel
+  zinit update --parallel &&
+  nvim --headless "+Lazy! sync" +qa
 }
 
 alias re="source ~/.zshrc"
