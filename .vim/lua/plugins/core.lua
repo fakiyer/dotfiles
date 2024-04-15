@@ -5,15 +5,24 @@ return {
   "tomtom/tcomment_vim",
   "terryma/vim-expand-region",
   "mg979/vim-visual-multi",
+  -- {
+  --   "lifepillar/vim-solarized8",
+  --   lazy = false,
+  --   branch = "neovim",
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd([[colorscheme solarized8_flat]])
+  --     vim.cmd('let &t_8f = "\\<Esc>[38;2;%lu;%lu;%lum"')
+  --     vim.cmd('let &t_8b = "\\<Esc>[48;2;%lu;%lu;%lum"')
+  --   end
+  -- },
   {
-    "lifepillar/vim-solarized8",
+    "shaunsingh/solarized.nvim",
     lazy = false,
-    branch = "neovim",
     priority = 1000,
     config = function()
-      vim.cmd([[colorscheme solarized8_flat]])
-      vim.cmd('let &t_8f = "\\<Esc>[38;2;%lu;%lu;%lum"')
-      vim.cmd('let &t_8b = "\\<Esc>[48;2;%lu;%lu;%lum"')
+      -- vim.cmd([[colorscheme solarized]])
+      require('solarized').set()
     end
   },
   {
@@ -21,7 +30,7 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       require("lualine").setup({
-        options = { theme = "solarized_dark" }
+        options = { theme = "solarized_light" }
       })
     end,
   },
@@ -35,7 +44,8 @@ return {
       configs.setup({
         auto_install = true,
         highlight = {
-          enable = false,
+          -- enable = false,
+          enable = true,
         },
         matchup = {
           enable = true

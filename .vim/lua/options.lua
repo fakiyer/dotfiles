@@ -8,7 +8,8 @@ g.mapleader = " "
 
 -- Display
 opt.termguicolors = true
-opt.background = "dark"
+-- opt.background = "dark"
+opt.background = "light"
 
 -- Option
 opt.showmode = false
