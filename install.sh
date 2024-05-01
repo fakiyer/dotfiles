@@ -10,9 +10,9 @@ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 gem install solargraph
 
 # Switch to using brew-installed zsh as default shell
-if ! fgrep -q '/usr/local/bin/zsh' /etc/shells; then
-  echo '/usr/local/bin/zsh' | sudo tee -a /etc/shells;
-  chsh -s /usr/local/bin/zsh;
+if ! fgrep -q '/opt/homebrew/bin/zsh' /etc/shells; then
+  echo '/opt/homebrew/bin/zsh' | sudo tee -a /etc/shells;
+  chsh -s /opt/homebrew/bin/zsh;
 fi;
 
 /usr/local/opt/fzf/install

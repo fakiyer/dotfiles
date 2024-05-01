@@ -47,7 +47,7 @@ zstyle :prompt:pure:git:dirty color yellow
 autoload -Uz zmv
 
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin"
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin"
 export LANG=ja_JP.UTF-8
 
 
