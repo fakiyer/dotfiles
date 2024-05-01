@@ -132,9 +132,8 @@
     "type": "none"
   },
   "editor.codeActionsOnSave": {
-
-    "source.fixAll.eslint": true,
-    "source.addMissingImports": true
+    "source.fixAll.eslint": "explicit",
+    "source.addMissingImports": "explicit"
   },
   "todo-tree.tree.showScanModeButton": false,
   "emmet.excludeLanguages": [
@@ -178,5 +177,8 @@
   "eslint.useESLintClass": true,
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
-  }
+  },
+  "playwright.reuseBrowser": true,
+  "playwright.showTrace": false,
+  "workbench.startupEditor": "none"
 }

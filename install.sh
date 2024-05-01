@@ -5,9 +5,9 @@ pip3 install pip-review
 pip3 install neovim-remote
 
 # for coc.nvim
-curl -sL install-node.now.sh/lts | sh
-curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
-gem install solargraph
+# curl -sL install-node.now.sh/lts | sh
+# curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+# gem install solargraph
 
 # Switch to using brew-installed zsh as default shell
 if ! fgrep -q '/opt/homebrew/bin/zsh' /etc/shells; then
