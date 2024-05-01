@@ -15,12 +15,12 @@ if ! fgrep -q '/opt/homebrew/bin/zsh' /etc/shells; then
   chsh -s /opt/homebrew/bin/zsh;
 fi;
 
-/usr/local/opt/fzf/install
+# /usr/local/opt/fzf/install
 
 # cht.sh
-mkdir ~/bin
-curl https://cht.sh/:cht.sh > ~/bin/cht.sh
-chmod +x ~/bin/cht.sh
+# mkdir ~/bin
+# curl https://cht.sh/:cht.sh > ~/bin/cht.sh
+# chmod +x ~/bin/cht.sh
 
 # zinit
 sh -c "$(curl -fsSL https://git.io/zinit-install)"
