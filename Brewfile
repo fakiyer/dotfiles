@@ -7,8 +7,6 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "jesseduffield/lazydocker"
 tap "neovim/neovim"
-tap "universal-ctags/universal-ctags"
-tap "kyoshidajp/ghkw"
 tap "wagoodman/dive"
 
 brew "anyenv"
@@ -33,7 +31,7 @@ brew "lf"
 brew "mdcat"
 brew "neovim"
 brew "python"
-brew "python@2"
+# brew "python@2"
 brew "reattach-to-user-namespace"
 brew "ripgrep"
 brew "rlwrap"
@@ -42,44 +40,48 @@ brew "tailspin"
 brew "tmux"
 brew "tree"
 brew "vim"
-brew "zsh", args: ["without-etcdir"]
+# brew "zsh", args: ["without-etcdir"]
 brew "lazydocker"
-brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
-brew "ghkw"
+brew "universal-ctags"
 brew "zoxide"
 
 # Apps
+cask '1password'
 cask 'alfred'
 cask 'android-file-transfer'
-cask 'google-backup-and-sync'
-cask 'cheatsheet'
+cask 'anki'
+# cask 'google-backup-and-sync'
+# cask 'cheatsheet'
 cask 'clipy'
 cask 'docker'
+cask 'deepl'
 cask 'figma'
 cask "font-hackgen"
 cask "font-hackgen-nerd"
 cask 'google-chrome'
 cask 'google-japanese-ime'
 cask 'iterm2'
-cask 'jasper'
 cask 'karabiner-elements'
-cask 'kindle'
 cask 'licecap'
 cask 'monitorcontrol'
 cask 'ngrok'
 cask 'obsidian'
-cask 'sequel-pro'
+# cask 'sequel-pro'
 cask 'shiftit'
-cask 'slack'
 cask 'spotify'
-cask 'typora'
+cask 'tableplus'
 cask 'visual-studio-code'
-cask 'vivaldi'
+cask 'zoom'
 
 mas 'Amphetamin', id: 937984704
-mas 'Day One', id: 1055511498
+# mas 'Day One', id: 1055511498
+mas 'Evernote', id: 406056744
 mas 'Habitify', id: 1111447047
 mas 'Hidden Bar', id: 1452453066
+mas 'Kindle', id: 302584613
+mas 'Slack', id: 803453959
 mas 'Todoist', id: 585829637
 mas 'Tomato 2', id: 1494210770
 mas 'Twitter', id: 1482454543
+mas 'Toggl Track', id: 1291898086
+mas '辞書 by 物書堂', id: 1380563956
