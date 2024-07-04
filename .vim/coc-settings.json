@@ -36,31 +36,6 @@
       ],
       "requireRootPattern": true
     },
-    "ruby-lsp": {
-      "command": "ruby-lsp",
-      "initializationOptions": {
-        "experimentalFeaturesEnabled": false,
-        "enabledFeatures": [
-          "codeActions",
-          "diagnostics",
-          "documentHighlights",
-          "documentLink",
-          "documentSymbols",
-          "foldingRanges",
-          "formatting",
-          "hover",
-          "inlayHint",
-          "onTypeFormatting",
-          "selectionRanges",
-          "semanticHighlighting",
-          "completion"
-        ],
-        "formatter": "auto"
-      },
-      "filetypes": [
-        "ruby"
-      ]
-    }
   },
   "coc.preferences.formatOnSave": true,
   "snippets.ultisnips.pythonPrompt": false
