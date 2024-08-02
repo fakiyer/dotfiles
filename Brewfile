@@ -82,6 +82,7 @@ mas 'Kindle', id: 302584613
 mas 'Slack', id: 803453959
 mas 'Todoist', id: 585829637
 mas 'Tomato 2', id: 1494210770
-mas 'Twitter', id: 1482454543
+# mas 'Twitter', id: 1482454543
+mas 'X', id: 333903271
 mas 'Toggl Track', id: 1291898086
 mas '辞書 by 物書堂', id: 1380563956
