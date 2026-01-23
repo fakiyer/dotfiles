@@ -318,3 +318,10 @@ alias sppp="spotify prev"
 
 ### C++
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+
+### git-wt
+eval "$(git wt --init zsh)"
+fwt() {
+  git wt $(git wt | tail -n +2 > /dev/null | fzf-tmux --reverse +m | awk '{print $(NF-1)}')
+}

@@ -34,3 +34,5 @@
 	root = ~/src
 [pull]
 	rebase = true
+[wt]
+	basedir = .worktrees
