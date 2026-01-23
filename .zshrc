@@ -65,7 +65,7 @@ fi
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 function allupdate() {
-  brew upgrade && brew update && brew cleanup &&
+  brew upgrade && brew upgrade --cask claude-code && brew update && brew cleanup &&
   pip-review --auto &&
   ~/.tmux/plugins/tpm/bin/update_plugins all &&
   zinit self-update &&
@@ -325,3 +325,9 @@ eval "$(git wt --init zsh)"
 fwt() {
   git wt $(git wt | tail -n +2 > /dev/null | fzf-tmux --reverse +m | awk '{print $(NF-1)}')
 }
+
+
+### claude code
+export PATH="$HOME/.local/bin:$PATH"
+export DISABLE_AUTOUPDATER=1
+export CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR=1
