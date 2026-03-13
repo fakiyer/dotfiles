@@ -173,6 +173,12 @@ fe() {
   [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
 }
 
+feg() {
+  local selected
+  selected=($(git status -s | fzf-tmux | awk '{print $2}'))
+  ${EDITOR:-vim} "${selected[@]}"
+}
+
 # fuzzy grep open via rg
 vg() {
   local file
