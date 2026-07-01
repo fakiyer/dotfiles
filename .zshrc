@@ -336,6 +336,10 @@ fwt() {
 }
 
 
+### mo
+alias mo="mo --foreground"
+
+
 ### claude code
 export PATH="$HOME/.local/bin:$PATH"
 export DISABLE_AUTOUPDATER=1
