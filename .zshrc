@@ -236,6 +236,53 @@ fif() {
   [ -n "$selected" ] && ${EDITOR:-vim} "$selected"
 }
 
+# gwtd    (git wt -d)
+# gwtd -f (git wt -D)
+gwtd() {
+  local flag=-d
+  case "$1" in
+    -f | -D | --force) flag=-D; shift ;;
+  esac
+
+  local cmd
+  for cmd in git-wt fzf jq; do
+    command -v "$cmd" >/dev/null 2>&1 || { print -u2 "gwtd: $cmd is required"; return 1; }
+  done
+  git rev-parse --git-dir >/dev/null 2>&1 || { print -u2 'gwtd: not a git repository'; return 1; }
+
+  local main_wt
+  main_wt=${$(git rev-parse --path-format=absolute --git-common-dir):h}
+
+  local selected
+  selected=$(
+    git wt --json |
+      jq -r --arg main "$main_wt" '
+        .[]
+        | select(((.current or .bare) | not) and .path != $main)
+        | [.path, (.path | split("/") | last), .branch, .head]
+        | @tsv
+      ' |
+      fzf --multi --layout=reverse --delimiter='\t' --with-nth='2..' \
+          --header="Select worktrees to delete  [Tab] multi-select  [Enter] confirm  (${flag})" \
+          --preview='git -C {1} status --short --branch; echo; git -C {1} log --oneline -5' \
+          --preview-window='right,55%,wrap'
+  ) || return 0
+
+  local -a targets=("${(@f)selected}")
+  targets=("${(@)targets:#}")
+  (( $#targets )) || return 0
+  targets=("${(@)targets%%$'\t'*}")
+
+  print 'Deleting:'
+  print -l -- "${targets[@]/#/  }"
+  print -n 'Proceed? [y/N] '
+  local ans
+  read -r ans
+  [[ $ans == [yY]* ]] || { print 'Canceled'; return 1 }
+
+  git wt "$flag" "${targets[@]}"
+}
+
 
 ### node.js
 # export NVM_DIR="$HOME/.nvm"
